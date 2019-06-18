@@ -5,7 +5,7 @@
     "Speed": 3,
     "Power": 45,
     "Disguise": 5,
-    "Top Trumps Rating": 10,
+    "Rating": 10,
     "Type": "Insecticon",
     "Image": "https://placezombie.com/640x360"
   },
@@ -15,7 +15,7 @@
     "Speed": 2,
     "Power": 35,
     "Disguise": 20,
-    "Top Trumps Rating": 6,
+    "Rating": 6,
     "Type": "Insecticon",
     "Image": "https://placezombie.com/640x360"
   },
@@ -25,7 +25,7 @@
     "Speed": 8,
     "Power": 45,
     "Disguise": 10,
-    "Top Trumps Rating": 8,
+    "Rating": 8,
     "Type": "Insecticon",
     "Image": "https://placezombie.com/640x360"
   },
@@ -35,7 +35,7 @@
     "Speed": 6,
     "Power": 25,
     "Disguise": 14,
-    "Top Trumps Rating": 4,
+    "Rating": 4,
     "Type": "Autobot",
     "Image": "https://placezombie.com/640x360"
   },
@@ -45,7 +45,7 @@
     "Speed": 3,
     "Power": 32,
     "Disguise": 19,
-    "Top Trumps Rating": 7,
+    "Rating": 7,
     "Type": "Autobot",
     "Image": "https://placezombie.com/640x360"
   },
@@ -55,7 +55,7 @@
     "Speed": 5,
     "Power": 15,
     "Disguise": 16,
-    "Top Trumps Rating": 14,
+    "Rating": 14,
     "Type": "Autobot",
     "Image": "https://placezombie.com/640x360"
   },
@@ -65,7 +65,7 @@
     "Speed": 6,
     "Power": 30,
     "Disguise": 16,
-    "Top Trumps Rating": 7,
+    "Rating": 7,
     "Type": "Autobot",
     "Image": "https://placezombie.com/640x360"
   },
@@ -75,7 +75,7 @@
     "Speed": 1,
     "Power": 50,
     "Disguise": 1,
-    "Top Trumps Rating": 5,
+    "Rating": 5,
     "Type": "Autobot",
     "Image": "https://placezombie.com/640x360"
   },
@@ -85,7 +85,7 @@
     "Speed": 4,
     "Power": 50,
     "Disguise": 20,
-    "Top Trumps Rating": 14,
+    "Rating": 14,
     "Type": "Insecticon",
     "Image": "https://placezombie.com/640x360"
   },
@@ -95,7 +95,7 @@
     "Speed": 2,
     "Power": 15,
     "Disguise": 18,
-    "Top Trumps Rating": 8,
+    "Rating": 8,
     "Type": "Autobot",
     "Image": "https://placezombie.com/640x360"
   },
@@ -105,7 +105,7 @@
     "Speed": 2,
     "Power": 49,
     "Disguise": 13,
-    "Top Trumps Rating": 3,
+    "Rating": 3,
     "Type": "Autobot",
     "Image": "https://placezombie.com/640x360"
   },
@@ -115,7 +115,7 @@
     "Speed": 5,
     "Power": 49,
     "Disguise": 1,
-    "Top Trumps Rating": 15,
+    "Rating": 15,
     "Type": "Autobot",
     "Image": "https://placezombie.com/640x360"
   },
@@ -125,7 +125,7 @@
     "Speed": 4,
     "Power": 18,
     "Disguise": 16,
-    "Top Trumps Rating": 4,
+    "Rating": 4,
     "Type": "Autobot",
     "Image": "https://placezombie.com/640x360"
   },
@@ -135,7 +135,7 @@
     "Speed": 3,
     "Power": 15,
     "Disguise": 11,
-    "Top Trumps Rating": 3,
+    "Rating": 3,
     "Type": "Autobot",
     "Image": "https://placezombie.com/640x360"
   },
@@ -145,7 +145,7 @@
     "Speed": 4,
     "Power": 32,
     "Disguise": 20,
-    "Top Trumps Rating": 13,
+    "Rating": 13,
     "Type": "Autobot",
     "Image": "https://placezombie.com/640x360"
   },
@@ -155,7 +155,7 @@
     "Speed": 8,
     "Power": 36,
     "Disguise": 12,
-    "Top Trumps Rating": 13,
+    "Rating": 13,
     "Type": "Autobot",
     "Image": "https://placezombie.com/640x360"
   },
@@ -165,7 +165,7 @@
     "Speed": 5,
     "Power": 25,
     "Disguise": 18,
-    "Top Trumps Rating": 12,
+    "Rating": 12,
     "Type": "Decepticon",
     "Image": "https://placezombie.com/640x360"
   },
@@ -175,7 +175,7 @@
     "Speed": 6,
     "Power": 48,
     "Disguise": 3,
-    "Top Trumps Rating": 14,
+    "Rating": 14,
     "Type": "Autobot",
     "Image": "https://placezombie.com/640x360"
   },
@@ -185,7 +185,7 @@
     "Speed": 8,
     "Power": 50,
     "Disguise": 11,
-    "Top Trumps Rating": 15,
+    "Rating": 15,
     "Type": "Autobot",
     "Image": "https://placezombie.com/640x360"
   },
@@ -195,7 +195,7 @@
     "Speed": 4,
     "Power": 28,
     "Disguise": 20,
-    "Top Trumps Rating": 6,
+    "Rating": 6,
     "Type": "Insecticon",
     "Image": "https://placezombie.com/640x360"
   },
@@ -205,7 +205,7 @@
     "Speed": 6,
     "Power": 28,
     "Disguise": 18,
-    "Top Trumps Rating": 10,
+    "Rating": 10,
     "Type": "Autobot",
     "Image": "https://placezombie.com/640x360"
   },
@@ -215,7 +215,7 @@
     "Speed": 4,
     "Power": 30,
     "Disguise": 18,
-    "Top Trumps Rating": 13,
+    "Rating": 13,
     "Type": "Insecticon",
     "Image": "https://placezombie.com/640x360"
   },
@@ -225,7 +225,7 @@
     "Speed": 4,
     "Power": 20,
     "Disguise": 6,
-    "Top Trumps Rating": 2,
+    "Rating": 2,
     "Type": "Autobot",
     "Image": "https://placezombie.com/640x360"
   },
@@ -235,7 +235,7 @@
     "Speed": 5,
     "Power": 48,
     "Disguise": 1,
-    "Top Trumps Rating": 9,
+    "Rating": 9,
     "Type": "Insecticon",
     "Image": "https://placezombie.com/640x360"
   },
@@ -245,7 +245,7 @@
     "Speed": 10,
     "Power": 26,
     "Disguise": 11,
-    "Top Trumps Rating": 2,
+    "Rating": 2,
     "Type": "Insecticon",
     "Image": "https://placezombie.com/640x360"
   },
@@ -255,7 +255,7 @@
     "Speed": 4,
     "Power": 30,
     "Disguise": 18,
-    "Top Trumps Rating": 11,
+    "Rating": 11,
     "Type": "Insecticon",
     "Image": "https://placezombie.com/640x360"
   },
@@ -265,7 +265,7 @@
     "Speed": 9,
     "Power": 35,
     "Disguise": 10,
-    "Top Trumps Rating": 9,
+    "Rating": 9,
     "Type": "Insecticon",
     "Image": "https://placezombie.com/640x360"
   },
@@ -275,7 +275,7 @@
     "Speed": 8,
     "Power": 36,
     "Disguise": 11,
-    "Top Trumps Rating": 5,
+    "Rating": 5,
     "Type": "Insecticon",
     "Image": "https://placezombie.com/640x360"
   },
@@ -285,7 +285,7 @@
     "Speed": 4,
     "Power": 48,
     "Disguise": 2,
-    "Top Trumps Rating": 11,
+    "Rating": 11,
     "Type": "Autobot",
     "Image": "https://placezombie.com/640x360"
   },
@@ -295,7 +295,7 @@
     "Speed": 9,
     "Power": 40,
     "Disguise": 15,
-    "Top Trumps Rating": 12,
+    "Rating": 12,
     "Type": "Autobot",
     "Image": "https://placezombie.com/640x360"
   }
