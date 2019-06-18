@@ -26,5 +26,4 @@ function render (data) {
     container.append(p)
   }
   console.log(...data)
-  console.log('still un-done')
 }
