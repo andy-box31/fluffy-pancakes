@@ -1,11 +1,11 @@
 {
-  "name": "viewloader",
+  "name": "trumps",
   "version": "1.0.0",
-  "description": "load views on demand",
+  "description": "online card game",
   "repository": {},
   "main": "app.js",
   "scripts": {
-    "start": "node app.js",
+    "start": "webpack && node app.js",
     "test": "test"
   },
   "author": "Andy Phillips",
