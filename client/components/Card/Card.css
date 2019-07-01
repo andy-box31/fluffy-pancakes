@@ -1,0 +1,30 @@
+.card {
+  border: 1px solid red;
+  border-radius: 6px;
+  box-sizing: border-box;
+  height: 600px;
+  margin: 16px auto;
+  padding: 16px;
+  position: relative;
+  width: 400px;
+
+}
+
+.cardHeader {
+  position: relative;
+  height: 200px;
+  overflow: hidden;
+}
+
+.cardImage {
+  width: 368px;
+  position: absolute;
+  z-index: -1;
+}
+
+.cardTitle {
+  background-color: rgba(200, 200, 200, .8);
+  color: #666;
+  padding: 10px 20px;
+  text-align: center;
+}

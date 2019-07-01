@@ -16,7 +16,7 @@ class App extends React.Component {
     this.setState({transformers: transformers})
   }
   render () {
-    const cardList = this.state.transformers.map((transformer) => <Card params={transformer} />)
+    const cardList = this.state.transformers.map((transformer) => <Card key={transformer.Name} params={transformer} />)
 
     return (
     <React.Fragment>
