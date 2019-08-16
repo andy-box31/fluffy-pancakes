@@ -1,8 +1,7 @@
 .card {
-  border: 1px solid red;
+  border: 1px solid #666;
   border-radius: 6px;
   box-sizing: border-box;
-  height: 600px;
   margin: 16px auto;
   padding: 16px;
   position: relative;
@@ -27,4 +26,8 @@
   color: #666;
   padding: 10px 20px;
   text-align: center;
+}
+
+.cardRadio {
+  display: block;
 }

@@ -1,0 +1,11 @@
+.previewList li{
+  display: inline;
+}
+
+.previewListLeft{
+  float: left;
+}
+
+.previewListRight{
+  float: right;
+}

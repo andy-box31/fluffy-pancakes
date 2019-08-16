@@ -2,14 +2,15 @@ import Axios from 'Axios'
 
 const Api = {
   get: async (endpoint) => {
+    let location = `/data/${endpoint}`
     try {
-      const resp = await Axios.get(`/data/${endpoint}`)
+      const resp = await Axios.get(location)
       if (resp.status === 200) {
         return resp.data
       }
-      return { isError: true }
+      throw new Error(`Unexpected response code ${resp.status} from ${location}`, resp)
     } catch (e) {
-      return { isError: true }
+      throw(e)
     }
   }
 }

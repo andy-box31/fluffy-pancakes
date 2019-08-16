@@ -1,6 +1,8 @@
 import '@babel/polyfill'
 import React from 'react'
-import ReactDOM from 'react-dom'
+import { render } from 'react-dom'
+import { Provider } from "react-redux"
+import store from './store/index'
 
 import App from './components/App/App'
 
@@ -9,4 +11,6 @@ import App from './components/App/App'
 
 const root = document.getElementById('root')
 
-ReactDOM.render(<App name='Andy' />, root)
+render(<Provider store={store}>
+    <App name='Andy' />
+  </Provider>, root)

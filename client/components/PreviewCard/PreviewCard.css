@@ -1,0 +1,15 @@
+.previewCard {
+  border: 1px solid #666;
+  border-radius: 6px;
+  box-sizing: border-box;
+  display: inline-block;
+  font-size:10px;
+  line-height: 12px;
+  margin: 4px auto;
+  padding: 4px;
+  position: relative;
+  width: 100px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+
+}

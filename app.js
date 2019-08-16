@@ -12,4 +12,7 @@ app.get('/healthcheck', (req, res) => res.send('I am healthy!'))
 
 app.get('/data/transformers', (req, res) => res.send(transformers))
 
-app.listen(port, () => console.log(`Example app listening on port ${port}!`))
+app.listen(port, () => {
+  console.log(`Example app listening on port ${port}!`)
+  console.log(`CMD + click to view http://localhost:${port}`)
+})
