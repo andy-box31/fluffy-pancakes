@@ -1,9 +1,9 @@
-import Axios from 'Axios'
+import axios from 'axios'
 
 const Api = {
   get: async (endpoint) => {
     try {
-      const resp = await Axios.get(`/data/${endpoint}`)
+      const resp = await axios.get(`/data/${endpoint}`)
       if (resp.status === 200) {
         return resp.data
       }
