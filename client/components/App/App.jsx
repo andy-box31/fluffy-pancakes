@@ -1,4 +1,5 @@
 import React from 'react'
+import { connect } from 'react-redux'
 import Api from '../../services/api'
 import { connect } from 'react-redux'
 import { getCards, dealCards } from '../../actions/index'
