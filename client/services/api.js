@@ -1,10 +1,10 @@
-import Axios from 'Axios'
+import axios from 'axios'
 
 const Api = {
   get: async (endpoint) => {
     let location = `/data/${endpoint}`
     try {
-      const resp = await Axios.get(location)
+      const resp = await axios.get(location)
       if (resp.status === 200) {
         return resp.data
       }
