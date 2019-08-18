@@ -1,6 +1,6 @@
 import React from 'react'
-import Api from '../../services/api'
 import { connect } from 'react-redux'
+import Api from '../../services/api'
 import { getCards, dealCards } from '../../actions/index'
 import Card from '../Card/Card'
 import PreviewCard from '../PreviewCard/PreviewCard'
@@ -19,7 +19,6 @@ class App extends React.Component {
   }
 
   dealCards () {
-    console.log('call deal')
     this.props.dealCards(this.props.cards)
   }
 
@@ -68,7 +67,7 @@ class App extends React.Component {
   }
 }
 
-const mapStateToProps = state => {
+function mapStateToProps (state) {
   return { 
     cards: state.cards,
     shuffledCards: state.shuffledCards,

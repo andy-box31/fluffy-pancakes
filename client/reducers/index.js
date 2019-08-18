@@ -6,7 +6,6 @@ const initialState = {
 }
 
 function rootReducer(state = initialState, action) {
-  console.log('reducer', action.type)
   let newState
   switch (action.type) {
     case (SET_CARDS):
