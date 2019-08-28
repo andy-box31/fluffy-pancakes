@@ -1,9 +1,9 @@
 import { takeEvery } from 'redux-saga/effects'
-import { GET_CARDS } from '../actions/index'
+import { ACTIONS } from '../utilities/constants'
 import { getCardsSaga } from './getCardsSaga'
 
 function * watcher () {
-  yield takeEvery(GET_CARDS, getCardsSaga)
+  yield takeEvery(ACTIONS.GET_CARDS, getCardsSaga)
 }
 
 export default watcher

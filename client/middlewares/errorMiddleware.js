@@ -1,9 +1,9 @@
-import { THROW_ERROR } from '../actions/index'
+import { ACTIONS } from '../utilities/constants'
 
 export default function errorMiddleware({ dispatch }) {
   return function(next){
     return function(action){
-      if(action.type === THROW_ERROR) {
+      if(action.type === ACTIONS.THROW_ERROR) {
         console.log('error in app', action.payload)
       }
       return next(action);
