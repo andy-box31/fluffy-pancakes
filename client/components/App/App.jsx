@@ -15,7 +15,7 @@ class App extends React.Component {
     }
     this.handleSelection = this.handleSelection.bind(this)
     this.handlePlaymodeSelection = this.handlePlaymodeSelection.bind(this)
-    this.dealCards = this.dealCards.bind(this)
+    this.handleDealCards = this.handleDealCards.bind(this)
   }
 
   componentDidMount(){
@@ -34,13 +34,13 @@ class App extends React.Component {
     this.props.setPlaymode(e.target.value)
   }
 
-  dealCards () {
-    this.props.dealCards(this.props.cards)
-  }
-
   handleSelection (e) {
     this.dispatchBattle(e.target.value)
     e.target.checked = false
+  }
+
+  handleDealCards () {
+    this.props.dealCards(this.props.cards)
   }
 
   dispatchBattle (pick) {
@@ -87,7 +87,7 @@ class App extends React.Component {
           <div>
             <h1>{activePlayer}'s turn</h1>
             <PlaymodeSelector onSelect={this.handlePlaymodeSelection} />
-            <button type="button" onClick={this.dealCards}>deal</button>
+            <button type="button" onClick={this.handleDealCards}>deal</button>
             <div className="flexOuter">
               <div className="flexCol">{hand1}</div>
               <div className="flexCol">
