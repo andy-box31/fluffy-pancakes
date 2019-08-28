@@ -1,20 +1,29 @@
-import { SHUFFLE_CARDS, SET_CARDS, DEAL_CARDS } from '../actions/index'
+import { ACTIONS, PLAY_MODE, PLAYERS } from '../utilities/constants'
 import shuffle from '../utilities/shuffle'
 
 const initialState = {
-  cards: []
+  cards: [],
+  playmode: PLAY_MODE.VS_LOCAL,
+  activePlayer: PLAYERS.PLAYER_1,
+  winner: null
 }
+
+const {SET_CARDS, SHUFFLE_CARDS, DEAL_CARDS, GO_BATTLE, SET_PLAY_MODE} = ACTIONS
 
 function rootReducer(state = initialState, action) {
   let newState
   switch (action.type) {
     case (SET_CARDS):
-      newState = {cards: action.payload}
+      newState = {
+        ...state,
+        cards: action.payload
+      }
       return newState
       break
     case (SHUFFLE_CARDS):
         // shuffle the cards
         newState = {
+          ...state,
           cards: action.payload,
           shuffledCards: shuffle(action.payload)
         }
@@ -23,16 +32,60 @@ function rootReducer(state = initialState, action) {
     case (DEAL_CARDS):
       const shuffled = shuffle(action.payload)
       const mid = Math.floor(shuffled.length/2)
+      newState = {
+        ...state,
+        cards: action.payload,
+        hand1Cards: shuffled.slice(0, mid),
+        hand2Cards: shuffled.slice(mid+1, shuffled.length)
+      }
+      return newState
+      break
+    case (SET_PLAY_MODE):
         newState = {
-          cards: action.payload,
-          hand1Cards: shuffled.slice(0, mid),
-          hand2Cards: shuffled.slice(mid+1, shuffled.length)
+          ...state,
+          playmode: action.payload
         }
         return newState
         break
+    case (GO_BATTLE):
+      let newWinner = state.winner
+      let newHand1 = state.hand1Cards.slice()
+      let newHand2 = state.hand2Cards.slice()
+      let newActivePlayer = state.activePlayer
+      const card1 = newHand1.shift()
+      const card2 = newHand2.shift()
+      if(!card1[action.payload] || !card2[action.payload]) {
+        // error
+        return state
+      }
+      if (card1[action.payload] > card2[action.payload]){
+        newHand1.push(card1)
+        newHand1.push(card2)
+        newActivePlayer = PLAYERS.PLAYER_1
+      } else {
+        newHand2.push(card1)
+        newHand2.push(card2)
+        newActivePlayer = PLAYERS.PLAYER_2
+      }
+      if (newHand1.length === 0) {
+        newWinner = PLAYERS.PLAYER_2
+      } else if (newHand2.length === 0) {
+        newWinner = PLAYERS.PLAYER_1
+
+      }
+      newState = {
+        ...state,
+        hand1Cards: newHand1,
+        hand2Cards: newHand2,
+        activePlayer: newActivePlayer,
+        winner: newWinner
+
+      }
+      return newState
+      break
     default:
   }
-  return state;
+  return state
 }
 
 export default rootReducer
