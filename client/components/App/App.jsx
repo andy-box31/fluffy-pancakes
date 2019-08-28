@@ -25,9 +25,7 @@ class App extends React.Component {
 
   componentDidUpdate() {
     // if it's the computers turn then have computer take turn - SHOULD BE MOVED TO CORRECT LOCATION
-    // console.log('Did update', this.props.playmode, PLAY_MODE.VS_COMPUTER, this.props.activePlayer, PLAYERS.PLAYER_2)
     if (!this.props.winner && this.props.playmode === PLAY_MODE.VS_COMPUTER && this.props.activePlayer === PLAYERS.PLAYER_2) {
-      console.log('battle')
       this.computerTurn()
     }
   }

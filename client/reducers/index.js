@@ -48,18 +48,14 @@ function rootReducer(state = initialState, action) {
         return newState
         break
     case (GO_BATTLE):
-      console.log('battle')
       let newWinner = state.winner
       let newHand1 = state.hand1Cards.slice()
       let newHand2 = state.hand2Cards.slice()
       let newActivePlayer = state.activePlayer
       const card1 = newHand1.shift()
       const card2 = newHand2.shift()
-      console.log('checking payload', !card1[action.payload], !card2[action.payload])
-      console.log('blah payload', newHand1.length, card1[action.payload], newHand2.length, card2[action.payload])
       if(!card1[action.payload] || !card2[action.payload]) {
         // error
-        console.log('error payload', card1, card2)
         return state
       }
       if (card1[action.payload] > card2[action.payload]){
@@ -71,7 +67,6 @@ function rootReducer(state = initialState, action) {
         newHand2.push(card2)
         newActivePlayer = PLAYERS.PLAYER_2
       }
-      console.log('check winner', newHand1.length, newHand2.length)
       if (newHand1.length === 0) {
         newWinner = PLAYERS.PLAYER_2
       } else if (newHand2.length === 0) {
