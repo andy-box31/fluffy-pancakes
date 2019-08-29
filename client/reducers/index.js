@@ -36,7 +36,8 @@ function rootReducer(state = initialState, action) {
         ...state,
         cards: action.payload,
         hand1Cards: shuffled.slice(0, mid),
-        hand2Cards: shuffled.slice(mid+1, shuffled.length)
+        hand2Cards: shuffled.slice(mid+1, shuffled.length),
+        theMiddle: []
       }
       return newState
       break
@@ -49,6 +50,7 @@ function rootReducer(state = initialState, action) {
         break
     case (GO_BATTLE):
       let newWinner = state.winner
+      let newMiddle = state.theMiddle
       let newHand1 = state.hand1Cards.slice()
       let newHand2 = state.hand2Cards.slice()
       let newActivePlayer = state.activePlayer
@@ -61,10 +63,17 @@ function rootReducer(state = initialState, action) {
       if (card1[action.payload] > card2[action.payload]){
         newHand1.push(card1)
         newHand1.push(card2)
+        newHand1.push(...newMiddle)
+        newMiddle = []
         newActivePlayer = PLAYERS.PLAYER_1
+      } else if (card1[action.payload] === card2[action.payload]){
+        newMiddle.push(card1)
+        newMiddle.push(card2)
       } else {
         newHand2.push(card1)
         newHand2.push(card2)
+        newHand2.push(...newMiddle)
+        newMiddle = []
         newActivePlayer = PLAYERS.PLAYER_2
       }
       if (newHand1.length === 0) {
@@ -77,6 +86,7 @@ function rootReducer(state = initialState, action) {
         ...state,
         hand1Cards: newHand1,
         hand2Cards: newHand2,
+        theMiddle: newMiddle,
         activePlayer: newActivePlayer,
         winner: newWinner
 
