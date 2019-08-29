@@ -1,11 +1,12 @@
-import { ACTIONS, PLAY_MODE, PLAYERS } from '../utilities/constants'
+import { ACTIONS, PLAY_MODE, PLAYERS, GAME_STATE } from '../utilities/constants'
 import shuffle from '../utilities/shuffle'
 
 const initialState = {
   cards: [],
   playmode: PLAY_MODE.VS_LOCAL,
-  activePlayer: PLAYERS.PLAYER_1,
-  winner: null
+  activePlayer: null,
+  winner: null,
+  gameState: GAME_STATE.PRE_GAME
 }
 
 const {SET_CARDS, SHUFFLE_CARDS, DEAL_CARDS, GO_BATTLE, SET_PLAY_MODE} = ACTIONS
@@ -16,19 +17,11 @@ function rootReducer(state = initialState, action) {
     case (SET_CARDS):
       newState = {
         ...state,
-        cards: action.payload
+        cards: action.payload,
+        activePlayer: PLAYERS.PLAYER_1
       }
       return newState
       break
-    case (SHUFFLE_CARDS):
-        // shuffle the cards
-        newState = {
-          ...state,
-          cards: action.payload,
-          shuffledCards: shuffle(action.payload)
-        }
-        return newState
-        break
     case (DEAL_CARDS):
       const shuffled = shuffle(action.payload)
       const mid = Math.floor(shuffled.length/2)
@@ -37,7 +30,8 @@ function rootReducer(state = initialState, action) {
         cards: action.payload,
         hand1Cards: shuffled.slice(0, mid),
         hand2Cards: shuffled.slice(mid+1, shuffled.length),
-        theMiddle: []
+        theMiddle: [],
+        gameState: GAME_STATE.DURING_GAME
       }
       return newState
       break
@@ -54,6 +48,7 @@ function rootReducer(state = initialState, action) {
       let newHand1 = state.hand1Cards.slice()
       let newHand2 = state.hand2Cards.slice()
       let newActivePlayer = state.activePlayer
+      let newGameState = state.gameState
       const card1 = newHand1.shift()
       const card2 = newHand2.shift()
       if(!card1[action.payload] || !card2[action.payload]) {
@@ -78,17 +73,20 @@ function rootReducer(state = initialState, action) {
       }
       if (newHand1.length === 0) {
         newWinner = PLAYERS.PLAYER_2
+        newGameState = GAME_STATE.POST_GAME
       } else if (newHand2.length === 0) {
         newWinner = PLAYERS.PLAYER_1
-
+        newGameState = GAME_STATE.POST_GAME
       }
+
       newState = {
         ...state,
         hand1Cards: newHand1,
         hand2Cards: newHand2,
         theMiddle: newMiddle,
         activePlayer: newActivePlayer,
-        winner: newWinner
+        winner: newWinner,
+        gameState: newGameState
 
       }
       return newState

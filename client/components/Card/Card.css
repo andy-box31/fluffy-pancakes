@@ -1,24 +1,24 @@
 .card {
-
   border: 1px solid red;
   border-radius: 6px;
   box-sizing: border-box;
-  height: 600px;
+  height: calc(100% - 28px);
   margin: 16px auto;
   padding: 16px;
   position: relative;
-  width: 400px;
+  width: 100%;
 }
 
 .cardHeader {
   position: relative;
-  height: 200px;
+  height: 50%;
   overflow: hidden;
 }
 
 .cardImage {
-  width: 368px;
+  left: 5%;
   position: absolute;
+  width: 90%;
   z-index: -1;
 }
 

@@ -1,16 +1,37 @@
-.flexOuter {
-  display: flex;
-  justify-content: space-around;
+.outer{
+  display: grid;
+  grid-template-columns: repeat(10, 10%);
+  grid-template-rows: repeat(10, 10%);
+  height: 550px;
+  margin: 10px auto;
+  width: 300px;
+}
+.active{
+  grid-area:1/1/7/7;
+}
+.info{
+  grid-area: 1/7/7/11;
+}
+.score{
+  grid-area: 7/1/11/6;
+}
+.opponent{
+  grid-area: 7/6/11/11;
 }
 
-.previewList li{
-  display: inline;
+.theMiddle {
+  border: 1px solid #333;
 }
+.opponentCard{
+  border-radius: 4px;
+  box-sizing: border-box;
+  height: calc(100% - 24px);
+  margin: 12px auto;
+  padding: 12px;
+  position: relative;
+  width: 100%;
 
-.previewListLeft{
-  float: left;
-}
-
-.previewListRight{
-  float: right;
+  background: radial-gradient(circle at 0% 50%, rgba(96, 16, 48, 0) 9px, #613 10px, rgba(96, 16, 48, 0) 11px) 0px 10px,
+    radial-gradient(at 100% 100%, rgba(96, 16, 48, 0) 9px, #613 10px, rgba(96, 16, 48, 0) 11px), #8a3;
+  background-size: 20px 20px;
 }

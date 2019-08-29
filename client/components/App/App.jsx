@@ -1,7 +1,7 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import { getCards, dealCards, goBattle, setPlaymode } from '../../actions/index'
-import { PLAY_MODE, PLAYERS } from '../../utilities/constants'
+import { PLAY_MODE, PLAYERS, GAME_STATE } from '../../utilities/constants'
 import Card from '../Card/Card'
 import PreviewCard from '../PreviewCard/PreviewCard'
 import PlaymodeSelector from '../PlaymodeSelector/PlaymodeSelector'
@@ -56,56 +56,49 @@ class App extends React.Component {
   }
 
   render () {
-    const { name, cards, hand1Cards, hand2Cards, activePlayer, winner, theMiddle } = this.props
-    if (cards) {
-      let hand1, hand2, activeCard, victory
+    const { name, hand1Cards, hand2Cards, activePlayer, winner, theMiddle, gameState } = this.props
+    if (activePlayer) {
+      let activeCard, victory, preGame
       let activeHand = activePlayer === PLAYERS.PLAYER_1 ? hand1Cards : hand2Cards
       if (winner) {
         victory = <h1>{winner} is the winner!</h1>
-      } 
-      if (hand1Cards) {
-        hand1 = (<ul className="previewListLeft">
-          {hand1Cards.map((card) => <li key={card.Name}><PreviewCard params={{name: card.Name}}></PreviewCard></li>)}
-        </ul>)
       }
-      if (hand2Cards) {
-        hand2 = (<ul className="previewListRight">
-          {hand2Cards.map((card) => <li key={card.Name}><PreviewCard params={{name: card.Name}}></PreviewCard></li>)}
-        </ul>)
+      if (gameState === GAME_STATE.PRE_GAME) {
+        preGame = <button type="button" onClick={this.handleDealCards}>deal</button>
       }
       activeCard = <div className="reverseCard"></div>
       if (activeHand && activeHand.length > 0) {
         activeCard = <Card params={activeHand[0]} onSubmit={this.handleSelection} />
       }
-      const preview = (<ul className="previewList">
-        {cards.map((card) => <li key={card.Name}><PreviewCard params={card} /></li>)}
-      </ul>)
       return (
       <React.Fragment>
         {victory}
-        {!victory && (
-          <div>
-            <h1>{activePlayer}'s turn</h1>
-            <PlaymodeSelector onSelect={this.handlePlaymodeSelection} />
-            <button type="button" onClick={this.handleDealCards}>deal</button>
-            <div className="flexOuter">
-              <div className="flexCol">{hand1}</div>
-              <div className="flexCol">
-                <div>{activeCard}</div>
-                {theMiddle && theMiddle.length >0 && <div style={{width:'50px', border:'1px dotted blue'}}>{theMiddle.length}</div>}
-                
-              </div>
-              <div className="flexCol">{hand2}</div>
+        {preGame}
+        {false && <PlaymodeSelector onSelect={this.handlePlaymodeSelection} />}
+        {gameState === GAME_STATE.DURING_GAME && (
+          <div className="outer">
+            <div className="active">
+              {activeCard}
             </div>
-            <div className="preview">
-              {preview}
+            <div className="info">
+              Trumps
+              {activePlayer}
+              {theMiddle.length > 0 && <div className="theMiddle">{theMiddle.length}</div>}
+              
+            </div>
+            <div className="opponent">
+              <div className="opponentCard"></div>
+            </div>
+            <div className="score">
+              {hand1Cards.length} VS
+              {hand2Cards.length}
             </div>
           </div>
         )}
       </React.Fragment>
       )
     } //else
-    return <h1>Yo, {name}</h1>
+    return <h1>Problem retrieving data :\ ... Wierd</h1>
   }
 }
 
@@ -115,6 +108,7 @@ function mapStateToProps (state) {
     hand1Cards: state.hand1Cards,
     hand2Cards: state.hand2Cards,
     playmode: state.playmode,
+    gameState: state.gameState,
     activePlayer: state.activePlayer,
     winner: state.winner,
     theMiddle: state.theMiddle
