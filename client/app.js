@@ -25,5 +25,4 @@ function render (data) {
     p.appendChild(document.createTextNode(`${data[i].Name} is an ${data[i].Type}`))
     container.append(p)
   }
-  console.log(...data)
 }

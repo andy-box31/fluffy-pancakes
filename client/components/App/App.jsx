@@ -56,7 +56,7 @@ class App extends React.Component {
   }
 
   render () {
-    const { name, cards, hand1Cards, hand2Cards, activePlayer, winner } = this.props
+    const { name, cards, hand1Cards, hand2Cards, activePlayer, winner, theMiddle } = this.props
     if (cards) {
       let hand1, hand2, activeCard, victory
       let activeHand = activePlayer === PLAYERS.PLAYER_1 ? hand1Cards : hand2Cards
@@ -91,7 +91,9 @@ class App extends React.Component {
             <div className="flexOuter">
               <div className="flexCol">{hand1}</div>
               <div className="flexCol">
-                {activeCard}
+                <div>{activeCard}</div>
+                {theMiddle && theMiddle.length >0 && <div style={{width:'50px', border:'1px dotted blue'}}>{theMiddle.length}</div>}
+                
               </div>
               <div className="flexCol">{hand2}</div>
             </div>
@@ -114,7 +116,8 @@ function mapStateToProps (state) {
     hand2Cards: state.hand2Cards,
     playmode: state.playmode,
     activePlayer: state.activePlayer,
-    winner: state.winner
+    winner: state.winner,
+    theMiddle: state.theMiddle
   }
 }
 
