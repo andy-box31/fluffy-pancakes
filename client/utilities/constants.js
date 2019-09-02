@@ -2,6 +2,7 @@
 export const ACTIONS = {
   THROW_ERROR: 'THROW_ERROR',
   SET_CARDS: 'SET_CARDS',
+  SET_INFO: 'SET_INFO',
   GET_CARDS: 'GET_CARDS',
   SHUFFLE_CARDS: 'SHUFFLE_CARDS',
   DEAL_CARDS: 'DEAL_CARDS',
@@ -20,4 +21,16 @@ export const PLAY_MODE = {
 export const PLAYERS = {
   PLAYER_1: 'PLAYER_1',
   PLAYER_2: 'PLAYER_2'
+}
+
+export const GAME_STATE = {
+  PRE_GAME: 'PRE_GAME',
+  DURING_GAME: 'DURING_GAME',
+  POST_GAME: 'POST_GAME'
+}
+
+export const GAME_LEVEL = {
+  EASY: 'EASY',
+  MEDIUM: 'MEDIUM',
+  HARD: 'HARD'
 }

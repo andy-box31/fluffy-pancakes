@@ -1,6 +1,6 @@
 import { ACTIONS } from '../utilities/constants'
 
-const { THROW_ERROR, SET_CARDS, GET_CARDS, SHUFFLE_CARDS, DEAL_CARDS, GO_BATTLE, SET_PLAY_MODE, COMPUTER_TURN } = ACTIONS
+const { THROW_ERROR, SET_CARDS, SET_INFO, GET_CARDS, SHUFFLE_CARDS, DEAL_CARDS, GO_BATTLE, SET_PLAY_MODE, COMPUTER_TURN } = ACTIONS
 
 export const throwError = (payload) => {
   return { type: THROW_ERROR, payload } // -> errorMiddleware
@@ -12,6 +12,10 @@ export const getCards = () => {
 
 export const setCards = (payload) => {
   return { type: SET_CARDS, payload }
+}
+
+export const setInfo = (payload) => {
+  return { type: SET_INFO, payload }
 }
 
 export const shuffleCards = (payload) => {

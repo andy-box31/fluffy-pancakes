@@ -1,9 +1,10 @@
 import React from 'react'
+import { connect } from 'react-redux'
 import './Card.css'
 
-const Card = ({params, onSubmit}) => {
+const Card = ({params, onSubmit, attrs}) => {
   const details = Object.keys(params).map((key, i) => {
-    if (key === 'Name' || key === 'Image' || key === 'Type'){
+    if (!attrs.includes(key)){
       return
     }
     return (
@@ -31,4 +32,8 @@ const Card = ({params, onSubmit}) => {
   )
 }
 
-export default Card
+function mapStateToProps (state) {
+  return { attrs: state.deckInfo.competeOn }
+}
+
+export default connect(mapStateToProps)(Card)
