@@ -1,0 +1,17 @@
+{
+  "short_name": "Trumps",
+  "name": "Trumps by Box31",
+  "icons": [
+    {
+      "src": "/images/trumps.png",
+      "type": "image/png",
+      "sizes": "282x282"
+    }
+  ],
+  "start_url": "/?utm_source=beta",
+  "background_color": "#ff0000",
+  "display": "standalone",
+  "orientation": "portrait",
+  "scope": "/",
+  "theme_color": "#ff0000"
+}
