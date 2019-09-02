@@ -40,7 +40,6 @@ class battleEngine {
         current.median = (current.all.length%2 === 0) ? current.all[Math.floor(current.all.length/2)-1] : current.all[Math.floor(current.all.length/2)]
       }
     })
-    console.log(attributes)
     return attributes
   }
 
