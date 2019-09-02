@@ -1,4 +1,4 @@
-.outer{
+.grid {
   display: grid;
   grid-template-columns: repeat(10, 10%);
   grid-template-rows: repeat(10, 10%);
@@ -6,23 +6,29 @@
   margin: 10px auto;
   width: 300px;
 }
-.active{
+.player1 {
+  background: lightblue;
+}
+.player2 {
+  background: lightpink;
+}
+.active {
   grid-area:1/1/7/7;
 }
-.info{
+.info {
   grid-area: 1/7/7/11;
 }
-.score{
+.score {
   grid-area: 7/1/11/6;
 }
-.opponent{
+.opponent {
   grid-area: 7/6/11/11;
 }
 
-.theMiddle {
+.theMiddle  {
   border: 1px solid #333;
 }
-.opponentCard{
+.opponentCard {
   border-radius: 4px;
   box-sizing: border-box;
   height: calc(100% - 24px);

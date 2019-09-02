@@ -3,13 +3,14 @@ import shuffle from '../utilities/shuffle'
 
 const initialState = {
   cards: [],
-  playmode: PLAY_MODE.VS_LOCAL,
+  deckInfo: null,
+  playmode: PLAY_MODE.VS_COMPUTER,
   activePlayer: null,
   winner: null,
   gameState: GAME_STATE.PRE_GAME
 }
 
-const {SET_CARDS, SHUFFLE_CARDS, DEAL_CARDS, GO_BATTLE, SET_PLAY_MODE} = ACTIONS
+const {SET_CARDS, SET_INFO, DEAL_CARDS, GO_BATTLE, SET_PLAY_MODE} = ACTIONS
 
 function rootReducer(state = initialState, action) {
   let newState
@@ -22,6 +23,13 @@ function rootReducer(state = initialState, action) {
       }
       return newState
       break
+    case (SET_INFO):
+      newState = {
+        ...state,
+        deckInfo: action.payload
+      }
+      return newState
+      break
     case (DEAL_CARDS):
       const shuffled = shuffle(action.payload)
       const mid = Math.floor(shuffled.length/2)
@@ -31,6 +39,7 @@ function rootReducer(state = initialState, action) {
         hand1Cards: shuffled.slice(0, mid),
         hand2Cards: shuffled.slice(mid+1, shuffled.length),
         theMiddle: [],
+        winner: null,
         gameState: GAME_STATE.DURING_GAME
       }
       return newState
@@ -41,7 +50,7 @@ function rootReducer(state = initialState, action) {
           playmode: action.payload
         }
         return newState
-        break
+        break // redundant
     case (GO_BATTLE):
       let newWinner = state.winner
       let newMiddle = state.theMiddle

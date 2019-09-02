@@ -1,0 +1,42 @@
+.header {
+  height: 200px;
+}
+
+.header h1 {
+  text-align: center;
+  font-size: 50px;
+  margin-bottom: 30px;
+}
+
+.header h3 {
+  text-align: center;
+  font-size: 35px;
+}
+
+.dealBtn {
+  background:linear-gradient(to bottom, #007dc1 5%, #0061a7 100%);
+	background-color:#007dc1;
+	border-radius:4px;
+  box-shadow: 0px 10px 14px -7px #276873;
+  cursor:pointer;
+  color:#ffffff;
+  display:block;
+  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#007dc1', endColorstr='#0061a7',GradientType=0);
+	font-size:20px;
+  font-weight:bold;
+  margin: 0 auto;
+  padding:10px 60px;
+  text-transform: uppercase;
+  text-decoration:none;
+	text-shadow:0px 1px 0px #154682;}
+
+.dealBtn:hover {
+  background:linear-gradient(to bottom, #0061a7 5%, #007dc1 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#0061a7', endColorstr='#007dc1',GradientType=0);
+	background-color:#0061a7;
+}
+
+.dealBtn:active {
+  position:relative;
+  top:1px;
+}
