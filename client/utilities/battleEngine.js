@@ -48,7 +48,7 @@ class battleEngine {
   }
 
   selectAttribute (card) {
-    const keys = this.competingAttributesgit 
+    const keys = this.competingAttributes
     const index = Math.floor(Math.random()*keys.length)
     switch (this.level) {
       case (GAME_LEVEL.EASY):
