@@ -2,7 +2,7 @@ import React from 'react'
 import { connect } from 'react-redux'
 import classNames from 'classnames'
 import battleEngine from '../../utilities/battleEngine'
-import { getCards, goBattle } from '../../actions/index'
+import { goBattle } from '../../actions/index'
 import { PLAY_MODE, PLAYERS, GAME_STATE, GAME_LEVEL } from '../../utilities/constants'
 import Splash from '../Splash/Splash'
 import Card from '../Card/Card'
@@ -55,7 +55,7 @@ class App extends React.Component {
 
   render () {
     const { hand1Cards, hand2Cards, activePlayer, theMiddle, gameState, playmode } = this.props
-    if (true) {
+    if (true) { // TODO
       let activeCard
       let activeHand = activePlayer === PLAYERS.PLAYER_1 ? hand1Cards : hand2Cards
       if (activeHand && activeHand.length > 0) {

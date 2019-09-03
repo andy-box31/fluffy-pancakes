@@ -19,7 +19,6 @@ const RadioSelector = ({params = [], handleChange, activeParam, name}) => {
     })}
     </React.Fragment>
   )
-  
 }
 
 export default RadioSelector

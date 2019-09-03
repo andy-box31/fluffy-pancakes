@@ -34,7 +34,6 @@ const Navigation = ({gameLevel, setGameLevel}) => {
           handleChange={(handleGameLevelSelection)}
           activeParam={gameLevel}
         />
-
       </nav>
       }
     </div>

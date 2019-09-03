@@ -11,8 +11,8 @@ const Splash = ({dealCards, getCards, winner = null}) => {
   const handleSelect = (e) => {
     updateChoice(e.target.value)
     getCards(e.target.value)
-
   }
+
   return (
     <div className="splash">
       <header className="header">
@@ -44,4 +44,5 @@ function mapDispatchToProps(dispatch) {
     getCards: (choice) => dispatch(getCards(choice))
   }
 }
+
 export default connect(mapStateToProps, mapDispatchToProps)(Splash)
