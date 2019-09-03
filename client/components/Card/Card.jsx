@@ -2,10 +2,13 @@ import React from 'react'
 import { connect } from 'react-redux'
 import './Card.css'
 
-const Card = ({params, onSubmit, attrs}) => {
+const Card = ({params, onSubmit, attrs, readOnly}) => {
   const details = Object.keys(params).map((key, i) => {
     if (!attrs.includes(key)){
       return
+    }
+    if (readOnly) {
+      return <p key={key}> {key}: {params[key]} </p> //TODO should be a list
     }
     return (
       <label key={key} className="cardRadio">

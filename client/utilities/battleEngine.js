@@ -40,7 +40,6 @@ class battleEngine {
         current.median = (current.all.length%2 === 0) ? current.all[Math.floor(current.all.length/2)-1] : current.all[Math.floor(current.all.length/2)]
       }
     })
-    console.log(attributes)
     return attributes
   }
 
@@ -78,7 +77,6 @@ class battleEngine {
           let val = this.getPercentageInRange(card[keys[i]], current.low, current.high)
           let median = this.getPercentageInRange(current.median, current.low, current.high)
           if (val > median) {
-            console.log('returning, gt median', keys[i])
             return keys[i]
           }
         }
@@ -91,7 +89,6 @@ class battleEngine {
             best = { key: keys[i], value: val }
           }
         }
-        console.log('returning, best', best.key)
         return best.key
     }
   }

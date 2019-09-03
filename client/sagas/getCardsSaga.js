@@ -2,9 +2,9 @@ import { call, put } from 'redux-saga/effects'
 import api from '../services/api'
 import { setCards, setInfo, throwError } from '../actions/index'
 
-export function * getCardsSaga() {
+export function * getCardsSaga(action) {
   try {
-    const payload = yield call(() => api.get('transformersShort'))
+    const payload = yield call(() => api.get(action.payload))
     yield put(setCards(payload.cards))
     yield put(setInfo(payload.info))
   } catch (e) {

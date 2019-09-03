@@ -1,302 +1,307 @@
-[
-  {
-    "Name": "Astrotrain",
-    "Size": 5,
-    "Speed": 3,
-    "Power": 45,
-    "Disguise": 5,
-    "Rating": 10,
-    "Type": "Insecticon",
-    "Image": "https://placeimg.com/640/480/people"
+{
+  "info": {
+    "competeOn": ["Size", "Speed", "Power", "Disguise", "Rating" ]
   },
-  {
-    "Name": "Barrage",
-    "Size": 1,
-    "Speed": 2,
-    "Power": 35,
-    "Disguise": 20,
-    "Rating": 6,
-    "Type": "Insecticon",
-    "Image": "https://placeimg.com/640/480/people"
-  },
-  {
-    "Name": "Blitzwing",
-    "Size": 4,
-    "Speed": 8,
-    "Power": 45,
-    "Disguise": 10,
-    "Rating": 8,
-    "Type": "Insecticon",
-    "Image": "https://placeimg.com/640/480/people"
-  },
-  {
-    "Name": "Bluestreak",
-    "Size": 3,
-    "Speed": 6,
-    "Power": 25,
-    "Disguise": 14,
-    "Rating": 4,
-    "Type": "Autobot",
-    "Image": "https://placeimg.com/640/480/people"
-  },
-  {
-    "Name": "Brawn",
-    "Size": 2,
-    "Speed": 3,
-    "Power": 32,
-    "Disguise": 19,
-    "Rating": 7,
-    "Type": "Autobot",
-    "Image": "https://placeimg.com/640/480/people"
-  },
-  {
-    "Name": "Bumblebee",
-    "Size": 2,
-    "Speed": 5,
-    "Power": 15,
-    "Disguise": 16,
-    "Rating": 14,
-    "Type": "Autobot",
-    "Image": "https://placeimg.com/640/480/people"
-  },
-  {
-    "Name": "Cliffjumper",
-    "Size": 1,
-    "Speed": 6,
-    "Power": 30,
-    "Disguise": 16,
-    "Rating": 7,
-    "Type": "Autobot",
-    "Image": "https://placeimg.com/640/480/people"
-  },
-  {
-    "Name": "Cosmos",
-    "Size": 6,
-    "Speed": 1,
-    "Power": 50,
-    "Disguise": 1,
-    "Rating": 5,
-    "Type": "Autobot",
-    "Image": "https://placeimg.com/640/480/people"
-  },
-  {
-    "Name": "Devastator",
-    "Size": 5,
-    "Speed": 4,
-    "Power": 50,
-    "Disguise": 20,
-    "Rating": 14,
-    "Type": "Insecticon",
-    "Image": "https://placeimg.com/640/480/people"
-  },
-  {
-    "Name": "Frenzy",
-    "Size": 1,
-    "Speed": 2,
-    "Power": 15,
-    "Disguise": 18,
-    "Rating": 8,
-    "Type": "Autobot",
-    "Image": "https://placeimg.com/640/480/people"
-  },
-  {
-    "Name": "Grapple",
-    "Size": 5,
-    "Speed": 2,
-    "Power": 49,
-    "Disguise": 13,
-    "Rating": 3,
-    "Type": "Autobot",
-    "Image": "https://placeimg.com/640/480/people"
-  },
-  {
-    "Name": "Grimlock",
-    "Size": 4,
-    "Speed": 5,
-    "Power": 49,
-    "Disguise": 1,
-    "Rating": 15,
-    "Type": "Autobot",
-    "Image": "https://placeimg.com/640/480/people"
-  },
-  {
-    "Name": "Hound",
-    "Size": 2,
-    "Speed": 4,
-    "Power": 18,
-    "Disguise": 16,
-    "Rating": 4,
-    "Type": "Autobot",
-    "Image": "https://placeimg.com/640/480/people"
-  },
-  {
-    "Name": "Huffer",
-    "Size": 2,
-    "Speed": 3,
-    "Power": 15,
-    "Disguise": 11,
-    "Rating": 3,
-    "Type": "Autobot",
-    "Image": "https://placeimg.com/640/480/people"
-  },
-  {
-    "Name": "Ironhide",
-    "Size": 3,
-    "Speed": 4,
-    "Power": 32,
-    "Disguise": 20,
-    "Rating": 13,
-    "Type": "Autobot",
-    "Image": "https://placeimg.com/640/480/people"
-  },
-  {
-    "Name": "Jazz",
-    "Size": 2,
-    "Speed": 8,
-    "Power": 36,
-    "Disguise": 12,
-    "Rating": 13,
-    "Type": "Autobot",
-    "Image": "https://placeimg.com/640/480/people"
-  },
-  {
-    "Name": "Laserbeak",
-    "Size": 1,
-    "Speed": 5,
-    "Power": 25,
-    "Disguise": 18,
-    "Rating": 12,
-    "Type": "Decepticon",
-    "Image": "https://placeimg.com/640/480/people"
-  },
-  {
-    "Name": "Megatron",
-    "Size": 5,
-    "Speed": 6,
-    "Power": 48,
-    "Disguise": 3,
-    "Rating": 14,
-    "Type": "Autobot",
-    "Image": "https://placeimg.com/640/480/people"
-  },
-  {
-    "Name": "Optimus Prime",
-    "Size": 4,
-    "Speed": 8,
-    "Power": 50,
-    "Disguise": 11,
-    "Rating": 15,
-    "Type": "Autobot",
-    "Image": "https://placeimg.com/640/480/people"
-  },
-  {
-    "Name": "Ransack",
-    "Size": 1,
-    "Speed": 4,
-    "Power": 28,
-    "Disguise": 20,
-    "Rating": 6,
-    "Type": "Insecticon",
-    "Image": "https://placeimg.com/640/480/people"
-  },
-  {
-    "Name": "Ratchet",
-    "Size": 3,
-    "Speed": 6,
-    "Power": 28,
-    "Disguise": 18,
-    "Rating": 10,
-    "Type": "Autobot",
-    "Image": "https://placeimg.com/640/480/people"
-  },
-  {
-    "Name": "Ravage",
-    "Size": 1,
-    "Speed": 4,
-    "Power": 30,
-    "Disguise": 18,
-    "Rating": 13,
-    "Type": "Insecticon",
-    "Image": "https://placeimg.com/640/480/people"
-  },
-  {
-    "Name": "Seaspray",
-    "Size": 2,
-    "Speed": 4,
-    "Power": 20,
-    "Disguise": 6,
-    "Rating": 2,
-    "Type": "Autobot",
-    "Image": "https://placeimg.com/640/480/people"
-  },
-  {
-    "Name": "Shockwave",
-    "Size": 4,
-    "Speed": 5,
-    "Power": 48,
-    "Disguise": 1,
-    "Rating": 9,
-    "Type": "Insecticon",
-    "Image": "https://placeimg.com/640/480/people"
-  },
-  {
-    "Name": "Skywarp",
-    "Size": 3,
-    "Speed": 10,
-    "Power": 26,
-    "Disguise": 11,
-    "Rating": 2,
-    "Type": "Insecticon",
-    "Image": "https://placeimg.com/640/480/people"
-  },
-  {
-    "Name": "Soundwave",
-    "Size": 3,
-    "Speed": 4,
-    "Power": 30,
-    "Disguise": 18,
-    "Rating": 11,
-    "Type": "Insecticon",
-    "Image": "https://placeimg.com/640/480/people"
-  },
-  {
-    "Name": "Starscream",
-    "Size": 4,
-    "Speed": 9,
-    "Power": 35,
-    "Disguise": 10,
-    "Rating": 9,
-    "Type": "Insecticon",
-    "Image": "https://placeimg.com/640/480/people"
-  },
-  {
-    "Name": "Thundercracker",
-    "Size": 4,
-    "Speed": 8,
-    "Power": 36,
-    "Disguise": 11,
-    "Rating": 5,
-    "Type": "Insecticon",
-    "Image": "https://placeimg.com/640/480/people"
-  },
-  {
-    "Name": "Topspin",
-    "Size": 5,
-    "Speed": 4,
-    "Power": 48,
-    "Disguise": 2,
-    "Rating": 11,
-    "Type": "Autobot",
-    "Image": "https://placeimg.com/640/480/people"
-  },
-  {
-    "Name": "Windcharger",
-    "Size": 3,
-    "Speed": 9,
-    "Power": 40,
-    "Disguise": 15,
-    "Rating": 12,
-    "Type": "Autobot",
-    "Image": "https://placeimg.com/640/480/people"
-  }
-]
+  "cards": [
+    {
+      "Name": "Astrotrain",
+      "Size": 5,
+      "Speed": 3,
+      "Power": 45,
+      "Disguise": 5,
+      "Rating": 10,
+      "Type": "Insecticon",
+      "Image": "https://placeimg.com/640/480/people"
+    },
+    {
+      "Name": "Barrage",
+      "Size": 1,
+      "Speed": 2,
+      "Power": 35,
+      "Disguise": 20,
+      "Rating": 6,
+      "Type": "Insecticon",
+      "Image": "https://placeimg.com/640/480/people"
+    },
+    {
+      "Name": "Blitzwing",
+      "Size": 4,
+      "Speed": 8,
+      "Power": 45,
+      "Disguise": 10,
+      "Rating": 8,
+      "Type": "Insecticon",
+      "Image": "https://placeimg.com/640/480/people"
+    },
+    {
+      "Name": "Bluestreak",
+      "Size": 3,
+      "Speed": 6,
+      "Power": 25,
+      "Disguise": 14,
+      "Rating": 4,
+      "Type": "Autobot",
+      "Image": "https://placeimg.com/640/480/people"
+    },
+    {
+      "Name": "Brawn",
+      "Size": 2,
+      "Speed": 3,
+      "Power": 32,
+      "Disguise": 19,
+      "Rating": 7,
+      "Type": "Autobot",
+      "Image": "https://placeimg.com/640/480/people"
+    },
+    {
+      "Name": "Bumblebee",
+      "Size": 2,
+      "Speed": 5,
+      "Power": 15,
+      "Disguise": 16,
+      "Rating": 14,
+      "Type": "Autobot",
+      "Image": "https://placeimg.com/640/480/people"
+    },
+    {
+      "Name": "Cliffjumper",
+      "Size": 1,
+      "Speed": 6,
+      "Power": 30,
+      "Disguise": 16,
+      "Rating": 7,
+      "Type": "Autobot",
+      "Image": "https://placeimg.com/640/480/people"
+    },
+    {
+      "Name": "Cosmos",
+      "Size": 6,
+      "Speed": 1,
+      "Power": 50,
+      "Disguise": 1,
+      "Rating": 5,
+      "Type": "Autobot",
+      "Image": "https://placeimg.com/640/480/people"
+    },
+    {
+      "Name": "Devastator",
+      "Size": 5,
+      "Speed": 4,
+      "Power": 50,
+      "Disguise": 20,
+      "Rating": 14,
+      "Type": "Insecticon",
+      "Image": "https://placeimg.com/640/480/people"
+    },
+    {
+      "Name": "Frenzy",
+      "Size": 1,
+      "Speed": 2,
+      "Power": 15,
+      "Disguise": 18,
+      "Rating": 8,
+      "Type": "Autobot",
+      "Image": "https://placeimg.com/640/480/people"
+    },
+    {
+      "Name": "Grapple",
+      "Size": 5,
+      "Speed": 2,
+      "Power": 49,
+      "Disguise": 13,
+      "Rating": 3,
+      "Type": "Autobot",
+      "Image": "https://placeimg.com/640/480/people"
+    },
+    {
+      "Name": "Grimlock",
+      "Size": 4,
+      "Speed": 5,
+      "Power": 49,
+      "Disguise": 1,
+      "Rating": 15,
+      "Type": "Autobot",
+      "Image": "https://placeimg.com/640/480/people"
+    },
+    {
+      "Name": "Hound",
+      "Size": 2,
+      "Speed": 4,
+      "Power": 18,
+      "Disguise": 16,
+      "Rating": 4,
+      "Type": "Autobot",
+      "Image": "https://placeimg.com/640/480/people"
+    },
+    {
+      "Name": "Huffer",
+      "Size": 2,
+      "Speed": 3,
+      "Power": 15,
+      "Disguise": 11,
+      "Rating": 3,
+      "Type": "Autobot",
+      "Image": "https://placeimg.com/640/480/people"
+    },
+    {
+      "Name": "Ironhide",
+      "Size": 3,
+      "Speed": 4,
+      "Power": 32,
+      "Disguise": 20,
+      "Rating": 13,
+      "Type": "Autobot",
+      "Image": "https://placeimg.com/640/480/people"
+    },
+    {
+      "Name": "Jazz",
+      "Size": 2,
+      "Speed": 8,
+      "Power": 36,
+      "Disguise": 12,
+      "Rating": 13,
+      "Type": "Autobot",
+      "Image": "https://placeimg.com/640/480/people"
+    },
+    {
+      "Name": "Laserbeak",
+      "Size": 1,
+      "Speed": 5,
+      "Power": 25,
+      "Disguise": 18,
+      "Rating": 12,
+      "Type": "Decepticon",
+      "Image": "https://placeimg.com/640/480/people"
+    },
+    {
+      "Name": "Megatron",
+      "Size": 5,
+      "Speed": 6,
+      "Power": 48,
+      "Disguise": 3,
+      "Rating": 14,
+      "Type": "Autobot",
+      "Image": "https://placeimg.com/640/480/people"
+    },
+    {
+      "Name": "Optimus Prime",
+      "Size": 4,
+      "Speed": 8,
+      "Power": 50,
+      "Disguise": 11,
+      "Rating": 15,
+      "Type": "Autobot",
+      "Image": "https://placeimg.com/640/480/people"
+    },
+    {
+      "Name": "Ransack",
+      "Size": 1,
+      "Speed": 4,
+      "Power": 28,
+      "Disguise": 20,
+      "Rating": 6,
+      "Type": "Insecticon",
+      "Image": "https://placeimg.com/640/480/people"
+    },
+    {
+      "Name": "Ratchet",
+      "Size": 3,
+      "Speed": 6,
+      "Power": 28,
+      "Disguise": 18,
+      "Rating": 10,
+      "Type": "Autobot",
+      "Image": "https://placeimg.com/640/480/people"
+    },
+    {
+      "Name": "Ravage",
+      "Size": 1,
+      "Speed": 4,
+      "Power": 30,
+      "Disguise": 18,
+      "Rating": 13,
+      "Type": "Insecticon",
+      "Image": "https://placeimg.com/640/480/people"
+    },
+    {
+      "Name": "Seaspray",
+      "Size": 2,
+      "Speed": 4,
+      "Power": 20,
+      "Disguise": 6,
+      "Rating": 2,
+      "Type": "Autobot",
+      "Image": "https://placeimg.com/640/480/people"
+    },
+    {
+      "Name": "Shockwave",
+      "Size": 4,
+      "Speed": 5,
+      "Power": 48,
+      "Disguise": 1,
+      "Rating": 9,
+      "Type": "Insecticon",
+      "Image": "https://placeimg.com/640/480/people"
+    },
+    {
+      "Name": "Skywarp",
+      "Size": 3,
+      "Speed": 10,
+      "Power": 26,
+      "Disguise": 11,
+      "Rating": 2,
+      "Type": "Insecticon",
+      "Image": "https://placeimg.com/640/480/people"
+    },
+    {
+      "Name": "Soundwave",
+      "Size": 3,
+      "Speed": 4,
+      "Power": 30,
+      "Disguise": 18,
+      "Rating": 11,
+      "Type": "Insecticon",
+      "Image": "https://placeimg.com/640/480/people"
+    },
+    {
+      "Name": "Starscream",
+      "Size": 4,
+      "Speed": 9,
+      "Power": 35,
+      "Disguise": 10,
+      "Rating": 9,
+      "Type": "Insecticon",
+      "Image": "https://placeimg.com/640/480/people"
+    },
+    {
+      "Name": "Thundercracker",
+      "Size": 4,
+      "Speed": 8,
+      "Power": 36,
+      "Disguise": 11,
+      "Rating": 5,
+      "Type": "Insecticon",
+      "Image": "https://placeimg.com/640/480/people"
+    },
+    {
+      "Name": "Topspin",
+      "Size": 5,
+      "Speed": 4,
+      "Power": 48,
+      "Disguise": 2,
+      "Rating": 11,
+      "Type": "Autobot",
+      "Image": "https://placeimg.com/640/480/people"
+    },
+    {
+      "Name": "Windcharger",
+      "Size": 3,
+      "Speed": 9,
+      "Power": 40,
+      "Disguise": 15,
+      "Rating": 12,
+      "Type": "Autobot",
+      "Image": "https://placeimg.com/640/480/people"
+    }
+  ]
+}

@@ -2,6 +2,7 @@ import React from 'react'
 import { connect } from 'react-redux'
 import { setPlaymode } from '../../actions/index'
 import { PLAY_MODE } from '../../utilities/constants'
+import RadioSelector from '../RadioSelector/RadioSelector'
 import './PlaymodeSelector.css'
 
 class PlaymodeSelector extends React.Component{
@@ -17,19 +18,12 @@ class PlaymodeSelector extends React.Component{
 
   render () {
     return <div className="PlaymodeSelector">
-    {Object.keys(PLAY_MODE).map((mode, i) => {
-      return (
-        <label className="selectionElement" key={mode}>
-          <input
-            type="radio"
-            name="playmodeSelection"
-            value={mode}
-            onChange={this.handlePlaymodeSelection}
-            checked={this.props.playmode === mode}
-          /> {PLAY_MODE[mode]}
-        </label>
-      )
-    })}
+      <RadioSelector
+        params={Object.keys(PLAY_MODE)}
+        name="playmodeSelection"
+        handleChange={this.handlePlaymodeSelection}
+        activeParam={this.props.playmode}
+      />
   </div>
   }
 }
