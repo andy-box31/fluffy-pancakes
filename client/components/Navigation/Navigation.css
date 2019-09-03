@@ -19,7 +19,7 @@
 .menu.open {
   background: white;
   box-shadow: 1px 1px 5px rgba(0,0,0,.3);
-  width: 100px;
+  width: 110px;
 }
 
 .menu.open .icon:before {

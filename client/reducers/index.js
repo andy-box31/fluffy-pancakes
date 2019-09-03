@@ -1,4 +1,4 @@
-import { ACTIONS, PLAY_MODE, PLAYERS, GAME_STATE } from '../utilities/constants'
+import { ACTIONS, PLAY_MODE, PLAYERS, GAME_STATE, GAME_LEVEL } from '../utilities/constants'
 import shuffle from '../utilities/shuffle'
 
 const initialState = {
@@ -7,10 +7,11 @@ const initialState = {
   playmode: PLAY_MODE.VS_COMPUTER,
   activePlayer: null,
   winner: null,
-  gameState: GAME_STATE.PRE_GAME
+  gameState: GAME_STATE.PRE_GAME,
+  gameLevel: GAME_LEVEL.MEDIUM
 }
 
-const {SET_CARDS, SET_INFO, DEAL_CARDS, GO_BATTLE, SET_PLAY_MODE} = ACTIONS
+const {SET_CARDS, SET_INFO, DEAL_CARDS, GO_BATTLE, SET_PLAY_MODE, SET_GAME_LEVEL} = ACTIONS
 
 function rootReducer(state = initialState, action) {
   let newState
@@ -50,6 +51,12 @@ function rootReducer(state = initialState, action) {
         }
         return newState
         break // redundant
+    case (SET_GAME_LEVEL):
+      newState = {
+        ...state,
+        gameLevel: action.payload
+      }
+      return newState
     case (GO_BATTLE):
       let newWinner = state.winner
       let newMiddle = state.theMiddle
@@ -86,7 +93,6 @@ function rootReducer(state = initialState, action) {
         newWinner = PLAYERS.PLAYER_1
         newGameState = GAME_STATE.POST_GAME
       }
-
       newState = {
         ...state,
         hand1Cards: newHand1,
