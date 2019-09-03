@@ -32,5 +32,9 @@ export const GAME_STATE = {
 export const GAME_LEVEL = {
   EASY: 'EASY',
   MEDIUM: 'MEDIUM',
-  HARD: 'HARD'
+  HARD: 'HARD',
+  RANDOM: 'RANDOM',
+  GT_MEDIAN: 'GT_MEDIAN',
+  GT_AVERAGE: 'GT_AVERAGE',
+  BEST_ON_CARD: 'BEST_ON_CARD'
 }

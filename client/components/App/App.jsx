@@ -40,7 +40,7 @@ class App extends React.Component {
 
   handleDealCards () {
     this.props.dealCards(this.props.cards)
-    this.battleEngine = new battleEngine(this.props.cards, this.props.deckInfo, GAME_LEVEL.MEDIUM)
+    this.battleEngine = new battleEngine(this.props.cards, this.props.deckInfo, GAME_LEVEL.GT_MEDIAN)
   }
 
   handleSelection (e) {
