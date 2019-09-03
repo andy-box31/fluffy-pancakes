@@ -1,0 +1,307 @@
+{
+  "info": {
+    "competeOn": ["Height-ft","Weight-lbs","Length-ft","Killer_rating","Intelligence","Age-millions_of_yrs"]
+  },
+  "cards":[
+    {
+      "Name": "Pachycephalosaurus",
+      "Eating Habits": "Herbivore",
+      "Height-ft": 119.7,
+      "Weight-lbs": 6614,
+      "Length-ft": 26.2,
+      "Killer_rating": 2,
+      "Intelligence": 7,
+      "Age-millions_of_yrs": 76
+    },
+    {
+      "Name": "Tyrannosaurus Rex",
+      "Eating Habits": "Carnivore",
+      "Height-ft": 18.4,
+      "Weight-lbs": 13227,
+      "Length-ft":39.3,
+      "Killer_rating": 9,
+      "Intelligence": 9,
+      "Age-millions_of_yrs": 6
+    },
+    {
+      "Name": "Barosaurus",
+      "Eating Habits": "Herbivore",
+      "Height-ft": 85.3,
+      "Weight-lbs": 8819,
+      "Length-ft": 85.3,
+      "Killer_rating": 3,
+      "Intelligence": 2,
+      "Age-millions_of_yrs": 156
+    },
+    {
+      "Name": "Heterodontosaurus",
+      "Eating Habits": "Herbivore",
+      "Height-ft": 1.6,
+      "Weight-lbs": 22,
+      "Length-ft": 3.9,
+      "Killer_rating": 1,
+      "Intelligence": 5,
+      "Age-millions_of_yrs": 208
+    },
+    {
+      "Name": "Suchomimus",
+      "Eating Habits": "Carnivore",
+      "Height-ft": 13.1,
+      "Weight-lbs": 11023,
+      "Length-ft": 39.3,
+      "Killer_rating": 8,
+      "Intelligence": 7,
+      "Age-millions_of_yrs": 100
+    },
+    {
+      "Name": "Pachyrhinosaurus",
+      "Eating Habits": "Herbivore",
+      "Height-ft": 9.8,
+      "Weight-lbs": 8000,
+      "Length-ft": 23,
+      "Killer_rating": 2,
+      "Intelligence": 4,
+      "Age-millions_of_yrs": 70
+    },
+    {
+      "Name": "Compsognathus",
+      "Eating Habits": "Carnivore",
+      "Height-ft": 2.3,
+      "Weight-lbs": 6.6,
+      "Length-ft": 4.6,
+      "Killer_rating": 5,
+      "Intelligence": 7,
+      "Age-millions_of_yrs": 145
+    },
+    {
+      "Name": "Iguanodon",
+      "Eating Habits": "Herbivore",
+      "Height-ft": 16.4,
+      "Weight-lbs": 9920,
+      "Length-ft": 32.8,
+      "Killer_rating": 3,
+      "Intelligence": 6,
+      "Age-millions_of_yrs": 135
+    },
+    {
+      "Name": "Pentaceratops",
+      "Eating Habits": "Herbivore",
+      "Height-ft": 9.8,
+      "Weight-lbs": 17636,
+      "Length-ft": 26.2,
+      "Killer_rating": 3,
+      "Intelligence": 5,
+      "Age-millions_of_yrs": 75
+    },
+    {
+      "Name": "Coelophysis",
+      "Eating Habits": "Carnivore",
+      "Height-ft": 6.6,
+      "Weight-lbs": 59.5,
+      "Length-ft": 9.8,
+      "Killer_rating": 4,
+      "Intelligence": 7,
+      "Age-millions_of_yrs": 225
+    },
+    {
+      "Name": "Velociraptor",
+      "Eating Habits": "Carnivore",
+      "Height-ft": 3.3,
+      "Weight-lbs": 33,
+      "Length-ft": 6.6,
+      "Killer_rating": 9,
+      "Intelligence": 10,
+      "Age-millions_of_yrs": 85
+    },
+    {
+      "Name": "Centrosaurus",
+      "Eating Habits": "Herbivore",
+      "Height-ft": 6.6,
+      "Weight-lbs": 2205,
+      "Length-ft": 19.7,
+      "Killer_rating": 2,
+      "Intelligence": 4,
+      "Age-millions_of_yrs": 76
+    },
+    {
+      "Name": "Megalosaurus",
+      "Eating Habits": "Carnivore",
+      "Height-ft": 9.8,
+      "Weight-lbs": 2205,
+      "Length-ft": 29.5,
+      "Killer_rating": 9,
+      "Intelligence": 8,
+      "Age-millions_of_yrs": 175
+    },
+    {
+      "Name": "Protoceratops",
+      "Eating Habits": "Herbivore",
+      "Height-ft": 4.9,
+      "Weight-lbs": 881,
+      "Length-ft": 6.6,
+      "Killer_rating": 2,
+      "Intelligence": 4,
+      "Age-millions_of_yrs": 72
+    },
+    {
+      "Name": "Giganotosaurus",
+      "Eating Habits": "Carnivore",
+      "Height-ft": 19.7,
+      "Weight-lbs": 17636,
+      "Length-ft": 52.5,
+      "Killer_rating": 10,
+      "Intelligence": 7,
+      "Age-millions_of_yrs": 100
+    },
+    {
+      "Name": "Brachiosaurus",
+      "Eating Habits": "Herbivore",
+      "Height-ft": 52.5,
+      "Weight-lbs": 17636,
+      "Length-ft": 85.3,
+      "Killer_rating": 3,
+      "Intelligence": 2,
+      "Age-millions_of_yrs": 156
+    },
+    {
+      "Name": "Herrerasaurus",
+      "Eating Habits": "Carnivore",
+      "Height-ft": 3.3,
+      "Weight-lbs": 772,
+      "Length-ft": 16.4,
+      "Killer_rating": 7,
+      "Intelligence": 6,
+      "Age-millions_of_yrs": 230
+    },
+    {
+      "Name": "Gallimimus",
+      "Eating Habits": "Omnivore",
+      "Height-ft": 9.8,
+      "Weight-lbs": 440.9,
+      "Length-ft": 18.3,
+      "Killer_rating": 5,
+      "Intelligence": 7,
+      "Age-millions_of_yrs": 74
+    },
+    {
+      "Name": "Triceratops",
+      "Eating Habits": "Herbivore",
+      "Height-ft": 9.8,
+      "Weight-lbs": 12125,
+      "Length-ft": 29.5,
+      "Killer_rating": 2,
+      "Intelligence": 4,
+      "Age-millions_of_yrs": 72
+    },
+    {
+      "Name": "Corythosaurus",
+      "Eating Habits": "Herbivore",
+      "Height-ft": 16.4,
+      "Weight-lbs": 11023,
+      "Length-ft": 26.2,
+      "Killer_rating": 2,
+      "Intelligence": 5,
+      "Age-millions_of_yrs": 80
+    },
+    {
+      "Name": "Maiasaura",
+      "Eating Habits": "Herbivore",
+      "Height-ft": 8.2,
+      "Weight-lbs": 6614,
+      "Length-ft": 29.5,
+      "Killer_rating": 2,
+      "Intelligence": 3,
+      "Age-millions_of_yrs": 80
+    },
+    {
+      "Name": "Dimorphodon",
+      "Eating Habits": "Carnivore",
+      "Height-ft": 0.82,
+      "Weight-lbs": 8.8,
+      "Length-ft": 0.82,
+      "Killer_rating": 4,
+      "Intelligence": 4,
+      "Age-millions_of_yrs": 200
+    },
+    {
+      "Name": "Stegosaurus",
+      "Eating Habits": "Herbivore",
+      "Height-ft": 9.8,
+      "Weight-lbs": 6834,
+      "Length-ft": 29.5,
+      "Killer_rating": 2,
+      "Intelligence": 1,
+      "Age-millions_of_yrs": 76
+    },
+    {
+      "Name": "Stenonychosaurus",
+      "Eating Habits": "Carnivore",
+      "Height-ft": 5.9,
+      "Weight-lbs": 132,
+      "Length-ft": 6.6,
+      "Killer_rating": 7,
+      "Intelligence": 10,
+      "Age-millions_of_yrs": 76
+    },
+    {
+      "Name": "Hypsilophodon",
+      "Eating Habits": "Herbivore",
+      "Height-ft": 2.6,
+      "Weight-lbs": 110,
+      "Length-ft": 6.6,
+      "Killer_rating": 1,
+      "Intelligence": 6,
+      "Age-millions_of_yrs": 125
+    },
+    {
+      "Name": "Camarasaurus",
+      "Eating Habits": "Herbivore",
+      "Height-ft": 29.5,
+      "Weight-lbs": 4409,
+      "Length-ft": 59.1,
+      "Killer_rating": 3,
+      "Intelligence": 2,
+      "Age-millions_of_yrs": 150
+    },
+    {
+      "Name": "Styracosaurus",
+      "Eating Habits": "Herbivore",
+      "Height-ft": 6.6,
+      "Weight-lbs": 6614,
+      "Length-ft": 16.4,
+      "Killer_rating": 2,
+      "Intelligence": 3,
+      "Age-millions_of_yrs": 77
+    },
+    {
+      "Name": "Euoplocephalus",
+      "Eating Habits": "Herbivore",
+      "Height-ft": 5.9,
+      "Weight-lbs": 4409,
+      "Length-ft": 19.7,
+      "Killer_rating": 3,
+      "Intelligence": 3,
+      "Age-millions_of_yrs": 76
+    },
+    {
+      "Name": "Archaeopteryx",
+      "Eating Habits": "Omnivore",
+      "Height-ft": 1,
+      "Weight-lbs": 13.2,
+      "Length-ft": 1,
+      "Killer_rating": 6,
+      "Intelligence": 5,
+      "Age-millions_of_yrs": 150
+    },
+    {
+      "Name": "Oviraptor",
+      "Eating Habits": "Carnivore",
+      "Height-ft": 2.6,
+      "Weight-lbs": 44,
+      "Length-ft": 5.9,
+      "Killer_rating": 5,
+      "Intelligence": 8,
+      "Age-millions_of_yrs": 70
+    }
+  ]
+}

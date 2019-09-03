@@ -1,7 +1,7 @@
 import {GAME_LEVEL} from './constants'
 
 class battleEngine {
-  constructor (cards = [], info = {}, level = GAME_LEVEL.EASY) {
+  constructor (cards = [], info = {}, level = GAME_LEVEL.MEDIUM) {
     this.attributes = this.learnFrom(cards, info.competeOn)
     this.level = level
     this.competingAttributes = info.competeOn
@@ -47,23 +47,49 @@ class battleEngine {
     return a - b
   }
 
+  getPercentageInRange (value, low, high) {
+    let range = high - low
+    let relativeValue = value - low
+    return relativeValue/range * 100
+  }
+
   selectAttribute (card) {
-    const keys = this.competingAttributes
-    const index = Math.floor(Math.random()*keys.length)
+    const keys = this.competingAttributes //[]
+    const randomIndex = Math.floor(Math.random()*keys.length)
+    let best = { key: null, value: 0 }
     switch (this.level) {
       case (GAME_LEVEL.EASY):
-          return keys[index]
+      case (GAME_LEVEL.RANDOM):
+          return keys[randomIndex]
+      case (GAME_LEVEL.GT_AVERAGE):
+          for (let i = 0; i<keys.length; i++) {
+            const current = this.attributes[keys[i]]
+            let val = this.getPercentageInRange(card[keys[i]], current.low, current.high)
+            let average = this.getPercentageInRange(current.average, current.low, current.high)
+            if (val > average) {
+              return keys[i]
+            }
+          }
       case (GAME_LEVEL.MEDIUM):
-        // Know the range for each attr lowest->highest
-        // Find current attr as % value within range
-        // pick highest % attr
-        let attr
-       // for
+      case (GAME_LEVEL.GT_MEDIAN):
+        for (let i = 0; i<keys.length; i++) {
+          const current = this.attributes[keys[i]]
+          let val = this.getPercentageInRange(card[keys[i]], current.low, current.high)
+          let median = this.getPercentageInRange(current.median, current.low, current.high)
+          if (val > median) {
+            return keys[i]
+          }
+        }
       case (GAME_LEVEL.HARD):
-        // Know range and average score across Deck
-        // Find current attr as % in range aswell as relative to average score maybe range between average and top?
-        // pick best
-        return keys[index]
+      case (GAME_LEVEL.BEST_ON_CARD):
+        for (let i = 0; i<keys.length; i++) {
+          const current = this.attributes[keys[i]]
+          let val = this.getPercentageInRange(card[keys[i]], current.low, current.high)
+          if (val > best.value) {
+            best = { key: keys[i], value: val }
+          }
+        }
+        return best.key
     }
   }
 }

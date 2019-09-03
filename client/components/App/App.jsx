@@ -2,7 +2,7 @@ import React from 'react'
 import { connect } from 'react-redux'
 import classNames from 'classnames'
 import battleEngine from '../../utilities/battleEngine'
-import { getCards, dealCards, goBattle, setPlaymode } from '../../actions/index'
+import { goBattle } from '../../actions/index'
 import { PLAY_MODE, PLAYERS, GAME_STATE, GAME_LEVEL } from '../../utilities/constants'
 import Splash from '../Splash/Splash'
 import Card from '../Card/Card'
@@ -17,13 +17,7 @@ class App extends React.Component {
     }
     this.battleEngine = null
     this.handleSelection = this.handleSelection.bind(this)
-    this.handleDealCards = this.handleDealCards.bind(this)
     this.continuePlay = this.continuePlay.bind(this)
-  }
-
-  componentDidMount(){
-    // This action is intercepted by the sagas middleware which fires setCards action.
-    this.props.getCards()
   }
 
   componentDidUpdate() {
@@ -31,16 +25,14 @@ class App extends React.Component {
     if (!this.state.wait && !this.props.winner && this.props.playmode === PLAY_MODE.VS_COMPUTER && this.props.activePlayer === PLAYERS.PLAYER_2) {
       this.setState({wait: true})
     }
+    if (this.battleEngine === null && this.props.cards.length > 0 && this.props.deckInfo.competeOn.length > 0) {
+      this.battleEngine = new battleEngine(this.props.cards, this.props.deckInfo, GAME_LEVEL.GT_MEDIAN)
+    }
   }
 
   continuePlay () {
     this.setState({wait: false})
     this.computerTurn()
-  }
-
-  handleDealCards () {
-    this.props.dealCards(this.props.cards)
-    this.battleEngine = new battleEngine(this.props.cards, this.props.deckInfo, GAME_LEVEL.MEDIUM)
   }
 
   handleSelection (e) {
@@ -62,18 +54,17 @@ class App extends React.Component {
   }
 
   render () {
-    const { name, hand1Cards, hand2Cards, activePlayer, winner, theMiddle, gameState } = this.props
-    if (activePlayer) {
+    const { hand1Cards, hand2Cards, activePlayer, theMiddle, gameState, playmode } = this.props
+    if (true) { // TODO
       let activeCard
       let activeHand = activePlayer === PLAYERS.PLAYER_1 ? hand1Cards : hand2Cards
-      activeCard = <div className="reverseCard"></div>
       if (activeHand && activeHand.length > 0) {
-        activeCard = <Card params={activeHand[0]} onSubmit={this.handleSelection} />
+        activeCard = <Card params={activeHand[0]} onSubmit={this.handleSelection} readOnly={playmode === PLAY_MODE.VS_COMPUTER && activePlayer === PLAYERS.PLAYER_2} />
       }
       return (
       <React.Fragment>
         {(gameState === GAME_STATE.PRE_GAME || gameState === GAME_STATE.POST_GAME) &&
-          <Splash dealCards={this.handleDealCards} winner={winner} />
+          <Splash />
         }
         {gameState === GAME_STATE.DURING_GAME && (
           <div className={classNames({
@@ -117,15 +108,12 @@ function mapStateToProps (state) {
     playmode: state.playmode,
     gameState: state.gameState,
     activePlayer: state.activePlayer,
-    winner: state.winner,
     theMiddle: state.theMiddle
   }
 }
 
 function mapDispatchToProps(dispatch) {
   return {
-    getCards: () => dispatch(getCards()),
-    dealCards: (cards) => dispatch(dealCards(cards)),
     goBattle: (args) => dispatch(goBattle(args))
   }
 }

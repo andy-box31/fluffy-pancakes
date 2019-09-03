@@ -1,13 +1,24 @@
 import { ACTIONS } from '../utilities/constants'
 
-const { THROW_ERROR, SET_CARDS, SET_INFO, GET_CARDS, SHUFFLE_CARDS, DEAL_CARDS, GO_BATTLE, SET_PLAY_MODE, COMPUTER_TURN } = ACTIONS
+const {
+  THROW_ERROR,
+  SET_CARDS,
+  SET_INFO,
+  GET_CARDS,
+  SHUFFLE_CARDS,
+  DEAL_CARDS,
+  GO_BATTLE,
+  SET_PLAY_MODE,
+  COMPUTER_TURN,
+  SET_GAME_LEVEL
+} = ACTIONS
 
 export const throwError = (payload) => {
   return { type: THROW_ERROR, payload } // -> errorMiddleware
 }
 
-export const getCards = () => {
-  return { type: GET_CARDS } // -> sagasMiddleware
+export const getCards = (payload) => {
+  return { type: GET_CARDS, payload} // -> sagasMiddleware
 }
 
 export const setCards = (payload) => {
@@ -32,6 +43,11 @@ export const goBattle = (payload) => {
 
 export const setPlaymode = (payload) => {
   return {type: SET_PLAY_MODE, payload}
+}
+
+
+export const setGameLevel = (payload) => {
+  return {type: SET_GAME_LEVEL, payload}
 }
 
 export const computerTurn = () => {
