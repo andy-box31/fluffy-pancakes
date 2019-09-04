@@ -16,22 +16,32 @@ const {SET_CARDS, SET_INFO, DEAL_CARDS, GO_BATTLE, SET_PLAY_MODE, SET_GAME_LEVEL
 function rootReducer(state = initialState, action) {
   let newState
   switch (action.type) {
-    case (SET_CARDS):
+    case (SET_CARDS): // cards, activePlayer
       newState = {
         ...state,
         cards: action.payload,
         activePlayer: PLAYERS.PLAYER_1
       }
       return newState
-      break
-    case (SET_INFO):
+    case (SET_INFO): // deckInfo
       newState = {
         ...state,
         deckInfo: action.payload
       }
       return newState
-      break
-    case (DEAL_CARDS):
+    case (SET_PLAY_MODE): // playmode
+        newState = {
+          ...state,
+          playmode: action.payload
+        }
+        return newState
+    case (SET_GAME_LEVEL): // gameLevel
+      newState = {
+        ...state,
+        gameLevel: action.payload
+      }
+      return newState
+    case (DEAL_CARDS): // cards, hand1Cards, hand2Cards, theMiddle, winner, gameState
       const shuffled = shuffle(state.cards)
       const mid = Math.floor(shuffled.length/2)
       newState = {
@@ -43,21 +53,7 @@ function rootReducer(state = initialState, action) {
         gameState: GAME_STATE.DURING_GAME
       }
       return newState
-      break
-    case (SET_PLAY_MODE):
-        newState = {
-          ...state,
-          playmode: action.payload
-        }
-        return newState
-        break // redundant
-    case (SET_GAME_LEVEL):
-      newState = {
-        ...state,
-        gameLevel: action.payload
-      }
-      return newState
-    case (GO_BATTLE):
+    case (GO_BATTLE): // hand1Cards, hand2Cards, theMiddle, winner, gameState activePlayer,
       let newWinner = state.winner
       let newMiddle = state.theMiddle
       let newHand1 = state.hand1Cards.slice()
@@ -104,7 +100,6 @@ function rootReducer(state = initialState, action) {
 
       }
       return newState
-      break
     default:
   }
   return state
