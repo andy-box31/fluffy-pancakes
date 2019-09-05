@@ -11,7 +11,7 @@
       "Disguise": 5,
       "Rating": 10,
       "Type": "Insecticon",
-      "Image": "https://placeimg.com/640/480/people"
+      "Image": "/images/transformers/astroTrain.jpg"
     },
     {
       "Name": "Barrage",
@@ -21,7 +21,7 @@
       "Disguise": 20,
       "Rating": 6,
       "Type": "Insecticon",
-      "Image": "https://placeimg.com/640/480/people"
+      "Image": "/images/transformers/barrage.jpg"
     },
     {
       "Name": "Blitzwing",
@@ -31,7 +31,7 @@
       "Disguise": 10,
       "Rating": 8,
       "Type": "Insecticon",
-      "Image": "https://placeimg.com/640/480/people"
+      "Image": "/images/transformers/blitzwing.jpg"
     },
     {
       "Name": "Bluestreak",
@@ -41,7 +41,7 @@
       "Disguise": 14,
       "Rating": 4,
       "Type": "Autobot",
-      "Image": "https://placeimg.com/640/480/people"
+      "Image": "/images/transformers/bluestreak.jpg"
     },
     {
       "Name": "Brawn",
@@ -51,7 +51,7 @@
       "Disguise": 19,
       "Rating": 7,
       "Type": "Autobot",
-      "Image": "https://placeimg.com/640/480/people"
+      "Image": "/images/transformers/brawn.jpg"
     },
     {
       "Name": "Bumblebee",
@@ -61,7 +61,7 @@
       "Disguise": 16,
       "Rating": 14,
       "Type": "Autobot",
-      "Image": "https://placeimg.com/640/480/people"
+      "Image": "/images/transformers/bumblebee.jpg"
     },
     {
       "Name": "Cliffjumper",
@@ -71,7 +71,7 @@
       "Disguise": 16,
       "Rating": 7,
       "Type": "Autobot",
-      "Image": "https://placeimg.com/640/480/people"
+      "Image": "/images/transformers/cliffJumper.jpg"
     },
     {
       "Name": "Cosmos",
@@ -81,7 +81,7 @@
       "Disguise": 1,
       "Rating": 5,
       "Type": "Autobot",
-      "Image": "https://placeimg.com/640/480/people"
+      "Image": "/images/transformers/cosmos.jpg"
     },
     {
       "Name": "Devastator",
@@ -91,7 +91,7 @@
       "Disguise": 20,
       "Rating": 14,
       "Type": "Insecticon",
-      "Image": "https://placeimg.com/640/480/people"
+      "Image": "/images/transformers/devastator.jpg"
     },
     {
       "Name": "Frenzy",
@@ -101,7 +101,7 @@
       "Disguise": 18,
       "Rating": 8,
       "Type": "Autobot",
-      "Image": "https://placeimg.com/640/480/people"
+      "Image": "/images/transformers/frenzy.jpg"
     },
     {
       "Name": "Grapple",
@@ -111,7 +111,7 @@
       "Disguise": 13,
       "Rating": 3,
       "Type": "Autobot",
-      "Image": "https://placeimg.com/640/480/people"
+      "Image": "/images/transformers/grapple.jpg"
     },
     {
       "Name": "Grimlock",
@@ -121,7 +121,7 @@
       "Disguise": 1,
       "Rating": 15,
       "Type": "Autobot",
-      "Image": "https://placeimg.com/640/480/people"
+      "Image": "/images/transformers/grimlock.jpg"
     },
     {
       "Name": "Hound",
@@ -131,7 +131,7 @@
       "Disguise": 16,
       "Rating": 4,
       "Type": "Autobot",
-      "Image": "https://placeimg.com/640/480/people"
+      "Image": "/images/transformers/hound.jpg"
     },
     {
       "Name": "Huffer",
@@ -141,7 +141,7 @@
       "Disguise": 11,
       "Rating": 3,
       "Type": "Autobot",
-      "Image": "https://placeimg.com/640/480/people"
+      "Image": "/images/transformers/huffer.jpg"
     },
     {
       "Name": "Ironhide",
@@ -151,7 +151,7 @@
       "Disguise": 20,
       "Rating": 13,
       "Type": "Autobot",
-      "Image": "https://placeimg.com/640/480/people"
+      "Image": "/images/transformers/ironhide.jpg"
     },
     {
       "Name": "Jazz",
@@ -161,7 +161,7 @@
       "Disguise": 12,
       "Rating": 13,
       "Type": "Autobot",
-      "Image": "https://placeimg.com/640/480/people"
+      "Image": "/images/transformers/jazz.jpg"
     },
     {
       "Name": "Laserbeak",
@@ -171,7 +171,7 @@
       "Disguise": 18,
       "Rating": 12,
       "Type": "Decepticon",
-      "Image": "https://placeimg.com/640/480/people"
+      "Image": "/images/transformers/lazerBeak.jpg"
     },
     {
       "Name": "Megatron",
@@ -181,7 +181,7 @@
       "Disguise": 3,
       "Rating": 14,
       "Type": "Autobot",
-      "Image": "https://placeimg.com/640/480/people"
+      "Image": "/images/transformers/megatron.jpg"
     },
     {
       "Name": "Optimus Prime",
@@ -191,7 +191,7 @@
       "Disguise": 11,
       "Rating": 15,
       "Type": "Autobot",
-      "Image": "https://placeimg.com/640/480/people"
+      "Image": "/images/transformers/optimusPrime.jpg"
     },
     {
       "Name": "Ransack",
@@ -201,7 +201,7 @@
       "Disguise": 20,
       "Rating": 6,
       "Type": "Insecticon",
-      "Image": "https://placeimg.com/640/480/people"
+      "Image": "/images/transformers/ransack.jpg"
     },
     {
       "Name": "Ratchet",
@@ -211,7 +211,7 @@
       "Disguise": 18,
       "Rating": 10,
       "Type": "Autobot",
-      "Image": "https://placeimg.com/640/480/people"
+      "Image": "/images/transformers/ratchet.jpg"
     },
     {
       "Name": "Ravage",
@@ -221,7 +221,7 @@
       "Disguise": 18,
       "Rating": 13,
       "Type": "Insecticon",
-      "Image": "https://placeimg.com/640/480/people"
+      "Image": "/images/transformers/ravage.jpg"
     },
     {
       "Name": "Seaspray",
@@ -231,7 +231,7 @@
       "Disguise": 6,
       "Rating": 2,
       "Type": "Autobot",
-      "Image": "https://placeimg.com/640/480/people"
+      "Image": "/images/transformers/seaspray.jpg"
     },
     {
       "Name": "Shockwave",
@@ -241,7 +241,7 @@
       "Disguise": 1,
       "Rating": 9,
       "Type": "Insecticon",
-      "Image": "https://placeimg.com/640/480/people"
+      "Image": "/images/transformers/shockwave.jpg"
     },
     {
       "Name": "Skywarp",
@@ -251,7 +251,7 @@
       "Disguise": 11,
       "Rating": 2,
       "Type": "Insecticon",
-      "Image": "https://placeimg.com/640/480/people"
+      "Image": "/images/transformers/skywarp.jpg"
     },
     {
       "Name": "Soundwave",
@@ -261,7 +261,7 @@
       "Disguise": 18,
       "Rating": 11,
       "Type": "Insecticon",
-      "Image": "https://placeimg.com/640/480/people"
+      "Image": "/images/transformers/soundWave.jpg"
     },
     {
       "Name": "Starscream",
@@ -271,7 +271,7 @@
       "Disguise": 10,
       "Rating": 9,
       "Type": "Insecticon",
-      "Image": "https://placeimg.com/640/480/people"
+      "Image": "/images/transformers/starScream.jpg"
     },
     {
       "Name": "Thundercracker",
@@ -281,7 +281,7 @@
       "Disguise": 11,
       "Rating": 5,
       "Type": "Insecticon",
-      "Image": "https://placeimg.com/640/480/people"
+      "Image": "/images/transformers/thundercracker.jpg"
     },
     {
       "Name": "Topspin",
@@ -291,7 +291,7 @@
       "Disguise": 2,
       "Rating": 11,
       "Type": "Autobot",
-      "Image": "https://placeimg.com/640/480/people"
+      "Image": "/images/transformers/topspin.jpg"
     },
     {
       "Name": "Windcharger",
@@ -301,7 +301,7 @@
       "Disguise": 15,
       "Rating": 12,
       "Type": "Autobot",
-      "Image": "https://placeimg.com/640/480/people"
+      "Image": "/images/transformers/windCharger.jpg"
     }
   ]
 }

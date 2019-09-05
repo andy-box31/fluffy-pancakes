@@ -25,14 +25,14 @@ class GamePlay extends React.Component {
 
   componentDidMount () {
     this.checkPauseForComputer()
+    if (this.battleEngine === null && this.props.cards.length > 0 && this.props.deckInfo.competeOn.length > 0) {
+      this.battleEngine = new battleEngine(this.props.cards, this.props.deckInfo, GAME_LEVEL.GT_MEDIAN)
+    }
   }
 
   componentDidUpdate() {
     this.checkPauseForComputer()
-    if (this.battleEngine === null && this.props.cards.length > 0 && this.props.deckInfo.competeOn.length > 0) {
-      // TODO move to component did mount
-      this.battleEngine = new battleEngine(this.props.cards, this.props.deckInfo, GAME_LEVEL.GT_MEDIAN)
-    }
+    
   }
 
   checkPauseForComputer () {
@@ -100,7 +100,7 @@ class GamePlay extends React.Component {
         player2: isPlayer2
       })}>
         <div className="grid">
-          <div className="active">
+          <div className="p1Outer">
           {showCard1 &&
             <Card
               params={hand1Cards[0]}
@@ -119,7 +119,7 @@ class GamePlay extends React.Component {
             {!!pick && <p>{pick} {hand1Cards[0][pick]} VS {hand2Cards[0][pick]}</p>}
             
           </div>
-          <div className="opponent">
+          <div className="p2Outer">
 
             {showCard2 &&
               <Card

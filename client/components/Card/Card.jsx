@@ -8,10 +8,10 @@ const Card = ({params, onSubmit, attrs, readOnly}) => {
       return
     }
     if (readOnly) {
-      return <p key={key}> {key}: {params[key]} </p> //TODO should be a list
+      return <p className="cardChoice" key={key}> {key}: {params[key]} </p> //TODO should be a list
     }
     return (
-      <label key={key} className="cardRadio">
+      <label key={key} className="cardChoice">
         <input
           type="radio"
           name="selection"
@@ -21,16 +21,22 @@ const Card = ({params, onSubmit, attrs, readOnly}) => {
       </label>
     )
   })
+
+  const backgroundImage = !!params.Image ? {
+    backgroundImage: `url(${params.Image})`,
+    backgroundSize: 'cover',
+    backgroundRepeat: 'no-repeat'
+  } : {}
   return (
     <div className="card">
-      <header className="cardHeader">
-        {params.Image && <img className="cardImage" src={params.Image} alt={`image of ${params.Name}`} /> }
+      <header style={backgroundImage} className="cardHeader">
         <h1 className="cardTitle">
           {params.Name ? params.Name : 'Card info'}
         </h1>
       </header>
-      <div className="cardContent"></div>
-      {details}
+      <div className="cardContent">
+        {details}
+      </div>
     </div>
   )
 }

@@ -8,7 +8,7 @@ const initialState = {
   activePlayer: null,
   winner: null,
   gameState: GAME_STATE.PRE_GAME,
-  gameLevel: GAME_LEVEL.MEDIUM
+  gameLevel: GAME_LEVEL.HARD
 }
 
 const {SET_CARDS, SET_INFO, DEAL_CARDS, GO_BATTLE, SET_PLAY_MODE, SET_GAME_LEVEL} = ACTIONS
