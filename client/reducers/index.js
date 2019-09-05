@@ -14,26 +14,38 @@ const initialState = {
 const {SET_CARDS, SET_INFO, DEAL_CARDS, GO_BATTLE, SET_PLAY_MODE, SET_GAME_LEVEL} = ACTIONS
 
 function rootReducer(state = initialState, action) {
-  let newState
+  let newState, newWinner, newMiddle, newHand1, newHand2, newActivePlayer, newGameState
   switch (action.type) {
-    case (SET_CARDS):
+    case (SET_CARDS): // cards, activePlayer
       newState = {
         ...state,
         cards: action.payload,
         activePlayer: PLAYERS.PLAYER_1
       }
       return newState
-      break
-    case (SET_INFO):
+    case (SET_INFO): // deckInfo
       newState = {
         ...state,
         deckInfo: action.payload
       }
       return newState
-      break
-    case (DEAL_CARDS):
+    case (SET_PLAY_MODE): // playmode
+        newState = {
+          ...state,
+          playmode: action.payload
+        }
+        return newState
+    case (SET_GAME_LEVEL): // gameLevel
+      newState = {
+        ...state,
+        gameLevel: action.payload
+      }
+      return newState
+    case (DEAL_CARDS): // cards, hand1Cards, hand2Cards, theMiddle, winner, gameState
       const shuffled = shuffle(state.cards)
       const mid = Math.floor(shuffled.length/2)
+      // Play against computer reset active player to player1
+      newActivePlayer = state.playmode === PLAY_MODE.VS_COMPUTER ? PLAYERS.PLAYER_1 : state.activePlayer
       newState = {
         ...state,
         hand1Cards: shuffled.slice(0, mid),
@@ -43,27 +55,13 @@ function rootReducer(state = initialState, action) {
         gameState: GAME_STATE.DURING_GAME
       }
       return newState
-      break
-    case (SET_PLAY_MODE):
-        newState = {
-          ...state,
-          playmode: action.payload
-        }
-        return newState
-        break // redundant
-    case (SET_GAME_LEVEL):
-      newState = {
-        ...state,
-        gameLevel: action.payload
-      }
-      return newState
-    case (GO_BATTLE):
-      let newWinner = state.winner
-      let newMiddle = state.theMiddle
-      let newHand1 = state.hand1Cards.slice()
-      let newHand2 = state.hand2Cards.slice()
-      let newActivePlayer = state.activePlayer
-      let newGameState = state.gameState
+    case (GO_BATTLE): // hand1Cards, hand2Cards, theMiddle, winner, gameState activePlayer
+      newWinner = state.winner
+      newMiddle = state.theMiddle
+      newHand1 = state.hand1Cards.slice()
+      newHand2 = state.hand2Cards.slice()
+      newActivePlayer = state.activePlayer
+      newGameState = state.gameState
       const card1 = newHand1.shift()
       const card2 = newHand2.shift()
       if(!card1[action.payload] || !card2[action.payload]) {
@@ -71,18 +69,18 @@ function rootReducer(state = initialState, action) {
         return state
       }
       if (card1[action.payload] > card2[action.payload]){
-        newHand1.push(card1)
-        newHand1.push(card2)
         newHand1.push(...newMiddle)
+        newHand1.push(card2)
+        newHand1.push(card1)
         newMiddle = []
         newActivePlayer = PLAYERS.PLAYER_1
       } else if (card1[action.payload] === card2[action.payload]){
         newMiddle.push(card1)
         newMiddle.push(card2)
       } else {
+        newHand2.push(...newMiddle)
         newHand2.push(card1)
         newHand2.push(card2)
-        newHand2.push(...newMiddle)
         newMiddle = []
         newActivePlayer = PLAYERS.PLAYER_2
       }
@@ -104,7 +102,6 @@ function rootReducer(state = initialState, action) {
 
       }
       return newState
-      break
     default:
   }
   return state
