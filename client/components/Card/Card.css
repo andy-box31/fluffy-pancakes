@@ -6,9 +6,12 @@
   height: calc(100% - 32px);
   margin: 16px;
   position: relative;
+  z-index: 2;
+  transform: rotate(-2deg);
 }
 
 .cardHeader {
+  background-color: white;
   position: relative;
   height: 50%;
   overflow: hidden;
@@ -44,7 +47,8 @@
 .cardChoice {
   display: block;
   font-size: 20px;
-  line-height: 28px;
+  line-height: 30px;
+  margin-bottom: 0;
 }
 .cardContent {
   background-color:WhiteSmoke;

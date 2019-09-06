@@ -80,7 +80,7 @@ class GamePlay extends React.Component {
   }
 
   render () {
-    const { hand1Cards, hand2Cards, activePlayer, theMiddle, playmode } = this.props
+    const { hand1Cards, hand2Cards, activePlayer, theMiddle, playmode, deckInfo } = this.props
     const { revealCards, pauseForComputer, pick } = this.state
 
     const isPlayer1 = activePlayer === PLAYERS.PLAYER_1
@@ -92,35 +92,78 @@ class GamePlay extends React.Component {
     const showCard2 = (revealCards || (isPlayer2 && isVsLocal))
     const readOnlyCard1 = (revealCards || isPlayer2)
     const readOnlyCard2 = (isVsComputer || revealCards || isPlayer1)
-   
+
+    let winLoseTie
+    if(pick && (hand1Cards[0][pick] === hand2Cards[0][pick])) {
+      winLoseTie = <p className="smaller">Tie, cards to the middle</p>
+    }else {
+      if(pick && (hand1Cards[0][pick] > hand2Cards[0][pick])) {
+        winLoseTie = <p className="smaller">Player 1 takes it</p>
+      } else {
+        winLoseTie = <p className="smaller">Player 2 takes it</p>
+      }
+    }
+    
+    // TODO make the middle its own component to abstract this out
+    const rand = Math.floor(Math.random()*25) - 15
+    let middleRandomRotate = {
+      transform: `rotate(${rand}deg)`
+    }
+    const backgroundImage = {
+      backgroundImage: `url(${deckInfo.backgroundImage})`
+    }
+    isPlayer2 ? backgroundImage.transform = "rotate(-35deg)" : () => {}
     return (
       <div className={classNames({
         outer: true,
         player1: isPlayer1,
         player2: isPlayer2
       })}>
+        <div className="outerBackground" style={backgroundImage}></div>
         <div className="grid">
           <div className="p1Outer">
           {showCard1 &&
-            <Card
-              params={hand1Cards[0]}
-              onSubmit={this.handleSelection}
-              readOnly={readOnlyCard1}
-            />
+            <div className="cardStackOuter">
+              <Card
+                params={hand1Cards[0]}
+                onSubmit={this.handleSelection}
+                readOnly={readOnlyCard1}
+              />
+              <div className="underCard1" />
+              <div className="underCard2" />
+              <div className="underCard3" />
+            </div>
+            
+
           }
           {!showCard1 && <div className="opponentCard" />}
           </div>
-          <div className="info">
-            Trumps
-            {activePlayer}
-            {theMiddle.length > 0 && <div className="theMiddle">{theMiddle.length}</div>}
-            {isVsComputer && isPlayer2 && pauseForComputer && <button type="button" className="dealBtn" onClick={this.endPauseForComputer}>Continue</button>}
-            {revealCards && <button type="button" className="dealBtn" onClick={this.endRevealCards}>Next</button>}
-            {!!pick && <p>{pick} {hand1Cards[0][pick]} VS {hand2Cards[0][pick]}</p>}
+          <div className="infoTop">
+            <header>
+              <h1>Trumps</h1>
+            </header>
+            {!revealCards && (!isVsComputer || isPlayer1) &&
+              <p><span className="standOut">{activePlayer}</span> take your turn!</p>
+            }
+            {isVsComputer && isPlayer2 && pauseForComputer &&
+              <React.Fragment>
+                <p>She's thinking..... </p>
+                <button type="button" className="fullPageButton" onClick={this.endPauseForComputer}>Continue</button>
+              </React.Fragment>
+            }
+            {revealCards &&
+              <button type="button" className="fullPageButton" onClick={this.endRevealCards}>Next</button>
+            }
+            {!!pick &&
+              <div>
+                <p>{pick}</p>
+                <p className="scores"><span className="score">{hand1Cards[0][pick]}</span> <span className="versus">VS</span> <span className="score">{hand2Cards[0][pick]}</span></p>
+                {winLoseTie}
+              </div>
+            }
             
           </div>
           <div className="p2Outer">
-
             {showCard2 &&
               <Card
                 params={hand2Cards[0]}
@@ -130,9 +173,9 @@ class GamePlay extends React.Component {
             }
             {!showCard2 && <div className="opponentCard" />}
           </div>
-          <div className="score">
-            {hand1Cards.length} VS
-            {hand2Cards.length}
+          <div className="infoBottom">
+          <p className="cardScores"><span className="score">{hand1Cards.length}</span> <span className="versus">VS</span> <span className="score">{hand2Cards.length}</span></p>
+            {(theMiddle.length > 0) && <div className="theMiddle" style={middleRandomRotate}><p>{theMiddle.length}</p></div>}
           </div>
         </div>
       </div>

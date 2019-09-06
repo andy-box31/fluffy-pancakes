@@ -27,8 +27,12 @@ const Card = ({params, onSubmit, attrs, readOnly}) => {
     backgroundSize: 'cover',
     backgroundRepeat: 'no-repeat'
   } : {}
+  const rand = Math.random()*3 - 2
+  const cardRotate = {
+    transform: `rotate(${rand}deg)`
+  }
   return (
-    <div className="card">
+    <div className="card" style={cardRotate}>
       <header style={backgroundImage} className="cardHeader">
         <h1 className="cardTitle">
           {params.Name ? params.Name : 'Card info'}

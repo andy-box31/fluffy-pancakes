@@ -42,6 +42,9 @@ function rootReducer(state = initialState, action) {
       }
       return newState
     case (DEAL_CARDS): // cards, hand1Cards, hand2Cards, theMiddle, winner, gameState
+      if (state.cards.length === 0) {
+        return state
+      }
       const shuffled = shuffle(state.cards)
       const mid = Math.floor(shuffled.length/2)
       // Play against computer reset active player to player1

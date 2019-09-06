@@ -1,18 +1,95 @@
+.splash {
+  background: red;
+  height: 100vh;
+  padding-top: 150px;
+  box-sizing: border-box;
+  overflow: hidden;
+  width: 100vw;
+  background-image: linear-gradient(45deg, transparent 20%, black 25%, transparent 25%), 
+                    linear-gradient(-45deg, transparent 20%, black 25%, transparent 25%), 
+                    linear-gradient(-45deg, transparent 75%, black 80%, transparent 0),
+                    radial-gradient(gray 2px, transparent 0);
+  background-size: 30px 30px, 30px 30px;
+}
+
 .header {
   height: 200px;
 }
 
 .header h1 {
   text-align: center;
-  font-size: 50px;
-  margin-bottom: 30px;
+  font-size: 100px;
+  margin-bottom: 15px;
+  text-shadow: 0 1px 0 #ccc,
+               0 2px 0 #c9c9c9,
+               0 3px 0 #bbb,
+               0 4px 0 #b9b9b9,
+               0 5px 0 #aaa,
+               0 6px 1px rgba(0,0,0,.1),
+               0 0 5px rgba(0,0,0,.1),
+               0 1px 3px rgba(0,0,0,.3),
+               0 3px 5px rgba(0,0,0,.2),
+               0 5px 10px rgba(0,0,0,.25),
+               0 10px 10px rgba(0,0,0,.2),
+               0 20px 20px rgba(0,0,0,.15);
+
+}
+
+.poly h1{
+  position: relative;
+  top: 200px;
+  left: 30px;
+  z-index: 3;
+  font-size: 100px;
+  text-align:center;
+  transform:rotate(-5deg);
+  text-shadow:
+    1px 0 #808d93,
+    0 -1px #cdd2d5,
+    2px -1px #808d93,
+    1px -2px #cdd2d5,
+    3px -2px #808d93,
+    2px -3px #cdd2d5,
+    4px -3px #808d93,
+    3px -4px #cdd2d5,
+    5px -4px #808d93,
+    4px -5px #cdd2d5,
+    6px -5px #808d93,
+    5px -6px #cdd2d5,
+    7px -6px #808d93,
+    6px -7px #cdd2d5,
+    8px -7px #808d93,
+    7px -8px #cdd2d5;
 }
 
 .header h3 {
   text-align: center;
   font-size: 35px;
+  width: 280px;
+}
+.mainContent {
+  border: 1px solid black;
+  outline: 6px solid white;
+  position: relative;
+  padding: 80px 20px;
+  width: 220px;
+  margin:0 auto;
+
+  background-color:WhiteSmoke;
+  background-image:
+  radial-gradient(circle at 100% 150%, WhiteSmoke 24%, white 24%, white 28%, WhiteSmoke 28%, WhiteSmoke 36%, white 36%, white 40%, transparent 40%, transparent),
+  radial-gradient(circle at 0    150%, WhiteSmoke 24%, white 24%, white 28%, WhiteSmoke 28%, WhiteSmoke 36%, white 36%, white 40%, transparent 40%, transparent),
+  radial-gradient(circle at 50%  100%, white 10%, WhiteSmoke 10%, WhiteSmoke 23%, white 23%, white 30%, WhiteSmoke 30%, WhiteSmoke 43%, white 43%, white 50%, WhiteSmoke 50%, WhiteSmoke 63%, white 63%, white 71%, transparent 71%, transparent),
+  radial-gradient(circle at 100% 50%, white 5%, WhiteSmoke 5%, WhiteSmoke 15%, white 15%, white 20%, WhiteSmoke 20%, WhiteSmoke 29%, white 29%, white 34%, WhiteSmoke 34%, WhiteSmoke 44%, white 44%, white 49%, transparent 49%, transparent),
+  radial-gradient(circle at 0    50%, white 5%, WhiteSmoke 5%, WhiteSmoke 15%, white 15%, white 20%, WhiteSmoke 20%, WhiteSmoke 29%, white 29%, white 34%, WhiteSmoke 34%, WhiteSmoke 44%, white 44%, white 49%, transparent 49%, transparent);
+  background-size: 50px 25px;
 }
 
+.mainContent .radioSelector {
+  margin: 0 20px 50px;
+  font-size: 20px;
+  line-height: 25px;
+}
 .dealBtn {
   background:linear-gradient(to bottom, #007dc1 5%, #0061a7 100%);
 	background-color:#007dc1;
@@ -39,4 +116,39 @@
 .dealBtn:active {
   position:relative;
   top:1px;
+}
+
+.poly,
+.poly:after {
+  background: black;
+  clip-path: polygon( 0 100%,
+                      5% 90%,
+                      15% 88%,
+                      20% 86%,
+                      22% 78%,
+                      50% 65%,
+                      45% 45%,
+                      70% 35%,
+                      65% 20%,
+                      90% 15%,
+                      100% 0,
+                      100% 100%);
+  position: fixed;
+  top:0;
+  bottom:0;
+  left:0;
+  right:0;
+}
+.poly:after {
+  background: blue;
+  content: '';
+  top: 35px;
+  left:45px;
+
+  background-color:#aef;
+  background-image: radial-gradient(closest-side, transparent 98%, rgba(0,0,100,.3) 99%),
+                    radial-gradient(closest-side, transparent 98%, rgba(0,0,100,.3) 99%);
+  background-size:80px 80px;
+  background-position:0 0, 40px 40px;
+
 }
