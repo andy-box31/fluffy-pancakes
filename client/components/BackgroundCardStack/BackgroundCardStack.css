@@ -1,0 +1,13 @@
+.underCard {
+  background: white;
+  margin: 16px;
+  border: 1px solid black;
+  border-radius: 4px;
+  box-shadow: 0 0 0 5px rgba(255,255,255,1), 1px 2px 5px 5px rgba(0,0,0,0.2);
+  box-sizing: border-box;
+  z-index: 1;
+}
+
+.backside {
+  background: #8a3;
+}

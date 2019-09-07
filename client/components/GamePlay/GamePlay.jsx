@@ -4,7 +4,9 @@ import classNames from 'classnames'
 import battleEngine from '../../utilities/battleEngine'
 import { goBattle } from '../../actions/index'
 import { PLAY_MODE, PLAYERS,  GAME_LEVEL } from '../../utilities/constants'
+import BackgroundCardStack from '../BackgroundCardStack/BackgroundCardStack'
 import Card from '../Card/Card'
+import TheMiddle from '../TheMiddle/TheMiddle'
 import './GamePlay.css'
 
 class GamePlay extends React.Component {
@@ -104,11 +106,6 @@ class GamePlay extends React.Component {
       }
     }
     
-    // TODO make the middle its own component to abstract this out
-    const rand = Math.floor(Math.random()*25) - 15
-    let middleRandomRotate = {
-      transform: `rotate(${rand}deg)`
-    }
     const backgroundImage = {
       backgroundImage: `url(${deckInfo.backgroundImage})`
     }
@@ -122,19 +119,15 @@ class GamePlay extends React.Component {
         <div className="outerBackground" style={backgroundImage}></div>
         <div className="grid">
           <div className="p1Outer">
-          {showCard1 &&
+          {showCard1 && //TODO create component for this and player 2 Card stack
             <div className="cardStackOuter">
               <Card
                 params={hand1Cards[0]}
                 onSubmit={this.handleSelection}
                 readOnly={readOnlyCard1}
               />
-              <div className="underCard1" />
-              <div className="underCard2" />
-              <div className="underCard3" />
+              <BackgroundCardStack count={hand1Cards.length - 1} />
             </div>
-            
-
           }
           {!showCard1 && <div className="opponentCard" />}
           </div>
@@ -161,21 +154,28 @@ class GamePlay extends React.Component {
                 {winLoseTie}
               </div>
             }
-            
           </div>
           <div className="p2Outer">
             {showCard2 &&
-              <Card
-                params={hand2Cards[0]}
-                onSubmit={this.handleSelection}
-                readOnly={readOnlyCard2}
-              />
+              <div className="cardStackOuter">
+                <Card
+                  params={hand2Cards[0]}
+                  onSubmit={this.handleSelection}
+                  readOnly={readOnlyCard2}
+                />
+                <BackgroundCardStack count={hand1Cards.length - 1} />
+              </div>
             }
-            {!showCard2 && <div className="opponentCard" />}
+            {!showCard2 &&
+              <div className="cardStackOuter">
+                <div className="opponentCard" />
+                <BackgroundCardStack count={hand2Cards.length - 1} back={true} />
+              </div>
+            }
           </div>
           <div className="infoBottom">
           <p className="cardScores"><span className="score">{hand1Cards.length}</span> <span className="versus">VS</span> <span className="score">{hand2Cards.length}</span></p>
-            {(theMiddle.length > 0) && <div className="theMiddle" style={middleRandomRotate}><p>{theMiddle.length}</p></div>}
+            <TheMiddle theMiddle={theMiddle} />
           </div>
         </div>
       </div>
