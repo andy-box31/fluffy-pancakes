@@ -1,17 +1,25 @@
 import React from 'react'
 import { connect } from 'react-redux'
+import classnames from 'classnames'
 import './Card.css'
 
 const Card = ({params, onSubmit, attrs, readOnly}) => {
+  let newLineHeight = {}
+  if (Object.keys(params).length > 5) {
+    newLineHeight = {
+      fontSize: '18px',
+      lineHeight: '25px'
+    }
+  }
   const details = Object.keys(params).map((key, i) => {
     if (!attrs.includes(key)){
       return
     }
     if (readOnly) {
-      return <p className="cardChoice" key={key}> {key}: {params[key]} </p> //TODO should be a list
+      return <p className="cardChoice" style={newLineHeight} key={key}> {key}: {params[key]} </p> //TODO should be a list
     }
     return (
-      <label key={key} className="cardChoice">
+      <label key={key} className="cardChoice" style={newLineHeight}>
         <input
           type="radio"
           name="selection"

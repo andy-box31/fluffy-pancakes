@@ -1,6 +1,6 @@
 {
   "info": {
-    "competeOn": ["Height-ft","Weight-lbs","Length-ft","Killer_rating","Intelligence","Age-millions_of_yrs"]
+    "competeOn": ["Height-ft","Weight-lbs","Length-ft","Killer_rating","Intelligence","Age-mill_yrs"]
   },
   "cards":[
     {
@@ -11,7 +11,7 @@
       "Length-ft": 26.2,
       "Killer_rating": 2,
       "Intelligence": 7,
-      "Age-millions_of_yrs": 76
+      "Age-mill_yrs": 76
     },
     {
       "Name": "Tyrannosaurus Rex",
@@ -21,7 +21,7 @@
       "Length-ft":39.3,
       "Killer_rating": 9,
       "Intelligence": 9,
-      "Age-millions_of_yrs": 6
+      "Age-mill_yrs": 6
     },
     {
       "Name": "Barosaurus",
@@ -31,7 +31,7 @@
       "Length-ft": 85.3,
       "Killer_rating": 3,
       "Intelligence": 2,
-      "Age-millions_of_yrs": 156
+      "Age-mill_yrs": 156
     },
     {
       "Name": "Heterodontosaurus",
@@ -41,7 +41,7 @@
       "Length-ft": 3.9,
       "Killer_rating": 1,
       "Intelligence": 5,
-      "Age-millions_of_yrs": 208
+      "Age-mill_yrs": 208
     },
     {
       "Name": "Suchomimus",
@@ -51,7 +51,7 @@
       "Length-ft": 39.3,
       "Killer_rating": 8,
       "Intelligence": 7,
-      "Age-millions_of_yrs": 100
+      "Age-mill_yrs": 100
     },
     {
       "Name": "Pachyrhinosaurus",
@@ -61,7 +61,7 @@
       "Length-ft": 23,
       "Killer_rating": 2,
       "Intelligence": 4,
-      "Age-millions_of_yrs": 70
+      "Age-mill_yrs": 70
     },
     {
       "Name": "Compsognathus",
@@ -71,7 +71,7 @@
       "Length-ft": 4.6,
       "Killer_rating": 5,
       "Intelligence": 7,
-      "Age-millions_of_yrs": 145
+      "Age-mill_yrs": 145
     },
     {
       "Name": "Iguanodon",
@@ -81,7 +81,7 @@
       "Length-ft": 32.8,
       "Killer_rating": 3,
       "Intelligence": 6,
-      "Age-millions_of_yrs": 135
+      "Age-mill_yrs": 135
     },
     {
       "Name": "Pentaceratops",
@@ -91,7 +91,7 @@
       "Length-ft": 26.2,
       "Killer_rating": 3,
       "Intelligence": 5,
-      "Age-millions_of_yrs": 75
+      "Age-mill_yrs": 75
     },
     {
       "Name": "Coelophysis",
@@ -101,7 +101,7 @@
       "Length-ft": 9.8,
       "Killer_rating": 4,
       "Intelligence": 7,
-      "Age-millions_of_yrs": 225
+      "Age-mill_yrs": 225
     },
     {
       "Name": "Velociraptor",
@@ -111,7 +111,7 @@
       "Length-ft": 6.6,
       "Killer_rating": 9,
       "Intelligence": 10,
-      "Age-millions_of_yrs": 85
+      "Age-mill_yrs": 85
     },
     {
       "Name": "Centrosaurus",
@@ -121,7 +121,7 @@
       "Length-ft": 19.7,
       "Killer_rating": 2,
       "Intelligence": 4,
-      "Age-millions_of_yrs": 76
+      "Age-mill_yrs": 76
     },
     {
       "Name": "Megalosaurus",
@@ -131,7 +131,7 @@
       "Length-ft": 29.5,
       "Killer_rating": 9,
       "Intelligence": 8,
-      "Age-millions_of_yrs": 175
+      "Age-mill_yrs": 175
     },
     {
       "Name": "Protoceratops",
@@ -141,7 +141,7 @@
       "Length-ft": 6.6,
       "Killer_rating": 2,
       "Intelligence": 4,
-      "Age-millions_of_yrs": 72
+      "Age-mill_yrs": 72
     },
     {
       "Name": "Giganotosaurus",
@@ -151,7 +151,7 @@
       "Length-ft": 52.5,
       "Killer_rating": 10,
       "Intelligence": 7,
-      "Age-millions_of_yrs": 100
+      "Age-mill_yrs": 100
     },
     {
       "Name": "Brachiosaurus",
@@ -161,7 +161,7 @@
       "Length-ft": 85.3,
       "Killer_rating": 3,
       "Intelligence": 2,
-      "Age-millions_of_yrs": 156
+      "Age-mill_yrs": 156
     },
     {
       "Name": "Herrerasaurus",
@@ -171,7 +171,7 @@
       "Length-ft": 16.4,
       "Killer_rating": 7,
       "Intelligence": 6,
-      "Age-millions_of_yrs": 230
+      "Age-mill_yrs": 230
     },
     {
       "Name": "Gallimimus",
@@ -181,7 +181,7 @@
       "Length-ft": 18.3,
       "Killer_rating": 5,
       "Intelligence": 7,
-      "Age-millions_of_yrs": 74
+      "Age-mill_yrs": 74
     },
     {
       "Name": "Triceratops",
@@ -191,7 +191,7 @@
       "Length-ft": 29.5,
       "Killer_rating": 2,
       "Intelligence": 4,
-      "Age-millions_of_yrs": 72
+      "Age-mill_yrs": 72
     },
     {
       "Name": "Corythosaurus",
@@ -201,7 +201,7 @@
       "Length-ft": 26.2,
       "Killer_rating": 2,
       "Intelligence": 5,
-      "Age-millions_of_yrs": 80
+      "Age-mill_yrs": 80
     },
     {
       "Name": "Maiasaura",
@@ -211,7 +211,7 @@
       "Length-ft": 29.5,
       "Killer_rating": 2,
       "Intelligence": 3,
-      "Age-millions_of_yrs": 80
+      "Age-mill_yrs": 80
     },
     {
       "Name": "Dimorphodon",
@@ -221,7 +221,7 @@
       "Length-ft": 0.82,
       "Killer_rating": 4,
       "Intelligence": 4,
-      "Age-millions_of_yrs": 200
+      "Age-mill_yrs": 200
     },
     {
       "Name": "Stegosaurus",
@@ -231,7 +231,7 @@
       "Length-ft": 29.5,
       "Killer_rating": 2,
       "Intelligence": 1,
-      "Age-millions_of_yrs": 76
+      "Age-mill_yrs": 76
     },
     {
       "Name": "Stenonychosaurus",
@@ -241,7 +241,7 @@
       "Length-ft": 6.6,
       "Killer_rating": 7,
       "Intelligence": 10,
-      "Age-millions_of_yrs": 76
+      "Age-mill_yrs": 76
     },
     {
       "Name": "Hypsilophodon",
@@ -251,7 +251,7 @@
       "Length-ft": 6.6,
       "Killer_rating": 1,
       "Intelligence": 6,
-      "Age-millions_of_yrs": 125
+      "Age-mill_yrs": 125
     },
     {
       "Name": "Camarasaurus",
@@ -261,7 +261,7 @@
       "Length-ft": 59.1,
       "Killer_rating": 3,
       "Intelligence": 2,
-      "Age-millions_of_yrs": 150
+      "Age-mill_yrs": 150
     },
     {
       "Name": "Styracosaurus",
@@ -271,7 +271,7 @@
       "Length-ft": 16.4,
       "Killer_rating": 2,
       "Intelligence": 3,
-      "Age-millions_of_yrs": 77
+      "Age-mill_yrs": 77
     },
     {
       "Name": "Euoplocephalus",
@@ -281,7 +281,7 @@
       "Length-ft": 19.7,
       "Killer_rating": 3,
       "Intelligence": 3,
-      "Age-millions_of_yrs": 76
+      "Age-mill_yrs": 76
     },
     {
       "Name": "Archaeopteryx",
@@ -291,7 +291,7 @@
       "Length-ft": 1,
       "Killer_rating": 6,
       "Intelligence": 5,
-      "Age-millions_of_yrs": 150
+      "Age-mill_yrs": 150
     },
     {
       "Name": "Oviraptor",
@@ -301,7 +301,7 @@
       "Length-ft": 5.9,
       "Killer_rating": 5,
       "Intelligence": 8,
-      "Age-millions_of_yrs": 70
+      "Age-mill_yrs": 70
     }
   ]
 }
