@@ -30,7 +30,7 @@ const Splash = ({dealCards, getCards, winner = null}) => {
           handleChange={handleSelect}
           activeParam={deckChoice}
         />
-        <button type="button" className="dealBtn" onClick={dealCards}>deal</button>
+        <button type="button" className="glbBtn" onClick={dealCards}>deal</button>
       </main>
     </div>
   )
