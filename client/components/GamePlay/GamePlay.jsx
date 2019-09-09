@@ -116,11 +116,11 @@ class GamePlay extends React.Component {
         player1: isPlayer1,
         player2: isPlayer2
       })}>
-        <div className="outerBackground" style={backgroundImage}></div>
+        <div className="glbFullFixed outerBackground" style={backgroundImage}></div>
         <div className="grid">
           <div className="p1Outer">
           {showCard1 && //TODO create component for this and player 2 Card stack
-            <div className="cardStackOuter">
+            <div className="glbFullAbsolute cardStackOuter">
               <Card
                 params={hand1Cards[0]}
                 onSubmit={this.handleSelection}
@@ -141,11 +141,11 @@ class GamePlay extends React.Component {
             {isVsComputer && isPlayer2 && pauseForComputer &&
               <React.Fragment>
                 <p>She's thinking..... </p>
-                <button type="button" className="fullPageButton" onClick={this.endPauseForComputer}>Continue</button>
+                <button type="button" className="glbFullAbsolute fullPageButton" onClick={this.endPauseForComputer}>Continue</button>
               </React.Fragment>
             }
             {revealCards &&
-              <button type="button" className="fullPageButton" onClick={this.endRevealCards}>Next</button>
+              <button type="button" className="glbFullAbsolute fullPageButton" onClick={this.endRevealCards}>Next</button>
             }
             {!!pick &&
               <div>
@@ -157,7 +157,7 @@ class GamePlay extends React.Component {
           </div>
           <div className="p2Outer">
             {showCard2 &&
-              <div className="cardStackOuter">
+              <div className="glbFullAbsolute cardStackOuter">
                 <Card
                   params={hand2Cards[0]}
                   onSubmit={this.handleSelection}
@@ -167,7 +167,7 @@ class GamePlay extends React.Component {
               </div>
             }
             {!showCard2 &&
-              <div className="cardStackOuter">
+              <div className="glbFullAbsolute">
                 <div className="opponentCard" />
                 <BackgroundCardStack count={hand2Cards.length - 1} back={true} />
               </div>

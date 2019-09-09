@@ -4,22 +4,15 @@ import classnames from 'classnames'
 import './Card.css'
 
 const Card = ({params, onSubmit, attrs, readOnly}) => {
-  let newLineHeight = {}
-  if (Object.keys(params).length > 5) {
-    newLineHeight = {
-      fontSize: '18px',
-      lineHeight: '25px'
-    }
-  }
   const details = Object.keys(params).map((key, i) => {
     if (!attrs.includes(key)){
       return
     }
     if (readOnly) {
-      return <p className="cardChoice" style={newLineHeight} key={key}> {key}: {params[key]} </p> //TODO should be a list
+      return <p className={classnames({cardChoice: true, cardChoice6: attrs.length > 5})} key={key}> {key}: {params[key]} </p> //TODO should be a list
     }
     return (
-      <label key={key} className="cardChoice" style={newLineHeight}>
+      <label key={key} className={classnames({cardChoice: true, cardChoice6: attrs.length > 5})}>
         <input
           type="radio"
           name="selection"
@@ -42,7 +35,7 @@ const Card = ({params, onSubmit, attrs, readOnly}) => {
   return (
     <div className="card" style={cardRotate}>
       <header style={backgroundImage} className="cardHeader">
-        <h1 className="cardTitle">
+        <h1 className="glbFullAbsolute cardTitle">
           {params.Name ? params.Name : 'Card info'}
         </h1>
       </header>

@@ -1,307 +1,338 @@
 {
   "info": {
-    "competeOn": ["Height-ft","Weight-lbs","Length-ft","Killer_rating","Intelligence","Age-mill_yrs"]
+    "competeOn": ["Height","Weight","Length","Kill_rating","Intelligence","Age-MilYrs"],
+    "backgroundImage": "/images/dinosaurs/background.png"
   },
   "cards":[
     {
       "Name": "Pachycephalosaurus",
       "Eating Habits": "Herbivore",
-      "Height-ft": 119.7,
-      "Weight-lbs": 6614,
-      "Length-ft": 26.2,
-      "Killer_rating": 2,
+      "Height": 119.7,
+      "Weight": 6614,
+      "Length": 26.2,
+      "Kill_rating": 2,
       "Intelligence": 7,
-      "Age-mill_yrs": 76
+      "Age-MilYrs": 76,
+      "Image": "/images/dinosaurs/trex.png"
     },
     {
       "Name": "Tyrannosaurus Rex",
       "Eating Habits": "Carnivore",
-      "Height-ft": 18.4,
-      "Weight-lbs": 13227,
-      "Length-ft":39.3,
-      "Killer_rating": 9,
+      "Height": 18.4,
+      "Weight": 13227,
+      "Length":39.3,
+      "Kill_rating": 9,
       "Intelligence": 9,
-      "Age-mill_yrs": 6
+      "Age-MilYrs": 6,
+      "Image": "/images/dinosaurs/trex.png"
     },
     {
       "Name": "Barosaurus",
       "Eating Habits": "Herbivore",
-      "Height-ft": 85.3,
-      "Weight-lbs": 8819,
-      "Length-ft": 85.3,
-      "Killer_rating": 3,
+      "Height": 85.3,
+      "Weight": 8819,
+      "Length": 85.3,
+      "Kill_rating": 3,
       "Intelligence": 2,
-      "Age-mill_yrs": 156
+      "Age-MilYrs": 156,
+      "Image": "/images/dinosaurs/trex.png"
     },
     {
       "Name": "Heterodontosaurus",
       "Eating Habits": "Herbivore",
-      "Height-ft": 1.6,
-      "Weight-lbs": 22,
-      "Length-ft": 3.9,
-      "Killer_rating": 1,
+      "Height": 1.6,
+      "Weight": 22,
+      "Length": 3.9,
+      "Kill_rating": 1,
       "Intelligence": 5,
-      "Age-mill_yrs": 208
+      "Age-MilYrs": 208,
+      "Image": "/images/dinosaurs/trex.png"
     },
     {
       "Name": "Suchomimus",
       "Eating Habits": "Carnivore",
-      "Height-ft": 13.1,
-      "Weight-lbs": 11023,
-      "Length-ft": 39.3,
-      "Killer_rating": 8,
+      "Height": 13.1,
+      "Weight": 11023,
+      "Length": 39.3,
+      "Kill_rating": 8,
       "Intelligence": 7,
-      "Age-mill_yrs": 100
+      "Age-MilYrs": 100,
+      "Image": "/images/dinosaurs/trex.png"
     },
     {
       "Name": "Pachyrhinosaurus",
       "Eating Habits": "Herbivore",
-      "Height-ft": 9.8,
-      "Weight-lbs": 8000,
-      "Length-ft": 23,
-      "Killer_rating": 2,
+      "Height": 9.8,
+      "Weight": 8000,
+      "Length": 23,
+      "Kill_rating": 2,
       "Intelligence": 4,
-      "Age-mill_yrs": 70
+      "Age-MilYrs": 70,
+      "Image": "/images/dinosaurs/trex.png"
     },
     {
       "Name": "Compsognathus",
       "Eating Habits": "Carnivore",
-      "Height-ft": 2.3,
-      "Weight-lbs": 6.6,
-      "Length-ft": 4.6,
-      "Killer_rating": 5,
+      "Height": 2.3,
+      "Weight": 6.6,
+      "Length": 4.6,
+      "Kill_rating": 5,
       "Intelligence": 7,
-      "Age-mill_yrs": 145
+      "Age-MilYrs": 145,
+      "Image": "/images/dinosaurs/trex.png"
     },
     {
       "Name": "Iguanodon",
       "Eating Habits": "Herbivore",
-      "Height-ft": 16.4,
-      "Weight-lbs": 9920,
-      "Length-ft": 32.8,
-      "Killer_rating": 3,
+      "Height": 16.4,
+      "Weight": 9920,
+      "Length": 32.8,
+      "Kill_rating": 3,
       "Intelligence": 6,
-      "Age-mill_yrs": 135
+      "Age-MilYrs": 135,
+      "Image": "/images/dinosaurs/trex.png"
     },
     {
       "Name": "Pentaceratops",
       "Eating Habits": "Herbivore",
-      "Height-ft": 9.8,
-      "Weight-lbs": 17636,
-      "Length-ft": 26.2,
-      "Killer_rating": 3,
+      "Height": 9.8,
+      "Weight": 17636,
+      "Length": 26.2,
+      "Kill_rating": 3,
       "Intelligence": 5,
-      "Age-mill_yrs": 75
+      "Age-MilYrs": 75,
+      "Image": "/images/dinosaurs/trex.png"
     },
     {
       "Name": "Coelophysis",
       "Eating Habits": "Carnivore",
-      "Height-ft": 6.6,
-      "Weight-lbs": 59.5,
-      "Length-ft": 9.8,
-      "Killer_rating": 4,
+      "Height": 6.6,
+      "Weight": 59.5,
+      "Length": 9.8,
+      "Kill_rating": 4,
       "Intelligence": 7,
-      "Age-mill_yrs": 225
+      "Age-MilYrs": 225,
+      "Image": "/images/dinosaurs/trex.png"
     },
     {
       "Name": "Velociraptor",
       "Eating Habits": "Carnivore",
-      "Height-ft": 3.3,
-      "Weight-lbs": 33,
-      "Length-ft": 6.6,
-      "Killer_rating": 9,
+      "Height": 3.3,
+      "Weight": 33,
+      "Length": 6.6,
+      "Kill_rating": 9,
       "Intelligence": 10,
-      "Age-mill_yrs": 85
+      "Age-MilYrs": 85,
+      "Image": "/images/dinosaurs/trex.png"
     },
     {
       "Name": "Centrosaurus",
       "Eating Habits": "Herbivore",
-      "Height-ft": 6.6,
-      "Weight-lbs": 2205,
-      "Length-ft": 19.7,
-      "Killer_rating": 2,
+      "Height": 6.6,
+      "Weight": 2205,
+      "Length": 19.7,
+      "Kill_rating": 2,
       "Intelligence": 4,
-      "Age-mill_yrs": 76
+      "Age-MilYrs": 76,
+      "Image": "/images/dinosaurs/trex.png"
     },
     {
       "Name": "Megalosaurus",
       "Eating Habits": "Carnivore",
-      "Height-ft": 9.8,
-      "Weight-lbs": 2205,
-      "Length-ft": 29.5,
-      "Killer_rating": 9,
+      "Height": 9.8,
+      "Weight": 2205,
+      "Length": 29.5,
+      "Kill_rating": 9,
       "Intelligence": 8,
-      "Age-mill_yrs": 175
+      "Age-MilYrs": 175,
+      "Image": "/images/dinosaurs/trex.png"
     },
     {
       "Name": "Protoceratops",
       "Eating Habits": "Herbivore",
-      "Height-ft": 4.9,
-      "Weight-lbs": 881,
-      "Length-ft": 6.6,
-      "Killer_rating": 2,
+      "Height": 4.9,
+      "Weight": 881,
+      "Length": 6.6,
+      "Kill_rating": 2,
       "Intelligence": 4,
-      "Age-mill_yrs": 72
+      "Age-MilYrs": 72,
+      "Image": "/images/dinosaurs/trex.png"
     },
     {
       "Name": "Giganotosaurus",
       "Eating Habits": "Carnivore",
-      "Height-ft": 19.7,
-      "Weight-lbs": 17636,
-      "Length-ft": 52.5,
-      "Killer_rating": 10,
+      "Height": 19.7,
+      "Weight": 17636,
+      "Length": 52.5,
+      "Kill_rating": 10,
       "Intelligence": 7,
-      "Age-mill_yrs": 100
+      "Age-MilYrs": 100,
+      "Image": "/images/dinosaurs/trex.png"
     },
     {
       "Name": "Brachiosaurus",
       "Eating Habits": "Herbivore",
-      "Height-ft": 52.5,
-      "Weight-lbs": 17636,
-      "Length-ft": 85.3,
-      "Killer_rating": 3,
+      "Height": 52.5,
+      "Weight": 17636,
+      "Length": 85.3,
+      "Kill_rating": 3,
       "Intelligence": 2,
-      "Age-mill_yrs": 156
+      "Age-MilYrs": 156,
+      "Image": "/images/dinosaurs/trex.png"
     },
     {
       "Name": "Herrerasaurus",
       "Eating Habits": "Carnivore",
-      "Height-ft": 3.3,
-      "Weight-lbs": 772,
-      "Length-ft": 16.4,
-      "Killer_rating": 7,
+      "Height": 3.3,
+      "Weight": 772,
+      "Length": 16.4,
+      "Kill_rating": 7,
       "Intelligence": 6,
-      "Age-mill_yrs": 230
+      "Age-MilYrs": 230,
+      "Image": "/images/dinosaurs/trex.png"
     },
     {
       "Name": "Gallimimus",
       "Eating Habits": "Omnivore",
-      "Height-ft": 9.8,
-      "Weight-lbs": 440.9,
-      "Length-ft": 18.3,
-      "Killer_rating": 5,
+      "Height": 9.8,
+      "Weight": 440.9,
+      "Length": 18.3,
+      "Kill_rating": 5,
       "Intelligence": 7,
-      "Age-mill_yrs": 74
+      "Age-MilYrs": 74,
+      "Image": "/images/dinosaurs/trex.png"
     },
     {
       "Name": "Triceratops",
       "Eating Habits": "Herbivore",
-      "Height-ft": 9.8,
-      "Weight-lbs": 12125,
-      "Length-ft": 29.5,
-      "Killer_rating": 2,
+      "Height": 9.8,
+      "Weight": 12125,
+      "Length": 29.5,
+      "Kill_rating": 2,
       "Intelligence": 4,
-      "Age-mill_yrs": 72
+      "Age-MilYrs": 72,
+      "Image": "/images/dinosaurs/trex.png"
     },
     {
       "Name": "Corythosaurus",
       "Eating Habits": "Herbivore",
-      "Height-ft": 16.4,
-      "Weight-lbs": 11023,
-      "Length-ft": 26.2,
-      "Killer_rating": 2,
+      "Height": 16.4,
+      "Weight": 11023,
+      "Length": 26.2,
+      "Kill_rating": 2,
       "Intelligence": 5,
-      "Age-mill_yrs": 80
+      "Age-MilYrs": 80,
+      "Image": "/images/dinosaurs/trex.png"
     },
     {
       "Name": "Maiasaura",
       "Eating Habits": "Herbivore",
-      "Height-ft": 8.2,
-      "Weight-lbs": 6614,
-      "Length-ft": 29.5,
-      "Killer_rating": 2,
+      "Height": 8.2,
+      "Weight": 6614,
+      "Length": 29.5,
+      "Kill_rating": 2,
       "Intelligence": 3,
-      "Age-mill_yrs": 80
+      "Age-MilYrs": 80,
+      "Image": "/images/dinosaurs/trex.png"
     },
     {
       "Name": "Dimorphodon",
       "Eating Habits": "Carnivore",
-      "Height-ft": 0.82,
-      "Weight-lbs": 8.8,
-      "Length-ft": 0.82,
-      "Killer_rating": 4,
+      "Height": 0.82,
+      "Weight": 8.8,
+      "Length": 0.82,
+      "Kill_rating": 4,
       "Intelligence": 4,
-      "Age-mill_yrs": 200
+      "Age-MilYrs": 200,
+      "Image": "/images/dinosaurs/trex.png"
     },
     {
       "Name": "Stegosaurus",
       "Eating Habits": "Herbivore",
-      "Height-ft": 9.8,
-      "Weight-lbs": 6834,
-      "Length-ft": 29.5,
-      "Killer_rating": 2,
+      "Height": 9.8,
+      "Weight": 6834,
+      "Length": 29.5,
+      "Kill_rating": 2,
       "Intelligence": 1,
-      "Age-mill_yrs": 76
+      "Age-MilYrs": 76,
+      "Image": "/images/dinosaurs/trex.png"
     },
     {
       "Name": "Stenonychosaurus",
       "Eating Habits": "Carnivore",
-      "Height-ft": 5.9,
-      "Weight-lbs": 132,
-      "Length-ft": 6.6,
-      "Killer_rating": 7,
+      "Height": 5.9,
+      "Weight": 132,
+      "Length": 6.6,
+      "Kill_rating": 7,
       "Intelligence": 10,
-      "Age-mill_yrs": 76
+      "Age-MilYrs": 76,
+      "Image": "/images/dinosaurs/trex.png"
     },
     {
       "Name": "Hypsilophodon",
       "Eating Habits": "Herbivore",
-      "Height-ft": 2.6,
-      "Weight-lbs": 110,
-      "Length-ft": 6.6,
-      "Killer_rating": 1,
+      "Height": 2.6,
+      "Weight": 110,
+      "Length": 6.6,
+      "Kill_rating": 1,
       "Intelligence": 6,
-      "Age-mill_yrs": 125
+      "Age-MilYrs": 125,
+      "Image": "/images/dinosaurs/trex.png"
     },
     {
       "Name": "Camarasaurus",
       "Eating Habits": "Herbivore",
-      "Height-ft": 29.5,
-      "Weight-lbs": 4409,
-      "Length-ft": 59.1,
-      "Killer_rating": 3,
+      "Height": 29.5,
+      "Weight": 4409,
+      "Length": 59.1,
+      "Kill_rating": 3,
       "Intelligence": 2,
-      "Age-mill_yrs": 150
+      "Age-MilYrs": 150,
+      "Image": "/images/dinosaurs/trex.png"
     },
     {
       "Name": "Styracosaurus",
       "Eating Habits": "Herbivore",
-      "Height-ft": 6.6,
-      "Weight-lbs": 6614,
-      "Length-ft": 16.4,
-      "Killer_rating": 2,
+      "Height": 6.6,
+      "Weight": 6614,
+      "Length": 16.4,
+      "Kill_rating": 2,
       "Intelligence": 3,
-      "Age-mill_yrs": 77
+      "Age-MilYrs": 77,
+      "Image": "/images/dinosaurs/trex.png"
     },
     {
       "Name": "Euoplocephalus",
       "Eating Habits": "Herbivore",
-      "Height-ft": 5.9,
-      "Weight-lbs": 4409,
-      "Length-ft": 19.7,
-      "Killer_rating": 3,
+      "Height": 5.9,
+      "Weight": 4409,
+      "Length": 19.7,
+      "Kill_rating": 3,
       "Intelligence": 3,
-      "Age-mill_yrs": 76
+      "Age-MilYrs": 76,
+      "Image": "/images/dinosaurs/trex.png"
     },
     {
       "Name": "Archaeopteryx",
       "Eating Habits": "Omnivore",
-      "Height-ft": 1,
-      "Weight-lbs": 13.2,
-      "Length-ft": 1,
-      "Killer_rating": 6,
+      "Height": 1,
+      "Weight": 13.2,
+      "Length": 1,
+      "Kill_rating": 6,
       "Intelligence": 5,
-      "Age-mill_yrs": 150
+      "Age-MilYrs": 150,
+      "Image": "/images/dinosaurs/trex.png"
     },
     {
       "Name": "Oviraptor",
       "Eating Habits": "Carnivore",
-      "Height-ft": 2.6,
-      "Weight-lbs": 44,
-      "Length-ft": 5.9,
-      "Killer_rating": 5,
+      "Height": 2.6,
+      "Weight": 44,
+      "Length": 5.9,
+      "Kill_rating": 5,
       "Intelligence": 8,
-      "Age-mill_yrs": 70
+      "Age-MilYrs": 70,
+      "Image": "/images/dinosaurs/trex.png"
     }
   ]
 }

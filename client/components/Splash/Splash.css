@@ -3,8 +3,7 @@
                     linear-gradient(-45deg, transparent 20%, black 25%, transparent 25%), 
                     linear-gradient(-45deg, transparent 75%, black 80%, transparent 0),
                     radial-gradient(gray 2px, transparent 0);
-  background-size: 30px 30px, 30px 30px;
-}
+  background-size: 30px 30px, 30px 30px; }
 .header { height: 130px; }
 .header h1 { font-size:70px; margin-bottom:15px; text-align:center;
   text-shadow: 0 1px 0 #ccc,
@@ -48,9 +47,7 @@
   radial-gradient(circle at 100% 50%, white 5%, WhiteSmoke 5%, WhiteSmoke 15%, white 15%, white 20%, WhiteSmoke 20%, WhiteSmoke 29%, white 29%, white 34%, WhiteSmoke 34%, WhiteSmoke 44%, white 44%, white 49%, transparent 49%, transparent),
   radial-gradient(circle at 0    50%, white 5%, WhiteSmoke 5%, WhiteSmoke 15%, white 15%, white 20%, WhiteSmoke 20%, WhiteSmoke 29%, white 29%, white 34%, WhiteSmoke 34%, WhiteSmoke 44%, white 44%, white 49%, transparent 49%, transparent);
 }
-
 .mainContent .radioSelector { font-size:20px; line-height:25px; margin:0 20px 50px; }
-
 .poly,
 .poly:after { background:black; bottom:0; left:0; position:fixed; right:0; top:0;
   clip-path: polygon( 0 100%,

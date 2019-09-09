@@ -1,58 +1,15 @@
-.card {
-  border: 1px solid black;
-  border-radius: 4px;
-  box-shadow: 0 0 0 5px rgba(255,255,255,1),
-              1px 2px 5px 5px rgba(0,0,0,0.2);
-  box-sizing: border-box;
-  height: calc(100% - 32px);
-  margin: 16px;
-  position: relative;
-  transform: rotate(-2deg);
-  z-index: 2;
-}
+.card { border:1px solid black; border-radius:4px;
+  box-shadow:0 0 0 5px rgba(255,255,255,1),
+             1px 2px 5px 5px rgba(0,0,0,0.2);
+  box-sizing:border-box; height:calc(100% - 32px); margin:16px; position:relative; transform:rotate(-2deg); z-index:2 }
 
-.cardHeader {
-  background-color: white;
-  position: relative;
-  height: 50%;
-  overflow: hidden;
-}
-
-.cardContent {
-  border-radius: 0 0 4px 4px;
-  height: calc(50% - 8px);
-  overflow: hidden;
-  padding: 4px 16px;
-}
-
-.cardImage {
-  left: 0;
-  position: absolute;
-  top:0;
-  width: 100%;
-}
-
-.cardTitle {
-  background-color:white;
-  border: 2px solid black;
-  border-left: 0;
-  border-right: 0;
-  padding: 5px 20px;
-  text-align: center;
-  position: absolute;
-  bottom:0;
-  left:0;
-  right:0;
-}
-
-.cardChoice {
-  display: block;
-  font-size: 20px;
-  line-height: 30px;
-  margin-bottom: 0;
-}
-.cardContent {
-  background-color:WhiteSmoke;
+.cardHeader { background-color:white; position:relative; height:50%; overflow:hidden }
+.cardContent { border-radius:0 0 4px 4px; height:calc(50% - 8px); overflow:hidden; padding:4px 12px }
+.cardImage { left:0; position:absolute; top:0; width: 100%; }
+.cardTitle { background-color:white; border:2px solid black; border-left:0; border-right:0; padding:5px 0; text-align:center; top:auto }
+.cardChoice { display:block; font-size:18px; line-height:23px; margin-bottom:0; white-space: nowrap }
+.cardChoice6 { font-size:15px; line-height:18px }
+.cardContent { background-color:WhiteSmoke;
   background-image:
   radial-gradient(circle at 100% 150%, WhiteSmoke 24%, white 24%, white 28%, WhiteSmoke 28%, WhiteSmoke 36%, white 36%, white 40%, transparent 40%, transparent),
   radial-gradient(circle at 0    150%, WhiteSmoke 24%, white 24%, white 28%, WhiteSmoke 28%, WhiteSmoke 36%, white 36%, white 40%, transparent 40%, transparent),
@@ -60,4 +17,17 @@
   radial-gradient(circle at 100% 50%, white 5%, WhiteSmoke 5%, WhiteSmoke 15%, white 15%, white 20%, WhiteSmoke 20%, WhiteSmoke 29%, white 29%, white 34%, WhiteSmoke 34%, WhiteSmoke 44%, white 44%, white 49%, transparent 49%, transparent),
   radial-gradient(circle at 0    50%, white 5%, WhiteSmoke 5%, WhiteSmoke 15%, white 15%, white 20%, WhiteSmoke 20%, WhiteSmoke 29%, white 29%, white 34%, WhiteSmoke 34%, WhiteSmoke 44%, white 44%, white 49%, transparent 49%, transparent);
   background-size: 50px 25px;
+}
+
+@media only screen and (min-width: 374px) {
+  .cardChoice { font-size: 20px; line-height: 28px }
+  .cardChoice6 { font-size:18px; line-height:24px }
+}
+@media only screen and (min-width: 413px) {
+  .cardChoice { line-height: 30px }
+  .cardChoice6 { line-height:26px }
+  .cardContent { padding:4px 16px }
+}
+@media only screen and (min-width: 767px) {
+  .card { height:100%; max-width:300px; max-height:450px; margin:0 auto }
 }
