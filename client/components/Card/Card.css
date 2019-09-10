@@ -34,3 +34,9 @@
   .cardChoice6 { font-size:25px; line-height:36px }
   .cardContent { padding:4px 24px }
 }
+@supports (-webkit-overflow-scrolling: touch) {
+  .cardChoice6 input[type="radio"] {
+    height: 10px;
+    width: 10px;
+  }
+}

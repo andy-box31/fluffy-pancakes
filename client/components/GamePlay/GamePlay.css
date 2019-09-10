@@ -15,7 +15,7 @@
 .standOut { display: block; margin-bottom: 10px }
 p.scores { font-size:40px; height:110px; white-space:nowrap; position:relative }
 .score { position:absolute; left:0px }
-.score ~ .score { top:75px; right:20px; left:auto }
+.score ~ .score { top:75px; right:40px; left:auto }
 .versus { font-size:28px; position:absolute; top:40px; left:50px }
 p.cardScores { font-size:30px; height:90px; padding:16px 16px 16px 20px; position:relative; text-align:center; white-space:nowrap }
 .cardScores .score,
@@ -71,4 +71,7 @@ p.cardScores { height:120px; padding-left: 30px }
   p.cardScores { box-sizing:border-box; float:left; height:auto; margin-top:30px; padding-left:240px; width:70% }
   .cardScores .score,
   .cardScores .versus{ display:inline; top:auto }
+}
+@supports (-webkit-overflow-scrolling: touch) {
+  .infoTop { text-align: left }
 }
