@@ -1,6 +1,7 @@
 {
   "info": {
-    "competeOn": ["Size", "Speed", "Power", "Disguise", "Rating" ]
+    "competeOn": ["Size", "Speed", "Power", "Disguise", "Rating" ],
+    "backgroundImage": "/images/transformers/background.png"
   },
   "cards": [
     {
@@ -11,7 +12,7 @@
       "Disguise": 5,
       "Rating": 10,
       "Type": "Insecticon",
-      "Image": "https://placeimg.com/640/480/people"
+      "Image": "/images/transformers/astroTrain.jpg"
     },
     {
       "Name": "Barrage",
@@ -21,7 +22,7 @@
       "Disguise": 20,
       "Rating": 6,
       "Type": "Insecticon",
-      "Image": "https://placeimg.com/640/480/people"
+      "Image": "/images/transformers/barrage.jpg"
     },
     {
       "Name": "Blitzwing",
@@ -31,7 +32,7 @@
       "Disguise": 10,
       "Rating": 8,
       "Type": "Insecticon",
-      "Image": "https://placeimg.com/640/480/people"
+      "Image": "/images/transformers/blitzwing.jpg"
     },
     {
       "Name": "Bluestreak",
@@ -41,7 +42,7 @@
       "Disguise": 14,
       "Rating": 4,
       "Type": "Autobot",
-      "Image": "https://placeimg.com/640/480/people"
+      "Image": "/images/transformers/bluestreak.jpg"
     },
     {
       "Name": "Brawn",
@@ -51,7 +52,7 @@
       "Disguise": 19,
       "Rating": 7,
       "Type": "Autobot",
-      "Image": "https://placeimg.com/640/480/people"
+      "Image": "/images/transformers/brawn.jpg"
     },
     {
       "Name": "Bumblebee",
@@ -61,17 +62,67 @@
       "Disguise": 16,
       "Rating": 14,
       "Type": "Autobot",
-      "Image": "https://placeimg.com/640/480/people"
+      "Image": "/images/transformers/bumblebee.jpg"
     },
     {
-      "Name": "Laserbeak",
+      "Name": "Cliffjumper",
       "Size": 1,
-      "Speed": 5,
-      "Power": 25,
+      "Speed": 6,
+      "Power": 30,
+      "Disguise": 16,
+      "Rating": 7,
+      "Type": "Autobot",
+      "Image": "/images/transformers/cliffJumper.jpg"
+    },
+    {
+      "Name": "Cosmos",
+      "Size": 6,
+      "Speed": 1,
+      "Power": 50,
+      "Disguise": 1,
+      "Rating": 5,
+      "Type": "Autobot",
+      "Image": "/images/transformers/cosmos.jpg"
+    },
+    {
+      "Name": "Devastator",
+      "Size": 5,
+      "Speed": 4,
+      "Power": 50,
+      "Disguise": 20,
+      "Rating": 14,
+      "Type": "Insecticon",
+      "Image": "/images/transformers/devastator.jpg"
+    },
+    {
+      "Name": "Frenzy",
+      "Size": 1,
+      "Speed": 2,
+      "Power": 15,
       "Disguise": 18,
-      "Rating": 12,
-      "Type": "Decepticon",
-      "Image": "https://placeimg.com/640/480/people"
+      "Rating": 8,
+      "Type": "Autobot",
+      "Image": "/images/transformers/frenzy.jpg"
+    },
+    {
+      "Name": "Grapple",
+      "Size": 5,
+      "Speed": 2,
+      "Power": 49,
+      "Disguise": 13,
+      "Rating": 3,
+      "Type": "Autobot",
+      "Image": "/images/transformers/grapple.jpg"
+    },
+    {
+      "Name": "Grimlock",
+      "Size": 4,
+      "Speed": 5,
+      "Power": 49,
+      "Disguise": 1,
+      "Rating": 15,
+      "Type": "Autobot",
+      "Image": "/images/transformers/grimlock.jpg"
     },
     {
       "Name": "Megatron",
@@ -81,7 +132,7 @@
       "Disguise": 3,
       "Rating": 14,
       "Type": "Autobot",
-      "Image": "https://placeimg.com/640/480/people"
+      "Image": "/images/transformers/megatron.jpg"
     },
     {
       "Name": "Optimus Prime",
@@ -91,7 +142,67 @@
       "Disguise": 11,
       "Rating": 15,
       "Type": "Autobot",
-      "Image": "https://placeimg.com/640/480/people"
+      "Image": "/images/transformers/optimusPrime.jpg"
+    },
+    {
+      "Name": "Ransack",
+      "Size": 1,
+      "Speed": 4,
+      "Power": 28,
+      "Disguise": 20,
+      "Rating": 6,
+      "Type": "Insecticon",
+      "Image": "/images/transformers/ransack.jpg"
+    },
+    {
+      "Name": "Ratchet",
+      "Size": 3,
+      "Speed": 6,
+      "Power": 28,
+      "Disguise": 18,
+      "Rating": 10,
+      "Type": "Autobot",
+      "Image": "/images/transformers/ratchet.jpg"
+    },
+    {
+      "Name": "Ravage",
+      "Size": 1,
+      "Speed": 4,
+      "Power": 30,
+      "Disguise": 18,
+      "Rating": 13,
+      "Type": "Insecticon",
+      "Image": "/images/transformers/ravage.jpg"
+    },
+    {
+      "Name": "Seaspray",
+      "Size": 2,
+      "Speed": 4,
+      "Power": 20,
+      "Disguise": 6,
+      "Rating": 2,
+      "Type": "Autobot",
+      "Image": "/images/transformers/seaspray.jpg"
+    },
+    {
+      "Name": "Shockwave",
+      "Size": 4,
+      "Speed": 5,
+      "Power": 48,
+      "Disguise": 1,
+      "Rating": 9,
+      "Type": "Insecticon",
+      "Image": "/images/transformers/shockwave.jpg"
+    },
+    {
+      "Name": "Skywarp",
+      "Size": 3,
+      "Speed": 10,
+      "Power": 26,
+      "Disguise": 11,
+      "Rating": 2,
+      "Type": "Insecticon",
+      "Image": "/images/transformers/skywarp.jpg"
     }
   ]
 }

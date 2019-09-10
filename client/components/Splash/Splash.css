@@ -1,42 +1,91 @@
-.header {
-  height: 200px;
+.splash { background:red; box-sizing:border-box; height:100vh; overflow:hidden; padding-top:60px; width:100vw;
+  background-image: linear-gradient(45deg, transparent 20%, black 25%, transparent 25%), 
+                    linear-gradient(-45deg, transparent 20%, black 25%, transparent 25%), 
+                    linear-gradient(-45deg, transparent 75%, black 80%, transparent 0),
+                    radial-gradient(gray 2px, transparent 0);
+  background-size: 30px 30px, 30px 30px; }
+.header { height: 130px; }
+.header h1 { font-size:70px; margin-bottom:15px; text-align:center;
+  text-shadow: 0 1px 0 #ccc,
+               0 2px 0 #c9c9c9,
+               0 3px 0 #bbb,
+               0 4px 0 #b9b9b9,
+               0 5px 0 #aaa,
+               0 6px 1px rgba(0,0,0,.1),
+               0 0 5px rgba(0,0,0,.1),
+               0 1px 3px rgba(0,0,0,.3),
+               0 3px 5px rgba(0,0,0,.2),
+               0 5px 10px rgba(0,0,0,.25),
+               0 10px 10px rgba(0,0,0,.2),
+               0 20px 20px rgba(0,0,0,.15);
+}
+.poly h1{ font-size:70px; left:10px; position:relative; text-align:center; top:90px; transform:rotate(-5deg); z-index:3;
+  text-shadow:
+    1px 0 #808d93,
+    0 -1px #cdd2d5,
+    2px -1px #808d93,
+    1px -2px #cdd2d5,
+    3px -2px #808d93,
+    2px -3px #cdd2d5,
+    4px -3px #808d93,
+    3px -4px #cdd2d5,
+    5px -4px #808d93,
+    4px -5px #cdd2d5,
+    6px -5px #808d93,
+    5px -6px #cdd2d5,
+    7px -6px #808d93,
+    6px -7px #cdd2d5,
+    8px -7px #808d93,
+    7px -8px #cdd2d5;
+}
+.header h3 { font-size:35px; text-align:center; width:280px; }
+.mainContent { background-color:WhiteSmoke; background-size:50px 25px; border:1px solid black; margin:0 auto; outline:6px solid white; padding:60px 10px; position:relative; width:220px;
+  background-image:
+  radial-gradient(circle at 100% 150%, WhiteSmoke 24%, white 24%, white 28%, WhiteSmoke 28%, WhiteSmoke 36%, white 36%, white 40%, transparent 40%, transparent),
+  radial-gradient(circle at 0    150%, WhiteSmoke 24%, white 24%, white 28%, WhiteSmoke 28%, WhiteSmoke 36%, white 36%, white 40%, transparent 40%, transparent),
+  radial-gradient(circle at 50%  100%, white 10%, WhiteSmoke 10%, WhiteSmoke 23%, white 23%, white 30%, WhiteSmoke 30%, WhiteSmoke 43%, white 43%, white 50%, WhiteSmoke 50%, WhiteSmoke 63%, white 63%, white 71%, transparent 71%, transparent),
+  radial-gradient(circle at 100% 50%, white 5%, WhiteSmoke 5%, WhiteSmoke 15%, white 15%, white 20%, WhiteSmoke 20%, WhiteSmoke 29%, white 29%, white 34%, WhiteSmoke 34%, WhiteSmoke 44%, white 44%, white 49%, transparent 49%, transparent),
+  radial-gradient(circle at 0    50%, white 5%, WhiteSmoke 5%, WhiteSmoke 15%, white 15%, white 20%, WhiteSmoke 20%, WhiteSmoke 29%, white 29%, white 34%, WhiteSmoke 34%, WhiteSmoke 44%, white 44%, white 49%, transparent 49%, transparent);
+}
+.mainContent .radioSelector { font-size:20px; line-height:25px; margin:0 20px 50px; }
+.poly,
+.poly:after { background:black; bottom:0; left:0; position:fixed; right:0; top:0;
+  clip-path: polygon( 0 100%,
+                      5% 90%,
+                      15% 88%,
+                      20% 86%,
+                      22% 78%,
+                      50% 65%,
+                      45% 45%,
+                      70% 35%,
+                      65% 20%,
+                      90% 15%,
+                      100% 0,
+                      100% 100%);
+}
+.poly:after { background:blue; background-color:#aef; content:''; left:45px; top:35px;
+  background-image: radial-gradient(closest-side, transparent 98%, rgba(0,0,100,.3) 99%),
+                    radial-gradient(closest-side, transparent 98%, rgba(0,0,100,.3) 99%);
+  background-size:80px 80px; background-position:0 0, 40px 40px;
 }
 
-.header h1 {
-  text-align: center;
-  font-size: 50px;
-  margin-bottom: 30px;
+@media only screen and (min-width: 374px) {
+  .header { height:160px; }
+  .splash { padding-top:100px; }
+  .poly h1 { top:120px; left:20px; }
 }
 
-.header h3 {
-  text-align: center;
-  font-size: 35px;
+@media only screen and (min-width: 413px) {
+  .header { height:180px; }
+  .poly h1,
+  .header h1 { font-size:80px; }
+  .mainContent { padding:80px 20px; }
 }
 
-.dealBtn {
-  background:linear-gradient(to bottom, #007dc1 5%, #0061a7 100%);
-	background-color:#007dc1;
-	border-radius:4px;
-  box-shadow: 0px 10px 14px -7px #276873;
-  cursor:pointer;
-  color:#ffffff;
-  display:block;
-  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#007dc1', endColorstr='#0061a7',GradientType=0);
-	font-size:20px;
-  font-weight:bold;
-  margin: 0 auto;
-  padding:10px 60px;
-  text-transform: uppercase;
-  text-decoration:none;
-	text-shadow:0px 1px 0px #154682;}
-
-.dealBtn:hover {
-  background:linear-gradient(to bottom, #0061a7 5%, #007dc1 100%);
-	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#0061a7', endColorstr='#007dc1',GradientType=0);
-	background-color:#0061a7;
-}
-
-.dealBtn:active {
-  position:relative;
-  top:1px;
+@media only screen and (min-width: 767px) {
+  .header { height:200px; }
+  .splash { padding-top:150px; }
+  .poly h1,
+  .header h1 { font-size:100px; }
+  .poly h1 { top:200px; left:30px; }
 }

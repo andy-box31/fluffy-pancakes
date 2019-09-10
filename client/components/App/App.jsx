@@ -3,7 +3,6 @@ import { connect } from 'react-redux'
 import { GAME_STATE } from '../../utilities/constants'
 import Splash from '../Splash/Splash'
 import GamePlay from '../GamePlay/GamePlay'
-import './App.css'
 
 const App = ({gameState}) => {
   return (

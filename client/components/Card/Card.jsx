@@ -1,5 +1,6 @@
 import React from 'react'
 import { connect } from 'react-redux'
+import classnames from 'classnames'
 import './Card.css'
 
 const Card = ({params, onSubmit, attrs, readOnly}) => {
@@ -8,10 +9,10 @@ const Card = ({params, onSubmit, attrs, readOnly}) => {
       return
     }
     if (readOnly) {
-      return <p key={key}> {key}: {params[key]} </p> //TODO should be a list
+      return <p className={classnames({cardChoice: true, cardChoice6: attrs.length > 5})} key={key}> {key}: {params[key]} </p> //TODO should be a list
     }
     return (
-      <label key={key} className="cardRadio">
+      <label key={key} className={classnames({cardChoice: true, cardChoice6: attrs.length > 5})}>
         <input
           type="radio"
           name="selection"
@@ -21,16 +22,26 @@ const Card = ({params, onSubmit, attrs, readOnly}) => {
       </label>
     )
   })
+
+  const backgroundImage = !!params.Image ? {
+    backgroundImage: `url(${params.Image})`,
+    backgroundSize: 'cover',
+    backgroundRepeat: 'no-repeat'
+  } : {}
+  const rand = Math.random()*3 - 2
+  const cardRotate = {
+    transform: `rotate(${rand}deg)`
+  }
   return (
-    <div className="card">
-      <header className="cardHeader">
-        {params.Image && <img className="cardImage" src={params.Image} alt={`image of ${params.Name}`} /> }
-        <h1 className="cardTitle">
+    <div className="card" style={cardRotate}>
+      <header style={backgroundImage} className="cardHeader">
+        <h1 className="glbFullAbsolute cardTitle">
           {params.Name ? params.Name : 'Card info'}
         </h1>
       </header>
-      <div className="cardContent"></div>
-      {details}
+      <div className="cardContent">
+        {details}
+      </div>
     </div>
   )
 }

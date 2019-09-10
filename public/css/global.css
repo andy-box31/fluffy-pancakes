@@ -1,7 +1,14 @@
-
-@import url('https://fonts.googleapis.com/css?family=Hind+Madurai|Titillium+Web&display=swap');
-
-* {
-  font-family: 'Titillium Web', sans-serif;
-  /* font-family: 'Hind Madurai', sans-serif; */
-}
+* { font-family: 'Titillium Web', sans-serif }
+h1, h2, h3, h4, h5, h6 { font-family:'Quantico', sans-serif; font-style:italic; font-weight: 700 }
+p { margin-bottom:8px; }
+.glbFullAbsolute,
+.glbFullFixed { top:0; bottom:0; right:0; left:0 }
+.glbFullAbsolute { position:absolute }
+.glbFullFixed { position:fixed }
+.glbBtn {
+  background:linear-gradient(to bottom, #007dc1 5%, #0061a7 100%);
+  background-color:#007dc1; border-radius:4px; box-shadow:0px 10px 14px -7px #276873; cursor:pointer; color:#ffffff; display:block;
+  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#007dc1', endColorstr='#0061a7',GradientType=0);
+  font-size:20px; font-weight:bold; margin:0 auto; padding:10px 60px; text-transform:uppercase; text-decoration:none; text-shadow:0px 1px 0px #154682;}
+.glbBtn:hover { background:linear-gradient(to bottom, #0061a7 5%, #007dc1 100%); filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#0061a7', endColorstr='#007dc1',GradientType=0); background-color:#0061a7; }
+.glbBtn:active { position:relative; top:1px; }

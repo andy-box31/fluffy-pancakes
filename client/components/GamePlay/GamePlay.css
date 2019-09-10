@@ -1,43 +1,74 @@
-.grid {
-  display: grid;
-  grid-template-columns: repeat(10, 10%);
-  grid-template-rows: repeat(10, 10%);
-  height: 550px;
-  margin: 10px auto;
-  width: 300px;
-}
-.player1 {
-  background: lightblue;
-}
-.player2 {
-  background: lightpink;
-}
-.active {
-  grid-area:1/1/7/7;
-}
-.info {
-  grid-area: 1/7/7/11;
-}
-.score {
-  grid-area: 7/1/11/6;
-}
-.opponent {
-  grid-area: 7/6/11/11;
-}
-
-.theMiddle  {
-  border: 1px solid #333;
-}
+.outerBackground { background-size:cover; background-repeat:no-repeat; content:''; left:-200px; opacity:.03; transform:rotate(35deg); width:880px }
+.grid { display:grid; grid-template-columns:repeat(10, 10%); grid-template-rows:repeat(10, 10%); grid-template-columns:repeat(auto-fit, minmax(1fr, 1fr)); height:100vh; overflow:hidden }
+.player1 { background:lightblue }
+.player2 { background:lightpink }
+.p1Outer { grid-area:1/1/6/7; position: relative }
+.p2Outer { grid-area:6/5/11/11; position:relative }
+.infoTop { grid-area: 1/7/6/11; padding-right: 10px; text-align: center }
+.infoBottom { grid-area:6/1/11/5 }
+.infoTop h1,
+.infoBottom h1 { font-size:45px; font-weight:700; margin:30px 0px -15px 0; transform:rotate(-12deg); position:relative; right:20px; color:rgba(0,0,0,0.15) }
+.infoTop p,
+.infoBottom p { font-size: 26px; line-height:35px; margin-bottom: 10px }
+.infoTop p.smaller,
+.infoBottom p.smaller { font-size: 20px; line-height: 22px }
+.standOut { display: block; margin-bottom: 10px }
+p.scores { font-size:40px; height:110px; white-space:nowrap; position:relative }
+.score { position:absolute; left:0px }
+.score ~ .score { top:75px; right:20px; left:auto }
+.versus { font-size:28px; position:absolute; top:40px; left:50px }
+p.cardScores { font-size:30px; height:90px; padding:16px 16px 16px 20px; position:relative; text-align:center; white-space:nowrap }
+.cardScores .score,
+.cardScores .versus { position:relative; top:auto; left:auto; right:auto }
+.cardScores .versus { font-size:22px }
 .opponentCard {
-  border-radius: 4px;
-  box-sizing: border-box;
-  height: calc(100% - 24px);
-  margin: 12px auto;
-  padding: 12px;
-  position: relative;
-  width: 100%;
-
-  background: radial-gradient(circle at 0% 50%, rgba(96, 16, 48, 0) 9px, #613 10px, rgba(96, 16, 48, 0) 11px) 0px 10px,
+  border-radius:6px;
+  box-shadow:inset 0 0 0 10px rgba(255,255,255,1), 1px 2px 5px 5px rgba(0,0,0,0.2);
+  box-sizing:border-box; height:calc(100% - 32px); margin:16px; position:relative;
+  background:radial-gradient(circle at 0% 50%, rgba(96, 16, 48, 0) 9px, #613 10px, rgba(96, 16, 48, 0) 11px) 0px 10px,
     radial-gradient(at 100% 100%, rgba(96, 16, 48, 0) 9px, #613 10px, rgba(96, 16, 48, 0) 11px), #8a3;
-  background-size: 20px 20px;
+  background-size:20px 20px; z-index:2 }
+.fullPageButton { background:transparent; font-size:0; width:100%; z-index:3 }
+
+
+@media only screen and (min-width: 374px) {
+  .infoTop h1,
+.infoBottom h1 { font-size:50px; margin-top:40px }
+.infoTop p,
+.infoBottom p { font-size:30px; line-height:35px; margin-bottom:40px }
+}
+
+@media only screen and (min-width: 413px) {
+.infoTop h1,
+.infoBottom h1 { font-size:61px; margin:40px 0 -20px }
+p.scores { font-size:60px; height:130px }
+.score { left:10px }
+.score ~ .score { top:85px }
+.versus { left:90px }
+p.cardScores { height:120px; padding-left: 30px }
+.cardScores .versus{ top:30px }
+}
+
+@media only screen and (min-width: 767px) {
+  .grid { grid-template-columns:repeat(16, 6.25%); grid-template-rows:repeat(10, 10%); grid-template-columns:repeat(auto-fit, minmax(1fr, 1fr)); height:100vh; overflow:hidden }
+  .p1Outer { grid-area:2/2/8/7; position: relative }
+  .p2Outer { grid-area:2/11/8/16; position:relative }
+  .infoTop { grid-area: 2/7/8/11; padding-right: 10px; text-align: center }
+  .infoBottom { grid-area:8/2/11/16 }
+  .opponentCard { height:100%; max-width:300px; max-height:450px; margin:0 auto }
+  .infoTop h1,
+  .infoBottom h1 { font-size:100px; margin:-50px 0 10px }
+  .infoTop p,
+  .infoBottom p { font-size: 40px; line-height:45px }
+  .infoTop p.smaller,
+  .infoBottom p.smaller { font-size: 26px; line-height:30px }
+  p.scores,
+  .score,
+  .score ~ .score,
+  .versus { bottom:auto; display:block; left:auto; margin:0 auto; position:relative; right:auto; top:auto }
+  .score { font-size:80px; line-height:80px }
+  p.scores { height:auto; margin-bottom:30px }
+  p.cardScores { box-sizing:border-box; float:left; height:auto; margin-top:30px; padding-left:240px; width:70% }
+  .cardScores .score,
+  .cardScores .versus{ display:inline; top:auto }
 }

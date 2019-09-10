@@ -15,8 +15,11 @@ const Splash = ({dealCards, getCards, winner = null}) => {
 
   return (
     <div className="splash">
+      <div className="poly">
+        <h1>TRUMPS</h1>
+      </div>
       <header className="header">
-        <h1>Trumps</h1>
+        <h1>TRUMPS</h1>
         {winner && <h3>WOOP WOOP {winner} Wins</h3>}
         <Navigation />
       </header>
@@ -27,7 +30,7 @@ const Splash = ({dealCards, getCards, winner = null}) => {
           handleChange={handleSelect}
           activeParam={deckChoice}
         />
-        <button type="button" className="dealBtn" onClick={dealCards}>deal</button>
+        <button type="button" className="glbBtn" onClick={dealCards}>deal</button>
       </main>
     </div>
   )
