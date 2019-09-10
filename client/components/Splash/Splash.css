@@ -19,6 +19,15 @@
                0 10px 10px rgba(0,0,0,.2),
                0 20px 20px rgba(0,0,0,.15);
 }
+.poly,
+.poly:after { background:black; bottom:0; left:0; position:fixed; right:0; top:0;
+  -webkit-clip-path: polygon( 0 100%, 5% 90%, 15% 88%, 20% 86%, 22% 78%, 50% 65%, 45% 45%, 70% 35%, 65% 20%, 90% 15%, 100% 0, 100% 100%);
+  clip-path: polygon( 0 100%, 5% 90%, 15% 88%, 20% 86%, 22% 78%, 50% 65%, 45% 45%, 70% 35%, 65% 20%, 90% 15%, 100% 0, 100% 100%);
+}
+.poly:after { background:blue; background-color:#aef; content:''; left:45px; top:35px;
+  background-image: radial-gradient(closest-side, transparent 98%, rgba(0,0,100,.3) 99%),
+                    radial-gradient(closest-side, transparent 98%, rgba(0,0,100,.3) 99%);
+  background-size:80px 80px; background-position:0 0, 40px 40px; }
 .poly h1{ font-size:70px; left:10px; position:relative; text-align:center; top:90px; transform:rotate(-5deg); z-index:3;
   text-shadow:
     1px 0 #808d93,
@@ -48,33 +57,12 @@
   radial-gradient(circle at 0    50%, white 5%, WhiteSmoke 5%, WhiteSmoke 15%, white 15%, white 20%, WhiteSmoke 20%, WhiteSmoke 29%, white 29%, white 34%, WhiteSmoke 34%, WhiteSmoke 44%, white 44%, white 49%, transparent 49%, transparent);
 }
 .mainContent .radioSelector { font-size:20px; line-height:25px; margin:0 20px 50px; }
-.poly,
-.poly:after { background:black; bottom:0; left:0; position:fixed; right:0; top:0;
-  clip-path: polygon( 0 100%,
-                      5% 90%,
-                      15% 88%,
-                      20% 86%,
-                      22% 78%,
-                      50% 65%,
-                      45% 45%,
-                      70% 35%,
-                      65% 20%,
-                      90% 15%,
-                      100% 0,
-                      100% 100%);
-}
-.poly:after { background:blue; background-color:#aef; content:''; left:45px; top:35px;
-  background-image: radial-gradient(closest-side, transparent 98%, rgba(0,0,100,.3) 99%),
-                    radial-gradient(closest-side, transparent 98%, rgba(0,0,100,.3) 99%);
-  background-size:80px 80px; background-position:0 0, 40px 40px;
-}
 
 @media only screen and (min-width: 374px) {
   .header { height:160px; }
   .splash { padding-top:100px; }
   .poly h1 { top:120px; left:20px; }
 }
-
 @media only screen and (min-width: 413px) {
   .header { height:180px; }
   .poly h1,
