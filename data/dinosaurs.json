@@ -1,6 +1,6 @@
 {
   "info": {
-    "competeOn": ["Height","Weight","Length","Kill_rating","Intelligence","Age-MilYrs"],
+    "competeOn": ["Height","Weight","Length","Kill_rating","Intelligence","Age"],
     "backgroundImage": "/images/dinosaurs/background.png"
   },
   "cards":[
@@ -12,7 +12,7 @@
       "Length": 26.2,
       "Kill_rating": 2,
       "Intelligence": 7,
-      "Age-MilYrs": 76,
+      "Age": 76,
       "Image": "/images/dinosaurs/trex.png"
     },
     {
@@ -23,7 +23,7 @@
       "Length":39.3,
       "Kill_rating": 9,
       "Intelligence": 9,
-      "Age-MilYrs": 6,
+      "Age": 6,
       "Image": "/images/dinosaurs/trex.png"
     },
     {
@@ -34,7 +34,7 @@
       "Length": 85.3,
       "Kill_rating": 3,
       "Intelligence": 2,
-      "Age-MilYrs": 156,
+      "Age": 156,
       "Image": "/images/dinosaurs/trex.png"
     },
     {
@@ -45,7 +45,7 @@
       "Length": 3.9,
       "Kill_rating": 1,
       "Intelligence": 5,
-      "Age-MilYrs": 208,
+      "Age": 208,
       "Image": "/images/dinosaurs/trex.png"
     },
     {
@@ -56,7 +56,7 @@
       "Length": 39.3,
       "Kill_rating": 8,
       "Intelligence": 7,
-      "Age-MilYrs": 100,
+      "Age": 100,
       "Image": "/images/dinosaurs/trex.png"
     },
     {
@@ -67,7 +67,7 @@
       "Length": 23,
       "Kill_rating": 2,
       "Intelligence": 4,
-      "Age-MilYrs": 70,
+      "Age": 70,
       "Image": "/images/dinosaurs/trex.png"
     },
     {
@@ -78,7 +78,7 @@
       "Length": 4.6,
       "Kill_rating": 5,
       "Intelligence": 7,
-      "Age-MilYrs": 145,
+      "Age": 145,
       "Image": "/images/dinosaurs/trex.png"
     },
     {
@@ -89,7 +89,7 @@
       "Length": 32.8,
       "Kill_rating": 3,
       "Intelligence": 6,
-      "Age-MilYrs": 135,
+      "Age": 135,
       "Image": "/images/dinosaurs/trex.png"
     },
     {
@@ -100,7 +100,7 @@
       "Length": 26.2,
       "Kill_rating": 3,
       "Intelligence": 5,
-      "Age-MilYrs": 75,
+      "Age": 75,
       "Image": "/images/dinosaurs/trex.png"
     },
     {
@@ -111,7 +111,7 @@
       "Length": 9.8,
       "Kill_rating": 4,
       "Intelligence": 7,
-      "Age-MilYrs": 225,
+      "Age": 225,
       "Image": "/images/dinosaurs/trex.png"
     },
     {
@@ -122,7 +122,7 @@
       "Length": 6.6,
       "Kill_rating": 9,
       "Intelligence": 10,
-      "Age-MilYrs": 85,
+      "Age": 85,
       "Image": "/images/dinosaurs/trex.png"
     },
     {
@@ -133,7 +133,7 @@
       "Length": 19.7,
       "Kill_rating": 2,
       "Intelligence": 4,
-      "Age-MilYrs": 76,
+      "Age": 76,
       "Image": "/images/dinosaurs/trex.png"
     },
     {
@@ -144,7 +144,7 @@
       "Length": 29.5,
       "Kill_rating": 9,
       "Intelligence": 8,
-      "Age-MilYrs": 175,
+      "Age": 175,
       "Image": "/images/dinosaurs/trex.png"
     },
     {
@@ -155,7 +155,7 @@
       "Length": 6.6,
       "Kill_rating": 2,
       "Intelligence": 4,
-      "Age-MilYrs": 72,
+      "Age": 72,
       "Image": "/images/dinosaurs/trex.png"
     },
     {
@@ -166,7 +166,7 @@
       "Length": 52.5,
       "Kill_rating": 10,
       "Intelligence": 7,
-      "Age-MilYrs": 100,
+      "Age": 100,
       "Image": "/images/dinosaurs/trex.png"
     },
     {
@@ -177,7 +177,7 @@
       "Length": 85.3,
       "Kill_rating": 3,
       "Intelligence": 2,
-      "Age-MilYrs": 156,
+      "Age": 156,
       "Image": "/images/dinosaurs/trex.png"
     },
     {
@@ -188,7 +188,7 @@
       "Length": 16.4,
       "Kill_rating": 7,
       "Intelligence": 6,
-      "Age-MilYrs": 230,
+      "Age": 230,
       "Image": "/images/dinosaurs/trex.png"
     },
     {
@@ -199,7 +199,7 @@
       "Length": 18.3,
       "Kill_rating": 5,
       "Intelligence": 7,
-      "Age-MilYrs": 74,
+      "Age": 74,
       "Image": "/images/dinosaurs/trex.png"
     },
     {
@@ -210,7 +210,7 @@
       "Length": 29.5,
       "Kill_rating": 2,
       "Intelligence": 4,
-      "Age-MilYrs": 72,
+      "Age": 72,
       "Image": "/images/dinosaurs/trex.png"
     },
     {
@@ -221,7 +221,7 @@
       "Length": 26.2,
       "Kill_rating": 2,
       "Intelligence": 5,
-      "Age-MilYrs": 80,
+      "Age": 80,
       "Image": "/images/dinosaurs/trex.png"
     },
     {
@@ -232,7 +232,7 @@
       "Length": 29.5,
       "Kill_rating": 2,
       "Intelligence": 3,
-      "Age-MilYrs": 80,
+      "Age": 80,
       "Image": "/images/dinosaurs/trex.png"
     },
     {
@@ -243,7 +243,7 @@
       "Length": 0.82,
       "Kill_rating": 4,
       "Intelligence": 4,
-      "Age-MilYrs": 200,
+      "Age": 200,
       "Image": "/images/dinosaurs/trex.png"
     },
     {
@@ -254,7 +254,7 @@
       "Length": 29.5,
       "Kill_rating": 2,
       "Intelligence": 1,
-      "Age-MilYrs": 76,
+      "Age": 76,
       "Image": "/images/dinosaurs/trex.png"
     },
     {
@@ -265,7 +265,7 @@
       "Length": 6.6,
       "Kill_rating": 7,
       "Intelligence": 10,
-      "Age-MilYrs": 76,
+      "Age": 76,
       "Image": "/images/dinosaurs/trex.png"
     },
     {
@@ -276,7 +276,7 @@
       "Length": 6.6,
       "Kill_rating": 1,
       "Intelligence": 6,
-      "Age-MilYrs": 125,
+      "Age": 125,
       "Image": "/images/dinosaurs/trex.png"
     },
     {
@@ -287,7 +287,7 @@
       "Length": 59.1,
       "Kill_rating": 3,
       "Intelligence": 2,
-      "Age-MilYrs": 150,
+      "Age": 150,
       "Image": "/images/dinosaurs/trex.png"
     },
     {
@@ -298,7 +298,7 @@
       "Length": 16.4,
       "Kill_rating": 2,
       "Intelligence": 3,
-      "Age-MilYrs": 77,
+      "Age": 77,
       "Image": "/images/dinosaurs/trex.png"
     },
     {
@@ -309,7 +309,7 @@
       "Length": 19.7,
       "Kill_rating": 3,
       "Intelligence": 3,
-      "Age-MilYrs": 76,
+      "Age": 76,
       "Image": "/images/dinosaurs/trex.png"
     },
     {
@@ -320,7 +320,7 @@
       "Length": 1,
       "Kill_rating": 6,
       "Intelligence": 5,
-      "Age-MilYrs": 150,
+      "Age": 150,
       "Image": "/images/dinosaurs/trex.png"
     },
     {
@@ -331,7 +331,7 @@
       "Length": 5.9,
       "Kill_rating": 5,
       "Intelligence": 8,
-      "Age-MilYrs": 70,
+      "Age": 70,
       "Image": "/images/dinosaurs/trex.png"
     }
   ]
