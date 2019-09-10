@@ -1,5 +1,5 @@
-.underCard { background:white; border:1px solid black; border-radius:4px; box-shadow:0 0 0 5px rgba(255,255,255,1), 1px 2px 5px 5px rgba(0,0,0,0.2); box-sizing:border-box; margin:16px; z-index:1; }
-.backside { background: #8a3; }
+.underCard { background:white; border:1px solid black; border-radius:4px; box-shadow:0 0 0 5px rgba(255,255,255,1), 1px 2px 5px 5px rgba(0,0,0,0.2); box-sizing:border-box; margin:16px; z-index:1 }
+.backside { background: #8a3 }
 @media only screen and (min-width: 767px) {
   .underCard { max-width:300px; max-height:450px; margin:0 auto }
 }

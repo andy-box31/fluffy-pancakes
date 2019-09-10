@@ -1,55 +1,21 @@
-.theMiddle {
-  position: relative;
-}
-
+.theMiddle { position: relative; }
+.theMiddle p,
+.theMiddle:after { border-radius:6px; box-shadow:inset 0 0 0 10px rgba(255,255,255,1), 1px 2px 5px 5px rgba(0,0,0,0.2);
+  box-sizing:border-box; height:calc(100% - 32px); margin:16px; position:relative;
+  background:radial-gradient(circle at 0% 50%, rgba(96, 16, 48, 0) 9px, #613 10px, rgba(96, 16, 48, 0) 11px) 0px 10px,
+    radial-gradient(at 100% 100%, rgba(96, 16, 48, 0) 9px, #613 10px, rgba(96, 16, 48, 0) 11px), #8a3; background-size:20px 20px; }
 .theMiddle p,
 .theMiddle:after {
-  border-radius: 6px;
-  box-shadow: inset 0 0 0 10px rgba(255,255,255,1), 1px 2px 5px 5px rgba(0,0,0,0.2);
-  box-sizing: border-box;
-  height: calc(100% - 32px);
-  margin: 16px;
-  position: relative;
-  background: radial-gradient(circle at 0% 50%, rgba(96, 16, 48, 0) 9px, #613 10px, rgba(96, 16, 48, 0) 11px) 0px 10px,
-    radial-gradient(at 100% 100%, rgba(96, 16, 48, 0) 9px, #613 10px, rgba(96, 16, 48, 0) 11px), #8a3;
-  background-size: 20px 20px;
-}
-
-.theMiddle p,
-.theMiddle:after {
-  border: 1px solid #333;
-  box-shadow: inset 0 0 0 6px rgba(255,255,255,1), 1px 2px 5px 5px rgba(0,0,0,0.05);
-  height: 120px;
-  width: 80px;
-  transform: rotate(5deg);
-  position: relative;
-  margin: 0 auto;
-  bottom: 30px;
-}
-.theMiddle:after {
-  content:'';
-  left:33px;
-  position: absolute;
-  transform: rotate(9deg);
-}
-.theMiddle p{
-  font-size: 60px;
-  padding-top: 40px;
-  text-shadow: 0 0 5px rgba(255,255,255,0.6);
-  text-align: center;
-  z-index: 1;
-}
-
-
-@media only screen and (min-width: 374px) {
-}
+  border:1px solid #333; bottom:30px; box-shadow:inset 0 0 0 6px rgba(255,255,255,1), 1px 2px 5px 5px rgba(0,0,0,0.05);
+  height:120px; margin:0 auto; position:relative; transform:rotate(5deg); width:80px }
+.theMiddle:after { content:''; left:33px; position:absolute; transform:rotate(9deg) }
+.theMiddle p { font-size:60px; padding-top:40px; text-shadow:0 0 5px rgba(255,255,255,0.6); text-align:center; z-index:1 }
 
 @media only screen and (min-width: 413px) {
   .theMiddle p,
-  .theMiddle:after { height:150px; width:100px; }
+  .theMiddle:after { height:150px; width:100px }
 }
-
 @media only screen and (min-width: 767px) {
-  .theMiddle { float:right; padding-right: 40px; }
-  .theMiddle p { margin: 40px 0 0; }
+  .theMiddle { float:right; padding-right: 40px }
+  .theMiddle p { margin: 40px 0 0 }
 }

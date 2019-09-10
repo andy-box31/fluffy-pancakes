@@ -68,7 +68,7 @@ p.cardScores { height:120px; padding-left: 30px }
   .versus { bottom:auto; display:block; left:auto; margin:0 auto; position:relative; right:auto; top:auto }
   .score { font-size:80px; line-height:80px }
   p.scores { height:auto; margin-bottom:30px }
-p.cardScores { box-sizing:border-box; float:left; height:auto; margin-top:30px; padding-left:240px; width:70%; }
-.cardScores .score,
-.cardScores .versus{ display:inline; top:auto }
+  p.cardScores { box-sizing:border-box; float:left; height:auto; margin-top:30px; padding-left:240px; width:70% }
+  .cardScores .score,
+  .cardScores .versus{ display:inline; top:auto }
 }
