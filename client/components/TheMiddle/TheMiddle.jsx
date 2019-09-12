@@ -2,7 +2,6 @@ import React from 'react'
 import { connect } from'react-redux'
 import './TheMiddle.css'
 
-// TODO get prop directly from redux istead of passed through GamePlay
 const TheMiddle = ({theMiddle}) => {
   const rand = Math.floor(Math.random()*25) - 15
   let middleRandomRotate = {

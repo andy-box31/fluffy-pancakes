@@ -104,7 +104,6 @@ function rootReducer(state = initialState, action) {
         gameState: newGameState
 
       }
-      console.log('pushing change')
       return newState
     default:
   }
