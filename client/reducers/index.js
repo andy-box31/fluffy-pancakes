@@ -102,7 +102,6 @@ function rootReducer(state = initialState, action) {
         activePlayer: newActivePlayer,
         winner: newWinner,
         gameState: newGameState
-
       }
       return newState
     default:

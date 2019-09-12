@@ -2,6 +2,7 @@ import React from 'react'
 import { connect } from 'react-redux'
 import classNames from 'classnames'
 import battleEngine from '../../utilities/battleEngine'
+import vpSetter from '../../utilities/viewportHeightSetter'
 import { goBattle } from '../../actions/index'
 import { PLAY_MODE, PLAYERS,  GAME_LEVEL } from '../../utilities/constants'
 import BackgroundCardStack from '../BackgroundCardStack/BackgroundCardStack'
@@ -26,6 +27,7 @@ class GamePlay extends React.Component {
   }
 
   componentDidMount () {
+    vpSetter()
     this.checkPauseForComputer()
     if (this.battleEngine === null && this.props.cards.length > 0 && this.props.deckInfo.competeOn.length > 0) {
       this.battleEngine = new battleEngine(this.props.cards, this.props.deckInfo, GAME_LEVEL.GT_MEDIAN)
