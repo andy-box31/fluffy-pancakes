@@ -1,4 +1,5 @@
 import React from 'react'
+import { connect } from'react-redux'
 import './TheMiddle.css'
 
 // TODO get prop directly from redux istead of passed through GamePlay
@@ -18,4 +19,8 @@ const TheMiddle = ({theMiddle}) => {
   )
 }
 
-export default TheMiddle
+function mapStateToProps (state) {
+  return { theMiddle: state.theMiddle }
+}
+
+export default connect(mapStateToProps)(TheMiddle)
