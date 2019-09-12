@@ -60,7 +60,7 @@ function rootReducer(state = initialState, action) {
       return newState
     case (GO_BATTLE): // hand1Cards, hand2Cards, theMiddle, winner, gameState activePlayer
       newWinner = state.winner
-      newMiddle = state.theMiddle
+      newMiddle = state.theMiddle.slice()
       newHand1 = state.hand1Cards.slice()
       newHand2 = state.hand2Cards.slice()
       newActivePlayer = state.activePlayer

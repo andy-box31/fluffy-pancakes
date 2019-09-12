@@ -82,7 +82,7 @@ class GamePlay extends React.Component {
   }
 
   render () {
-    const { hand1Cards, hand2Cards, activePlayer, theMiddle, playmode, deckInfo } = this.props
+    const { hand1Cards, hand2Cards, activePlayer, playmode, deckInfo } = this.props
     const { revealCards, pauseForComputer, pick } = this.state
 
     const isPlayer1 = activePlayer === PLAYERS.PLAYER_1
@@ -175,7 +175,7 @@ class GamePlay extends React.Component {
           </div>
           <div className="infoBottom">
           <p className="cardScores"><span className="score">{hand1Cards.length}</span> <span className="versus">VS</span> <span className="score">{hand2Cards.length}</span></p>
-            <TheMiddle theMiddle={theMiddle} />
+            <TheMiddle />
           </div>
         </div>
       </div>
@@ -191,7 +191,6 @@ function mapStateToProps (state) {
     hand2Cards: state.hand2Cards,
     playmode: state.playmode,
     activePlayer: state.activePlayer,
-    theMiddle: state.theMiddle,
     winner: state.winner
   }
 }
