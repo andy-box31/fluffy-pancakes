@@ -1,11 +1,9 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import classnames from 'classnames'
-import vpSetter from '../../utilities/viewportHeightSetter'
 import './Card.css'
 
 const Card = ({params, onSubmit, attrs, readOnly}) => {
-  vpSetter()
   const details = Object.keys(params).map((key, i) => {
     if (!attrs.includes(key)){
       return
