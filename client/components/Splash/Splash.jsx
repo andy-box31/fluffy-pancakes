@@ -25,7 +25,7 @@ const Splash = ({dealCards, getCards, winner = null}) => {
       </header>
       <main className="mainContent">
         <RadioSelector
-          params={['transformers', 'transformersShort', 'dinosaurs']}
+          params={['transformers', 'dinosaurs']}
           name="deckSelection"
           handleChange={handleSelect}
           activeParam={deckChoice}

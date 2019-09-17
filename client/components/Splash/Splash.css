@@ -21,10 +21,10 @@
 }
 .poly,
 .poly:after { background:black; bottom:0; left:0; position:fixed; right:0; top:0;
-  -webkit-clip-path: polygon( 0 100%, 5% 90%, 15% 88%, 20% 86%, 22% 78%, 50% 65%, 45% 45%, 70% 35%, 65% 20%, 90% 15%, 100% 0, 100% 100%);
-  clip-path: polygon( 0 100%, 5% 90%, 15% 88%, 20% 86%, 22% 78%, 50% 65%, 45% 45%, 70% 35%, 65% 20%, 90% 15%, 100% 0, 100% 100%);
+  -webkit-clip-path: polygon( 50% 0, 55% 5%, 45% 15%, 48% 20%, 46% 22%, 55% 40%, 45% 45%, 48% 55%, 40% 60%, 50% 65%, 46% 70%, 52% 80%, 48% 85%, 55% 92%, 46% 96%, 50% 100%, 100% 100%, 100% 0);
+  clip-path: polygon( 50% 0, 55% 5%, 45% 15%, 48% 20%, 46% 22%, 55% 40%, 45% 45%, 48% 55%, 40% 60%, 50% 65%, 46% 70%, 52% 80%, 48% 85%, 55% 92%, 46% 96%, 50% 100%, 100% 100%, 100% 0);
 }
-.poly:after { background:blue; background-color:#aef; content:''; left:45px; top:35px;
+.poly:after { background:blue; background-color:#aef; content:''; left:45px;
   background-image: radial-gradient(closest-side, transparent 98%, rgba(0,0,100,.3) 99%),
                     radial-gradient(closest-side, transparent 98%, rgba(0,0,100,.3) 99%);
   background-size:80px 80px; background-position:0 0, 40px 40px; }
@@ -48,7 +48,7 @@
     7px -8px #cdd2d5;
 }
 .header h3 { font-size:35px; text-align:center; width:280px; }
-.mainContent { background-color:WhiteSmoke; background-size:50px 25px; border:1px solid black; margin:0 auto; outline:6px solid white; padding:60px 10px; position:relative; width:220px;
+.mainContent { background-color:WhiteSmoke; background-size:50px 25px; border:1px solid black; margin:0 auto; outline:6px solid white; padding:50px 10px; position:relative; width:220px;
   background-image:
   radial-gradient(circle at 100% 150%, WhiteSmoke 24%, white 24%, white 28%, WhiteSmoke 28%, WhiteSmoke 36%, white 36%, white 40%, transparent 40%, transparent),
   radial-gradient(circle at 0    150%, WhiteSmoke 24%, white 24%, white 28%, WhiteSmoke 28%, WhiteSmoke 36%, white 36%, white 40%, transparent 40%, transparent),
@@ -56,7 +56,7 @@
   radial-gradient(circle at 100% 50%, white 5%, WhiteSmoke 5%, WhiteSmoke 15%, white 15%, white 20%, WhiteSmoke 20%, WhiteSmoke 29%, white 29%, white 34%, WhiteSmoke 34%, WhiteSmoke 44%, white 44%, white 49%, transparent 49%, transparent),
   radial-gradient(circle at 0    50%, white 5%, WhiteSmoke 5%, WhiteSmoke 15%, white 15%, white 20%, WhiteSmoke 20%, WhiteSmoke 29%, white 29%, white 34%, WhiteSmoke 34%, WhiteSmoke 44%, white 44%, white 49%, transparent 49%, transparent);
 }
-.mainContent .radioSelector { font-size:20px; line-height:25px; margin:0 20px 50px; }
+.mainContent .radioSelector { font-size:20px; line-height:25px; margin:0 20px 40px; }
 
 @media only screen and (min-width: 374px) {
   .header { height:160px; }
@@ -75,5 +75,5 @@
   .splash { padding-top:150px; }
   .poly h1,
   .header h1 { font-size:100px; }
-  .poly h1 { top:200px; left:30px; }
+  .poly h1 { top:170px; left:30px; }
 }
