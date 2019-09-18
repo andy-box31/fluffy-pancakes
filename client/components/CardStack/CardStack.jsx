@@ -8,7 +8,7 @@ const CardStack = ({params, onSubmit, readOnly, stackSize, showCard}) => {
   return (
     <div>
       {showCard &&
-        <div className="glbFullAbsolute cardStackOuter">
+        <div className="glbFullAbsolute">
           <Card
             params={params}
             onSubmit={onSubmit}
