@@ -47,7 +47,7 @@
     8px -7px #808d93,
     7px -8px #cdd2d5;
 }
-.header h3 { font-size:35px; text-align:center; width:280px; }
+.mainContent h3 { position:relative; text-align:center; top:-30px; }
 .mainContent { background-color:WhiteSmoke; background-size:50px 25px; border:1px solid black; margin:0 auto; outline:6px solid white; padding:50px 10px; position:relative; width:220px;
   background-image:
   radial-gradient(circle at 100% 150%, WhiteSmoke 24%, white 24%, white 28%, WhiteSmoke 28%, WhiteSmoke 36%, white 36%, white 40%, transparent 40%, transparent),

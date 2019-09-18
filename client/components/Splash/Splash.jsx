@@ -20,10 +20,10 @@ const Splash = ({dealCards, getCards, winner = null}) => {
       </div>
       <header className="header">
         <h1>TRUMPS</h1>
-        {winner && <h3>WOOP WOOP {winner} Wins</h3>}
         <Navigation />
       </header>
       <main className="mainContent">
+        {winner && <h3>WOOP WOOP {winner} Wins</h3>}
         <RadioSelector
           params={['transformers', 'dinosaurs']}
           name="deckSelection"

@@ -7,6 +7,7 @@ import { goBattle } from '../../actions/index'
 import { PLAY_MODE, PLAYERS,  GAME_LEVEL } from '../../utilities/constants'
 import BackgroundCardStack from '../BackgroundCardStack/BackgroundCardStack'
 import Card from '../Card/Card'
+import CardStack from '../CardStack/CardStack'
 import TheMiddle from '../TheMiddle/TheMiddle'
 import './GamePlay.css'
 
@@ -121,17 +122,13 @@ class GamePlay extends React.Component {
         <div className="glbFullFixed outerBackground" style={backgroundImage}></div>
         <div className="grid">
           <div className="p1Outer">
-          {showCard1 && //TODO create component for this and player 2 Card stack
-            <div className="glbFullAbsolute cardStackOuter">
-              <Card
-                params={hand1Cards[0]}
-                onSubmit={this.handleSelection}
-                readOnly={readOnlyCard1}
-              />
-              <BackgroundCardStack count={hand1Cards.length - 1} />
-            </div>
-          }
-          {!showCard1 && <div className="opponentCard" />}
+            <CardStack
+              params={hand1Cards[0]}
+              onSubmit={this.handleSelection}
+              readOnly={readOnlyCard1}
+              showCard={showCard1}
+              stackSize={hand1Cards.length - 1}
+            />
           </div>
           <div className="infoTop">
             <header>
@@ -158,22 +155,13 @@ class GamePlay extends React.Component {
             }
           </div>
           <div className="p2Outer">
-            {showCard2 &&
-              <div className="glbFullAbsolute cardStackOuter">
-                <Card
-                  params={hand2Cards[0]}
-                  onSubmit={this.handleSelection}
-                  readOnly={readOnlyCard2}
-                />
-                <BackgroundCardStack count={hand1Cards.length - 1} />
-              </div>
-            }
-            {!showCard2 &&
-              <div className="glbFullAbsolute">
-                <div className="opponentCard" />
-                <BackgroundCardStack count={hand2Cards.length - 1} back={true} />
-              </div>
-            }
+            <CardStack
+              params={hand2Cards[0]}
+              onSubmit={this.handleSelection}
+              readOnly={readOnlyCard2}
+              showCard={showCard2}
+              stackSize={hand2Cards.length - 1}
+            />
           </div>
           <div className="infoBottom">
           <p className="cardScores"><span className="score">{hand1Cards.length}</span> <span className="versus">VS</span> <span className="score">{hand2Cards.length}</span></p>

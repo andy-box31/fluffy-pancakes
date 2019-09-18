@@ -1,5 +1,6 @@
 import React from 'react'
 import { connect } from 'react-redux'
+import PropTypes from 'prop-types'
 import classnames from 'classnames'
 import './Card.css'
 
@@ -44,6 +45,17 @@ const Card = ({params, onSubmit, attrs, readOnly}) => {
       </div>
     </div>
   )
+}
+
+Card.defaultProps = {
+  readOnly: true
+}
+
+Card.propTypes = {
+  params: PropTypes.object.isRequired,
+  onSubmit: PropTypes.func,
+  attrs: PropTypes.arrayOf(PropTypes.string),
+  readOnly: PropTypes.bool
 }
 
 function mapStateToProps (state) {
