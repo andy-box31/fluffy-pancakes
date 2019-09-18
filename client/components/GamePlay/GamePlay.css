@@ -15,7 +15,7 @@
 .standOut { display: block; margin-bottom: 10px }
 p.scores { font-size:40px; height:110px; white-space:nowrap; position:relative }
 .score { position:absolute; left:0px }
-.score ~ .score { top:75px; right:40px; left:auto }
+.score ~ .score { top:75px; right:20px; left:auto }
 .versus { font-size:28px; position:absolute; top:40px; left:50px }
 p.cardScores { font-size:30px; height:90px; padding:16px 16px 16px 20px; position:relative; text-align:center; white-space:nowrap }
 .cardScores .score,
@@ -41,10 +41,10 @@ p.cardScores { font-size:30px; height:90px; padding:16px 16px 16px 20px; positio
 @media only screen and (min-width: 413px) {
 .infoTop h1,
 .infoBottom h1 { font-size:61px; margin:40px 0 -20px }
-p.scores { font-size:60px; height:130px }
+p.scores { font-size:50px; height:130px }
 .score { left:10px }
 .score ~ .score { top:85px }
-.versus { left:90px }
+.versus { left:70px }
 p.cardScores { height:120px; padding-left: 30px }
 .cardScores .versus{ top:30px }
 }
@@ -67,7 +67,7 @@ p.cardScores { height:120px; padding-left: 30px }
   .score ~ .score,
   .versus { bottom:auto; display:block; left:auto; margin:0 auto; position:relative; right:auto; top:auto }
   .score { font-size:80px; line-height:80px }
-  p.scores { height:auto; margin-bottom:30px }
+  p.scores { font-size:50px; height:auto; margin-bottom:30px }
   p.cardScores { box-sizing:border-box; float:left; height:auto; margin-top:30px; padding-left:240px; width:70% }
   .cardScores .score,
   .cardScores .versus{ display:inline; top:auto }

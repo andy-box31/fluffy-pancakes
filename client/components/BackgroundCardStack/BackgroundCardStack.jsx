@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import classNames from 'classnames'
 import './BackgroundCardStack.css'
 
@@ -15,6 +16,16 @@ const BackgroundCardStack = ({count, back}) => {
   return <React.Fragment>
           {underCards}
         </React.Fragment>
+}
+
+BackgroundCardStack.defaultProps = {
+  count: 0,
+  back: false
+}
+
+BackgroundCardStack.propTypes = {
+  count: PropTypes.number,
+  back:PropTypes.bool
 }
 
 export default BackgroundCardStack
