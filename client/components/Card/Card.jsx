@@ -54,7 +54,7 @@ Card.defaultProps = {
 Card.propTypes = {
   params: PropTypes.object.isRequired,
   onSubmit: PropTypes.func,
-  attrs: PropTypes.object.isRequired,
+  attrs: PropTypes.arrayOf(PropTypes.string),
   readOnly: PropTypes.bool
 }
 
