@@ -11,7 +11,7 @@ const initialState = {
   gameLevel: GAME_LEVEL.HARD
 }
 
-const {SET_CARDS, SET_INFO, DEAL_CARDS, GO_BATTLE, SET_PLAY_MODE, SET_GAME_LEVEL} = ACTIONS
+const {SET_CARDS, SET_INFO, DEAL_CARDS, SHOW_DECK, GO_BATTLE, SET_PLAY_MODE, SET_GAME_LEVEL} = ACTIONS
 
 function rootReducer(state = initialState, action) {
   let newState, newWinner, newMiddle, newHand1, newHand2, newActivePlayer, newGameState
@@ -39,6 +39,12 @@ function rootReducer(state = initialState, action) {
       newState = {
         ...state,
         gameLevel: action.payload
+      }
+      return newState
+    case (SHOW_DECK):
+      newState = {
+        ...state,
+        gameState: GAME_STATE.SHOW_DECK
       }
       return newState
     case (DEAL_CARDS): // cards, hand1Cards, hand2Cards, theMiddle, winner, gameState

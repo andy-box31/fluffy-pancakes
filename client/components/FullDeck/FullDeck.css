@@ -1,0 +1,2 @@
+.fullDeckOuter {display:flex; flex-wrap:wrap; justify-content: space-around; }
+.cardWrapper { min-width:300px; max-width:450px; float:left; height:450px; margin:40px;}
