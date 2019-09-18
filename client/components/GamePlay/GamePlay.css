@@ -21,13 +21,6 @@ p.cardScores { font-size:30px; height:90px; padding:16px 16px 16px 20px; positio
 .cardScores .score,
 .cardScores .versus { position:relative; top:auto; left:auto; right:auto }
 .cardScores .versus { font-size:22px }
-.opponentCard {
-  border-radius:6px;
-  box-shadow:inset 0 0 0 10px rgba(255,255,255,1), 1px 2px 5px 5px rgba(0,0,0,0.2);
-  box-sizing:border-box; height:calc(100% - 32px); margin:16px; position:relative;
-  background:radial-gradient(circle at 0% 50%, rgba(96, 16, 48, 0) 9px, #613 10px, rgba(96, 16, 48, 0) 11px) 0px 10px,
-    radial-gradient(at 100% 100%, rgba(96, 16, 48, 0) 9px, #613 10px, rgba(96, 16, 48, 0) 11px), #8a3;
-  background-size:20px 20px; z-index:2 }
 .fullPageButton { background:transparent; font-size:0; width:100%; z-index:3 }
 
 
@@ -55,7 +48,6 @@ p.cardScores { height:120px; padding-left: 30px }
   .p2Outer { grid-area:2/11/8/16; position:relative }
   .infoTop { grid-area: 2/7/8/11; padding-right: 10px; text-align: center }
   .infoBottom { grid-area:8/2/11/16 }
-  .opponentCard { height:100%; max-width:300px; max-height:450px; margin:0 auto }
   .infoTop h1,
   .infoBottom h1 { font-size:100px; margin:-50px 0 10px }
   .infoTop p,
