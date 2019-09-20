@@ -1,5 +1,5 @@
 const express = require('express')
-// const path = require('path')
+const path = require('path')
 const transformers = require('./data/transformers.json')
 const dinosaurs = require('./data/dinosaurs.json')
 const short = require('./data/transformersShort.json')
@@ -15,6 +15,10 @@ app.get('/healthcheck', (req, res) => res.send('I am healthy!'))
 app.get('/data/transformers', (req, res) => res.send(transformers))
 app.get('/data/dinosaurs', (req, res) => res.send(dinosaurs))
 app.get('/data/transformersShort', (req, res) => res.send(short))
+
+app.get('/*', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public/index.html'))
+})
 
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}!`)
