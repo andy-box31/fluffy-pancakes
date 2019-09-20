@@ -9,5 +9,5 @@ import App from './components/App/App'
 const root = document.getElementById('root')
 
 render(<Provider store={store}>
-    <App name='Andy' />
+    <App />
   </Provider>, root)

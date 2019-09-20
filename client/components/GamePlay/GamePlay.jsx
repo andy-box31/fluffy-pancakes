@@ -164,7 +164,7 @@ class GamePlay extends React.Component {
             />
           </div>
           <div className="infoBottom">
-          <p className="cardScores"><span className="score">{hand1Cards.length}</span> <span className="versus">VS</span> <span className="score">{hand2Cards.length}</span></p>
+            <p className="cardScores"><span className="score">{hand1Cards.length}</span> <span className="versus">VS</span> <span className="score">{hand2Cards.length}</span></p>
             <TheMiddle />
           </div>
         </div>

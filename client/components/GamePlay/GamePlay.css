@@ -1,5 +1,5 @@
 .outerBackground { background-size:cover; background-repeat:no-repeat; content:''; left:-200px; opacity:.03; transform:rotate(35deg); width:880px }
-.grid { display:grid; grid-template-columns:repeat(10, 10%); grid-template-rows:repeat(10, 10%); grid-template-columns:repeat(auto-fit, minmax(1fr, 1fr)); height:100vh; height:calc(var(--vh, 1vh) * 100); overflow:hidden }/* --vh is set by utility/viewportHeightSetter.js called by GamePlay ComponentDidMount */
+.grid { display:grid; grid-template-columns:repeat(10, 10%); grid-template-rows:repeat(10, 10%); grid-template-columns:repeat(auto-fit, minmax(1fr, 1fr)); height:100vh; height:calc(var(--vh, 1vh) * 100); overflow:hidden; position:relative; z-index:1 }/* --vh is set by utility/viewportHeightSetter.js called by GamePlay ComponentDidMount */
 .player1 { background:lightblue }
 .player2 { background:lightpink }
 .p1Outer { grid-area:1/1/6/7; position: relative }
