@@ -1,18 +1,11 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import { dealCards, getCards, showDeck } from '../../actions/index'
+import { dealCards, showDeck } from '../../actions/index'
 import Navigation from '../Navigation/Navigation'
-import RadioSelector from '../RadioSelector/RadioSelector'
+import DeckSelector from '../DeckSelector/DeckSelector'
 import './Splash.css'
 
-const Splash = ({showDeck, dealCards, getCards, cards, winner = null}) => {
-  const [deckChoice, updateChoice] = React.useState(false)
-
-  const handleSelect = (e) => {
-    updateChoice(e.target.value)
-    getCards(e.target.value)
-  }
-
+const Splash = ({showDeck, dealCards, cards, winner = null}) => {
   return (
     <div className="splash">
       <div className="poly">
@@ -24,19 +17,13 @@ const Splash = ({showDeck, dealCards, getCards, cards, winner = null}) => {
       </header>
       <main className="mainContent">
         {winner && <h3>WOOP WOOP {winner} Wins</h3>}
-        <RadioSelector
-          params={['transformers', 'dinosaurs']}
-          name="deckSelection"
-          handleChange={handleSelect}
-          activeParam={deckChoice}
-        />
+        <DeckSelector />
         <button type="button" className="glbBtn" disabled={cards.length === 0} onClick={dealCards}>Deal</button>
         <button type="button" className="glbBtn" disabled={cards.length === 0} onClick={showDeck}>Full deck</button>
       </main>
     </div>
   )
 }
-
 
 function mapStateToProps (state) {
   return {
@@ -48,8 +35,7 @@ function mapStateToProps (state) {
 function mapDispatchToProps(dispatch) {
   return {
     dealCards: () => dispatch(dealCards()),
-    showDeck: () => dispatch(showDeck()),
-    getCards: (choice) => dispatch(getCards(choice))
+    showDeck: () => dispatch(showDeck())
   }
 }
 
