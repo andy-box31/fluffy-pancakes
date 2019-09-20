@@ -1,4 +1,5 @@
 import React from 'react'
+import {BrowserRouter, Route, Switch, Redirect} from 'react-router-dom'
 import { connect } from 'react-redux'
 import { GAME_STATE } from '../../utilities/constants'
 import Splash from '../Splash/Splash'
@@ -7,17 +8,15 @@ import FullDeck from '../FullDeck/FullDeck'
 
 const App = ({gameState}) => {
   return (
-    <React.Fragment>
-      {(gameState === GAME_STATE.PRE_GAME || gameState === GAME_STATE.POST_GAME) &&
-        <Splash />
-      }
-      {(gameState === GAME_STATE.SHOW_DECK) &&
-        <FullDeck />
-      }
-      {gameState === GAME_STATE.DURING_GAME && 
-        <GamePlay />
-      }
-    </React.Fragment>
+    <BrowserRouter>
+      {gameState === GAME_STATE.SHOW_DECK && <Redirect push to="/deck" />}
+      {gameState === GAME_STATE.DURING_GAME && <Redirect push to="/play" />}
+      <Switch>
+        <Route exact path="/" component={Splash} />
+        <Route exact path="/deck" component={FullDeck} />
+        <Route exact path="/play" component={GamePlay} />
+      </Switch>
+    </BrowserRouter>
   )
 }
 

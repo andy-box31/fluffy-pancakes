@@ -1,10 +1,11 @@
 import React from 'react'
 import { connect } from 'react-redux'
+import {Redirect} from 'react-router-dom'
 import classNames from 'classnames'
 import battleEngine from '../../utilities/battleEngine'
 import vpSetter from '../../utilities/viewportHeightSetter'
 import { goBattle } from '../../actions/index'
-import { PLAY_MODE, PLAYERS,  GAME_LEVEL } from '../../utilities/constants'
+import { PLAY_MODE, PLAYERS, GAME_LEVEL, GAME_STATE } from '../../utilities/constants'
 import CardStack from '../CardStack/CardStack'
 import TheMiddle from '../TheMiddle/TheMiddle'
 import './GamePlay.css'
@@ -83,7 +84,7 @@ class GamePlay extends React.Component {
   }
 
   render () {
-    const { hand1Cards, hand2Cards, activePlayer, playmode, deckInfo } = this.props
+    const { hand1Cards, hand2Cards, activePlayer, playmode, deckInfo, gameState } = this.props
     const { revealCards, pauseForComputer, pick } = this.state
 
     const isPlayer1 = activePlayer === PLAYERS.PLAYER_1
@@ -112,6 +113,7 @@ class GamePlay extends React.Component {
     }
     isPlayer2 ? backgroundImage.transform = "rotate(-35deg)" : () => {}
     return (
+      (gameState != GAME_STATE.DURING_GAME) ? ( <Redirect push to="/" /> ) : (
       <div className={classNames({
         outer: true,
         player1: isPlayer1,
@@ -168,7 +170,7 @@ class GamePlay extends React.Component {
         </div>
       </div>
     )
-  }
+    )}
 }
 
 function mapStateToProps (state) {
@@ -179,7 +181,8 @@ function mapStateToProps (state) {
     hand2Cards: state.hand2Cards,
     playmode: state.playmode,
     activePlayer: state.activePlayer,
-    winner: state.winner
+    winner: state.winner,
+    gameState: state.gameState
   }
 }
 
