@@ -1,6 +1,6 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import {NavLink} from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 import { GAME_LEVEL } from '../../utilities/constants'
 import { setGameLevel } from '../../actions/index'
 import PlaymodeSelector from '../PlaymodeSelector/PlaymodeSelector'
