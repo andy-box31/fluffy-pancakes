@@ -4,7 +4,8 @@ import {Redirect} from 'react-router-dom'
 import classNames from 'classnames'
 import battleEngine from '../../utilities/battleEngine'
 import vpSetter from '../../utilities/viewportHeightSetter'
-import { goBattle } from '../../actions/index'
+import decks from '../../utilities/decks'
+import { goBattle, dealCards, getCards } from '../../actions/index'
 import { PLAY_MODE, PLAYERS, GAME_LEVEL, GAME_STATE } from '../../utilities/constants'
 import CardStack from '../CardStack/CardStack'
 import TheMiddle from '../TheMiddle/TheMiddle'
@@ -29,14 +30,30 @@ class GamePlay extends React.Component {
   componentDidMount () {
     vpSetter()
     this.checkPauseForComputer()
-    if (this.battleEngine === null && this.props.cards.length > 0 && this.props.deckInfo.competeOn.length > 0) {
-      this.battleEngine = new battleEngine(this.props.cards, this.props.deckInfo, GAME_LEVEL.GT_MEDIAN)
+    this.tryInitBattleEngine()
+    if( decks.includes(this.props.match.params.deck) && (!this.props.deckInfo.title || this.props.match.params.deck != this.props.deckInfo.title.toLowerCase()) ) {
+      this.props.getCards(this.props.match.params.deck)
+        //wait for cards and fire deal cards..
+      let interval = setInterval(() => {
+        // TODO instead of setting an interval move this to componentDidUpdate
+        if (!!this.props.deckInfo.title && (this.props.match.params.deck === this.props.deckInfo.title.toLowerCase())) {
+          this.props.dealCards()
+          this.tryInitBattleEngine()
+          clearInterval(interval)
+        }
+      }, 100)
     }
   }
 
-  componentDidUpdate() {
+  componentDidUpdate () {
     this.checkPauseForComputer()
     
+  }
+
+  tryInitBattleEngine () {
+    if (this.battleEngine === null && this.props.cards.length > 0 && this.props.deckInfo.competeOn.length > 0) {
+      this.battleEngine = new battleEngine(this.props.cards, this.props.deckInfo, GAME_LEVEL.GT_MEDIAN)
+    }
   }
 
   checkPauseForComputer () {
@@ -84,7 +101,7 @@ class GamePlay extends React.Component {
   }
 
   render () {
-    const { hand1Cards, hand2Cards, activePlayer, playmode, deckInfo, gameState } = this.props
+    const { hand1Cards, hand2Cards, activePlayer, playmode, deckInfo, match } = this.props
     const { revealCards, pauseForComputer, pick } = this.state
 
     const isPlayer1 = activePlayer === PLAYERS.PLAYER_1
@@ -113,63 +130,64 @@ class GamePlay extends React.Component {
     }
     isPlayer2 ? backgroundImage.transform = "rotate(-35deg)" : () => {}
     return (
-      (gameState != GAME_STATE.DURING_GAME) ? ( <Redirect push to="/" /> ) : (
-      <div className={classNames({
-        outer: true,
-        player1: isPlayer1,
-        player2: isPlayer2
-      })}>
-        <div className="glbFullFixed outerBackground" style={backgroundImage}></div>
-        <div className="grid">
-          <div className="p1Outer">
-            <CardStack
-              params={hand1Cards[0]}
-              onSubmit={this.handleSelection}
-              readOnly={readOnlyCard1}
-              showCard={showCard1}
-              stackSize={hand1Cards.length - 1}
-            />
-          </div>
-          <div className="infoTop">
-            <header>
-              <h1>Trumps</h1>
-            </header>
-            {!revealCards && (!isVsComputer || isPlayer1) &&
-              <p><span className="standOut">{activePlayer}</span> take your turn!</p>
-            }
-            {isVsComputer && isPlayer2 && pauseForComputer &&
-              <React.Fragment>
-                <p>She's thinking..... </p>
-                <button type="button" className="glbFullAbsolute fullPageButton" onClick={this.endPauseForComputer}>Continue</button>
-              </React.Fragment>
-            }
-            {revealCards &&
-              <button type="button" className="glbFullAbsolute fullPageButton" onClick={this.endRevealCards}>Next</button>
-            }
-            {!!pick &&
-              <div>
-                <p>{pick}</p>
-                <p className="scores"><span className="score">{hand1Cards[0][pick]}</span> <span className="versus">VS</span> <span className="score">{hand2Cards[0][pick]}</span></p>
-                {winLoseTie}
-              </div>
-            }
-          </div>
-          <div className="p2Outer">
-            <CardStack
-              params={hand2Cards[0]}
-              onSubmit={this.handleSelection}
-              readOnly={readOnlyCard2}
-              showCard={showCard2}
-              stackSize={hand2Cards.length - 1}
-            />
-          </div>
-          <div className="infoBottom">
-            <p className="cardScores"><span className="score">{hand1Cards.length}</span> <span className="versus">VS</span> <span className="score">{hand2Cards.length}</span></p>
-            <TheMiddle />
+      (!decks.includes(match.params.deck)) ? ( <Redirect push to="/" /> ) : (
+        (!hand1Cards || hand1Cards.length < 1) ? <p>Waiting for {match.params.deck}</p> :
+        <div className={classNames({
+          outer: true,
+          player1: isPlayer1,
+          player2: isPlayer2
+        })}>
+          <div className="glbFullFixed outerBackground" style={backgroundImage}></div>
+          <div className="grid">
+            <div className="p1Outer">
+              <CardStack
+                params={hand1Cards[0]}
+                onSubmit={this.handleSelection}
+                readOnly={readOnlyCard1}
+                showCard={showCard1}
+                stackSize={hand1Cards.length - 1}
+              />
+            </div>
+            <div className="infoTop">
+              <header>
+                <h1>Trumps</h1>
+              </header>
+              {!revealCards && (!isVsComputer || isPlayer1) &&
+                <p><span className="standOut">{activePlayer}</span> take your turn!</p>
+              }
+              {isVsComputer && isPlayer2 && pauseForComputer &&
+                <React.Fragment>
+                  <p>She's thinking..... </p>
+                  <button type="button" className="glbFullAbsolute fullPageButton" onClick={this.endPauseForComputer}>Continue</button>
+                </React.Fragment>
+              }
+              {revealCards &&
+                <button type="button" className="glbFullAbsolute fullPageButton" onClick={this.endRevealCards}>Next</button>
+              }
+              {!!pick &&
+                <div>
+                  <p>{pick}</p>
+                  <p className="scores"><span className="score">{hand1Cards[0][pick]}</span> <span className="versus">VS</span> <span className="score">{hand2Cards[0][pick]}</span></p>
+                  {winLoseTie}
+                </div>
+              }
+            </div>
+            <div className="p2Outer">
+              <CardStack
+                params={hand2Cards[0]}
+                onSubmit={this.handleSelection}
+                readOnly={readOnlyCard2}
+                showCard={showCard2}
+                stackSize={hand2Cards.length - 1}
+              />
+            </div>
+            <div className="infoBottom">
+              <p className="cardScores"><span className="score">{hand1Cards.length}</span> <span className="versus">VS</span> <span className="score">{hand2Cards.length}</span></p>
+              <TheMiddle />
+            </div>
           </div>
         </div>
-      </div>
-    )
+      )
     )}
 }
 
@@ -188,7 +206,9 @@ function mapStateToProps (state) {
 
 function mapDispatchToProps(dispatch) {
   return {
-    goBattle: (args) => dispatch(goBattle(args))
+    goBattle: (args) => dispatch(goBattle(args)),
+    dealCards: () => dispatch(dealCards()),
+    getCards: (val)=> dispatch(getCards(val))
   }
 }
 

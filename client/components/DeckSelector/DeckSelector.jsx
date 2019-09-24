@@ -2,6 +2,7 @@ import React from 'react'
 import { connect } from 'react-redux'
 import { getCards} from '../../actions/index'
 import RadioSelector from '../RadioSelector/RadioSelector'
+import decks from '../../utilities/decks'
 import './DeckSelector.css'
 
 const DeckSelector = ({getCards}) => {
@@ -13,7 +14,7 @@ const DeckSelector = ({getCards}) => {
   }
   return (
     <RadioSelector
-          params={['transformers', 'dinosaurs']}
+          params={decks}
           name="deckSelection"
           handleChange={handleSelect}
           activeParam={deckChoice}
