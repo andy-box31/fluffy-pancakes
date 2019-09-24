@@ -12,7 +12,7 @@ app.use(express.static('public'))
 // app.get('/', (req, res) => res.send("Nothing to see here :("));
 app.get('/healthcheck', (req, res) => res.send('I am healthy!'))
 
-app.get('/data/transformers', (req, res) => res.send(short))
+app.get('/data/transformers', (req, res) => res.send(transformers))
 app.get('/data/dinosaurs', (req, res) => res.send(dinosaurs))
 app.get('/data/transformersShort', (req, res) => res.send(short))
 
