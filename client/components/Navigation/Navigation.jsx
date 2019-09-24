@@ -1,5 +1,6 @@
 import React from 'react'
 import { connect } from 'react-redux'
+import { NavLink } from 'react-router-dom'
 import { GAME_LEVEL } from '../../utilities/constants'
 import { setGameLevel } from '../../actions/index'
 import PlaymodeSelector from '../PlaymodeSelector/PlaymodeSelector'
@@ -34,6 +35,8 @@ const Navigation = ({gameLevel, setGameLevel}) => {
           handleChange={(handleGameLevelSelection)}
           activeParam={gameLevel}
         />
+        <hr />
+        <NavLink className="glbBtn viewCardsBtn" to='/deck'>View all cards</NavLink>
       </nav>
       }
     </div>

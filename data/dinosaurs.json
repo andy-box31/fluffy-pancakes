@@ -1,7 +1,8 @@
 {
   "info": {
     "competeOn": ["Height","Weight","Length","Kill_rating","Intelligence","Age"],
-    "backgroundImage": "/images/dinosaurs/background.png"
+    "backgroundImage": "/images/dinosaurs/background.png",
+    "title": "Dinosaurs"
   },
   "cards":[
     {

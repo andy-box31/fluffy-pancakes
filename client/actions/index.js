@@ -7,6 +7,7 @@ const {
   GET_CARDS,
   SHUFFLE_CARDS,
   DEAL_CARDS,
+  SHOW_DECK,
   GO_BATTLE,
   SET_PLAY_MODE,
   COMPUTER_TURN,
@@ -35,6 +36,10 @@ export const shuffleCards = (payload) => {
 
 export const dealCards = (payload) => {
   return { type: DEAL_CARDS, payload }
+}
+
+export const showDeck = () => {
+  return { type: SHOW_DECK }
 }
 
 export const goBattle = (payload) => {

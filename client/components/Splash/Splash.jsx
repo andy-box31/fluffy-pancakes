@@ -1,18 +1,12 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import { dealCards, getCards } from '../../actions/index'
+import { dealCards, showDeck } from '../../actions/index'
+import { GAME_STATE } from '../../utilities/constants'
 import Navigation from '../Navigation/Navigation'
-import RadioSelector from '../RadioSelector/RadioSelector'
+import DeckSelector from '../DeckSelector/DeckSelector'
 import './Splash.css'
 
-const Splash = ({dealCards, getCards, winner = null}) => {
-  const [deckChoice, updateChoice] = React.useState(false)
-
-  const handleSelect = (e) => {
-    updateChoice(e.target.value)
-    getCards(e.target.value)
-  }
-
+const Splash = ({showDeck, dealCards, cards, gameState, winner = null}) => {
   return (
     <div className="splash">
       <div className="poly">
@@ -24,27 +18,36 @@ const Splash = ({dealCards, getCards, winner = null}) => {
       </header>
       <main className="mainContent">
         {winner && <h3>WOOP WOOP {winner} Wins</h3>}
-        <RadioSelector
-          params={['transformers', 'dinosaurs']}
-          name="deckSelection"
-          handleChange={handleSelect}
-          activeParam={deckChoice}
-        />
-        <button type="button" className="glbBtn" onClick={dealCards}>deal</button>
+        <DeckSelector />
+        <button
+          type="button"
+          className="glbBtn"
+          disabled={cards.length === 0 || gameState === GAME_STATE.DURING_GAME} // TODO - something better for weird condition when user clicks backbutton,
+          onClick={dealCards}>Deal</button>
+        <button
+          type="button"
+          className="glbBtn"
+          disabled={cards.length === 0 || gameState === GAME_STATE.SHOW_DECK} // TODO - something better for weird condition when user clicks backbutton
+          onClick={showDeck}>
+            Full deck
+          </button>
       </main>
     </div>
   )
 }
 
-
 function mapStateToProps (state) {
-  return { winner: state.winner }
+  return {
+    winner: state.winner,
+    cards: state.cards,
+    gameState: state.gameState
+  }
 }
 
 function mapDispatchToProps(dispatch) {
   return {
     dealCards: () => dispatch(dealCards()),
-    getCards: (choice) => dispatch(getCards(choice))
+    showDeck: () => dispatch(showDeck())
   }
 }
 

@@ -48,7 +48,7 @@
     7px -8px #cdd2d5;
 }
 .mainContent h3 { position:relative; text-align:center; top:-30px; }
-.mainContent { background-color:WhiteSmoke; background-size:50px 25px; border:1px solid black; margin:0 auto; outline:6px solid white; padding:50px 10px; position:relative; width:220px;
+.mainContent { background-color:WhiteSmoke; background-size:30px 25px; border:1px solid black; margin:0 auto; outline:6px solid white; padding:50px 10px; position:relative; width:220px;
   background-image:
   radial-gradient(circle at 100% 150%, WhiteSmoke 24%, white 24%, white 28%, WhiteSmoke 28%, WhiteSmoke 36%, white 36%, white 40%, transparent 40%, transparent),
   radial-gradient(circle at 0    150%, WhiteSmoke 24%, white 24%, white 28%, WhiteSmoke 28%, WhiteSmoke 36%, white 36%, white 40%, transparent 40%, transparent),
@@ -56,7 +56,6 @@
   radial-gradient(circle at 100% 50%, white 5%, WhiteSmoke 5%, WhiteSmoke 15%, white 15%, white 20%, WhiteSmoke 20%, WhiteSmoke 29%, white 29%, white 34%, WhiteSmoke 34%, WhiteSmoke 44%, white 44%, white 49%, transparent 49%, transparent),
   radial-gradient(circle at 0    50%, white 5%, WhiteSmoke 5%, WhiteSmoke 15%, white 15%, white 20%, WhiteSmoke 20%, WhiteSmoke 29%, white 29%, white 34%, WhiteSmoke 34%, WhiteSmoke 44%, white 44%, white 49%, transparent 49%, transparent);
 }
-.mainContent .radioSelector { font-size:20px; line-height:25px; margin:0 20px 40px; }
 
 @media only screen and (min-width: 374px) {
   .header { height:160px; }
@@ -67,7 +66,7 @@
   .header { height:180px; }
   .poly h1,
   .header h1 { font-size:80px; }
-  .mainContent { padding:80px 20px; }
+  .mainContent { padding:50px 20px; }
 }
 
 @media only screen and (min-width: 767px) {
