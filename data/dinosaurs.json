@@ -7,7 +7,7 @@
   "cards":[
     {
       "Name": "Pachycephalosaurus",
-      "Eating Habits": "Herbivore",
+      "Type": "Herbivore",
       "Height": 119.7,
       "Weight": 6614,
       "Length": 26.2,
@@ -18,7 +18,7 @@
     },
     {
       "Name": "Tyrannosaurus Rex",
-      "Eating Habits": "Carnivore",
+      "Type": "Carnivore",
       "Height": 18.4,
       "Weight": 13227,
       "Length":39.3,
@@ -29,7 +29,7 @@
     },
     {
       "Name": "Barosaurus",
-      "Eating Habits": "Herbivore",
+      "Type": "Herbivore",
       "Height": 85.3,
       "Weight": 8819,
       "Length": 85.3,
@@ -40,7 +40,7 @@
     },
     {
       "Name": "Heterodontosaurus",
-      "Eating Habits": "Herbivore",
+      "Type": "Herbivore",
       "Height": 1.6,
       "Weight": 22,
       "Length": 3.9,
@@ -51,7 +51,7 @@
     },
     {
       "Name": "Suchomimus",
-      "Eating Habits": "Carnivore",
+      "Type": "Carnivore",
       "Height": 13.1,
       "Weight": 11023,
       "Length": 39.3,
@@ -62,7 +62,7 @@
     },
     {
       "Name": "Pachyrhinosaurus",
-      "Eating Habits": "Herbivore",
+      "Type": "Herbivore",
       "Height": 9.8,
       "Weight": 8000,
       "Length": 23,
@@ -73,7 +73,7 @@
     },
     {
       "Name": "Compsognathus",
-      "Eating Habits": "Carnivore",
+      "Type": "Carnivore",
       "Height": 2.3,
       "Weight": 6.6,
       "Length": 4.6,
@@ -84,7 +84,7 @@
     },
     {
       "Name": "Iguanodon",
-      "Eating Habits": "Herbivore",
+      "Type": "Herbivore",
       "Height": 16.4,
       "Weight": 9920,
       "Length": 32.8,
@@ -95,7 +95,7 @@
     },
     {
       "Name": "Pentaceratops",
-      "Eating Habits": "Herbivore",
+      "Type": "Herbivore",
       "Height": 9.8,
       "Weight": 17636,
       "Length": 26.2,
@@ -106,7 +106,7 @@
     },
     {
       "Name": "Coelophysis",
-      "Eating Habits": "Carnivore",
+      "Type": "Carnivore",
       "Height": 6.6,
       "Weight": 59.5,
       "Length": 9.8,
@@ -117,7 +117,7 @@
     },
     {
       "Name": "Velociraptor",
-      "Eating Habits": "Carnivore",
+      "Type": "Carnivore",
       "Height": 3.3,
       "Weight": 33,
       "Length": 6.6,
@@ -128,7 +128,7 @@
     },
     {
       "Name": "Centrosaurus",
-      "Eating Habits": "Herbivore",
+      "Type": "Herbivore",
       "Height": 6.6,
       "Weight": 2205,
       "Length": 19.7,
@@ -139,7 +139,7 @@
     },
     {
       "Name": "Megalosaurus",
-      "Eating Habits": "Carnivore",
+      "Type": "Carnivore",
       "Height": 9.8,
       "Weight": 2205,
       "Length": 29.5,
@@ -150,7 +150,7 @@
     },
     {
       "Name": "Protoceratops",
-      "Eating Habits": "Herbivore",
+      "Type": "Herbivore",
       "Height": 4.9,
       "Weight": 881,
       "Length": 6.6,
@@ -161,7 +161,7 @@
     },
     {
       "Name": "Giganotosaurus",
-      "Eating Habits": "Carnivore",
+      "Type": "Carnivore",
       "Height": 19.7,
       "Weight": 17636,
       "Length": 52.5,
@@ -172,7 +172,7 @@
     },
     {
       "Name": "Brachiosaurus",
-      "Eating Habits": "Herbivore",
+      "Type": "Herbivore",
       "Height": 52.5,
       "Weight": 17636,
       "Length": 85.3,
@@ -183,7 +183,7 @@
     },
     {
       "Name": "Herrerasaurus",
-      "Eating Habits": "Carnivore",
+      "Type": "Carnivore",
       "Height": 3.3,
       "Weight": 772,
       "Length": 16.4,
@@ -194,7 +194,7 @@
     },
     {
       "Name": "Gallimimus",
-      "Eating Habits": "Omnivore",
+      "Type": "Omnivore",
       "Height": 9.8,
       "Weight": 440.9,
       "Length": 18.3,
@@ -205,7 +205,7 @@
     },
     {
       "Name": "Triceratops",
-      "Eating Habits": "Herbivore",
+      "Type": "Herbivore",
       "Height": 9.8,
       "Weight": 12125,
       "Length": 29.5,
@@ -216,7 +216,7 @@
     },
     {
       "Name": "Corythosaurus",
-      "Eating Habits": "Herbivore",
+      "Type": "Herbivore",
       "Height": 16.4,
       "Weight": 11023,
       "Length": 26.2,
@@ -227,7 +227,7 @@
     },
     {
       "Name": "Maiasaura",
-      "Eating Habits": "Herbivore",
+      "Type": "Herbivore",
       "Height": 8.2,
       "Weight": 6614,
       "Length": 29.5,
@@ -238,7 +238,7 @@
     },
     {
       "Name": "Dimorphodon",
-      "Eating Habits": "Carnivore",
+      "Type": "Carnivore",
       "Height": 0.82,
       "Weight": 8.8,
       "Length": 0.82,
@@ -249,7 +249,7 @@
     },
     {
       "Name": "Stegosaurus",
-      "Eating Habits": "Herbivore",
+      "Type": "Herbivore",
       "Height": 9.8,
       "Weight": 6834,
       "Length": 29.5,
@@ -260,7 +260,7 @@
     },
     {
       "Name": "Stenonychosaurus",
-      "Eating Habits": "Carnivore",
+      "Type": "Carnivore",
       "Height": 5.9,
       "Weight": 132,
       "Length": 6.6,
@@ -271,7 +271,7 @@
     },
     {
       "Name": "Hypsilophodon",
-      "Eating Habits": "Herbivore",
+      "Type": "Herbivore",
       "Height": 2.6,
       "Weight": 110,
       "Length": 6.6,
@@ -282,7 +282,7 @@
     },
     {
       "Name": "Camarasaurus",
-      "Eating Habits": "Herbivore",
+      "Type": "Herbivore",
       "Height": 29.5,
       "Weight": 4409,
       "Length": 59.1,
@@ -293,7 +293,7 @@
     },
     {
       "Name": "Styracosaurus",
-      "Eating Habits": "Herbivore",
+      "Type": "Herbivore",
       "Height": 6.6,
       "Weight": 6614,
       "Length": 16.4,
@@ -304,7 +304,7 @@
     },
     {
       "Name": "Euoplocephalus",
-      "Eating Habits": "Herbivore",
+      "Type": "Herbivore",
       "Height": 5.9,
       "Weight": 4409,
       "Length": 19.7,
@@ -315,7 +315,7 @@
     },
     {
       "Name": "Archaeopteryx",
-      "Eating Habits": "Omnivore",
+      "Type": "Omnivore",
       "Height": 1,
       "Weight": 13.2,
       "Length": 1,
@@ -326,7 +326,7 @@
     },
     {
       "Name": "Oviraptor",
-      "Eating Habits": "Carnivore",
+      "Type": "Carnivore",
       "Height": 2.6,
       "Weight": 44,
       "Length": 5.9,
