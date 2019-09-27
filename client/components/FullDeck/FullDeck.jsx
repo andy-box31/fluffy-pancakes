@@ -97,7 +97,10 @@ const FullDeck = ({cards, info, match, getCards}) => {
 }
 
 FullDeck.propTypes = {
-  cards: PropTypes.arrayOf(PropTypes.object)
+  cards: PropTypes.arrayOf(PropTypes.object),
+  info: PropTypes.object,
+  match: PropTypes.object,
+  getCards: PropTypes.func
 }
 
 function mapStateToProps (state) {
