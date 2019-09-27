@@ -1,5 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import classnames from 'classnames'
 import './DeckSelect.css'
 
 const DeckSelect = ({title, initial, currentValue, handleChange, options, handleToggle = null}) => {
@@ -7,7 +8,7 @@ const DeckSelect = ({title, initial, currentValue, handleChange, options, handle
     <div className='deckSelect'>
       <label>
       <span className="glbLabelText">{title}:</span>
-        <select className="glbSlct inlineRight" value={currentValue} onChange={handleChange}>
+        <select className={classnames({glbSlct: true, inlineRight: !!handleToggle})} value={currentValue} onChange={handleChange}>
         <option value={initial}>{initial}</option>
           {options.map((val) => <option value={val} key={val}>{val}</option>)}
         </select>
