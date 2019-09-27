@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import './DeckSelect.css'
 
 const DeckSelect = ({title, initial, currentValue, handleChange, options, handleToggle = null}) => {
@@ -14,6 +15,15 @@ const DeckSelect = ({title, initial, currentValue, handleChange, options, handle
       {handleToggle && <button type="button" className="glbSlctToggle" onClick={handleToggle}>&#8693;</button>}
     </div>
   )
+}
+
+DeckSelect.propTypes = {
+  title: PropTypes.string.isRequired,
+  initial: PropTypes.string.isRequired,
+  currentValue: PropTypes.string.isRequired,
+  options: PropTypes.array.isRequired,
+  handleChange: PropTypes.func.isRequired,
+  handleToggle: PropTypes.func
 }
 
 export default DeckSelect
