@@ -2,6 +2,7 @@ import React from 'react'
 import { connect } from 'react-redux'
 import { Redirect } from 'react-router-dom'
 import PropTypes from 'prop-types'
+import { sortAlphabetical, sortAlphabeticalInverse } from '../../utilities/other'
 import decks from '../../utilities/decks'
 import { getCards } from '../../actions/index'
 import Card from '../Card/Card'
@@ -14,6 +15,7 @@ const FullDeck = ({cards, info, match, getCards}) => {
 
   const [shownCards, updateCards] = React.useState(cards)
   const [isChanged, updateChanged] = React.useState(false)
+  const [orderLowHigh, updateOrder] = React.useState(true)
   const [currentFilter, updateFilter] = React.useState('all')
   const [currentSort, updateSort] = React.useState('Name')
 
@@ -59,24 +61,26 @@ const FullDeck = ({cards, info, match, getCards}) => {
   const handleSort = (e) => {
     doSort(e.target.value)
   }
-  const sortAlpha = (a,b) => {
-    return (a.Name > b.Name) ? 1 : -1
-  }
 
   const doSort = (val) => {
     updateSort(val)
-    let newShownCards = val === 'Name' ? shownCards.sort(sortAlpha) : shownCards.sort((a, b) => a[val] - b[val])
+    let newShownCards
+    if(orderLowHigh){
+      newShownCards = val === 'Name' ? shownCards.sort(sortAlphabetical) : shownCards.sort((a, b) => a[val] - b[val])
+    } else {
+      newShownCards = val === 'Name' ? shownCards.sort(sortAlphabeticalInverse) : shownCards.sort((a, b) => b[val] - a[val])
+    }
     updateCards(newShownCards)
   }
 
   return (
     (cards.length < 1 && !decks.includes(match.params.deck)) ? ( <Redirect push to="/" /> ) : (
       <div className="fullDeckOuter">
-        <header>
-          <div className='deckFilterOuter'>
+        <header className="fullDeckHeader">
+          <div className='deckFilterOuter'>{/* TODO create as separate component component*/}
             <label>
-              Filter cards:
-              <select value={currentFilter} onChange={handleFilter}>
+              <span className="glbLabelText">Filter:</span>
+              <select className="glbSlct" value={currentFilter} onChange={handleFilter}>
               <option value="all">all</option>
                 {filterOptions}
               </select>
@@ -84,22 +88,26 @@ const FullDeck = ({cards, info, match, getCards}) => {
           </div>
           <div className='deckSortOuter'>
             <label>
-              Sort cards:
-              <select value={currentSort} onChange={handleSort}>
+            <span className="glbLabelText">Sort:</span>
+              <select className="glbSlct inlineRight" value={currentSort} onChange={handleSort}>
               <option value="Name">Name</option>
                 {attributes.map((attr) => <option value={attr} key={attr}>{attr}</option>)}
               </select>
             </label>
+            <button type="button" className="glbSlctToggle" onClick={() => {updateOrder(!orderLowHigh); updateChanged(true)}}>&#8693;</button>
           </div>
         </header>
-        {cards.length < 1 ? <p>Waiting for {match.params.deck}</p> :
-          shownCards.map((card) => {
-            return (
-              <div key={card.Name} className="cardWrapper">
-                <Card params={card} />
-              </div>
-            )
-          })}
+        <main className="fullDeckMain">
+          {cards.length < 1 ? <p>Waiting for {match.params.deck}</p> :
+            shownCards.map((card) => {
+              return (
+                <div key={card.Name} className="cardWrapper">
+                  <Card params={card} />
+                </div>
+              )
+            })
+          }
+        </main>
       </div>
     )
   )
