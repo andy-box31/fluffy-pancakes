@@ -1,2 +1,8 @@
-.fullDeckOuter { display:flex; flex-wrap:wrap; justify-content: space-around; }
-.cardWrapper { min-width:300px; float:left; height:450px; margin:40px; }
+.fullDeckHeader,
+.fullDeckMain { display:flex; flex-wrap:wrap; justify-content: space-around }
+.fullDeckHeader { padding: 30px 0 }
+.cardWrapper { float:left; height:450px; margin:40px; min-width:300px }
+
+@media only screen and (min-width: 767px) {
+  .fullDeckHeader { padding: 30px 0 }
+}
