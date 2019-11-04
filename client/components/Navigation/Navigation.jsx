@@ -28,7 +28,7 @@ const Navigation = ({gameLevel, setGameLevel}) => {
       {menuOpen && <nav>
         <PlaymodeSelector />
         <hr />
-        <h4>difficulty</h4>
+        <h4 className="sectionTitle">Difficulty</h4>
         <RadioSelector
           params={Object.keys(GAME_LEVEL)}
           name="gameLevelSelection"
@@ -36,7 +36,7 @@ const Navigation = ({gameLevel, setGameLevel}) => {
           activeParam={gameLevel}
         />
         <hr />
-        <NavLink className="glbBtn viewCardsBtn" to='/deck'>View all cards</NavLink>
+        <NavLink className="glbBtn viewCardsBtn" to='/deck'>Deck</NavLink>
       </nav>
       }
     </div>

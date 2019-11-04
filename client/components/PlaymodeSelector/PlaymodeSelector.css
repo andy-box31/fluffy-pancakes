@@ -1,3 +1,8 @@
-.PlaymodeSelector label {
+.playmodeSelector label {
   display: block;
+}
+
+.sectionTitle {
+ margin: 6px;
+ font-size: 16px;
 }
