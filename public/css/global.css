@@ -24,6 +24,7 @@ p { margin-bottom:8px; }
 .glbFullFixed { top:0; bottom:0; right:0; left:0 }
 .glbFullAbsolute { position:absolute }
 .glbFullFixed { position:fixed }
+
 .glbBtn {
   background:linear-gradient(to bottom, #007dc1 5%, #0061a7 100%);
   background-color:#007dc1; border-radius:4px; box-shadow:0px 10px 14px -7px #276873; cursor:pointer; color:#ffffff; display:block;

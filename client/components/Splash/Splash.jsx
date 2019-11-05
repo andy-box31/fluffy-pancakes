@@ -14,7 +14,7 @@ const Splash = ({showDeck, dealCards, cards, gameState, winner = null}) => {
       </div>
       <header className="header">
         <h1>TRUMPS</h1> 
-        <Navigation />
+        <Navigation showDeck={showDeck}/>
       </header>
       <main className="mainContent">
         {winner && <h3>WOOP WOOP {winner} Wins</h3>}
