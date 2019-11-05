@@ -1,27 +1,56 @@
 .menu {
+  font-size: 10px;
+  padding-top: 20px;
   position: absolute;
   right: 10px;
-  font-size: 10px;
   top: 10px;
+  z-index: 1;
 }
 
 .icon {
+  background: transparent;
+  border: none;
   float: right;
   font-size: 0;
+  height: 20px;
   padding: 0;
-  width: 15px;
+  position: relative;
+  top: -20px;
+  width: 30px;
+  
 }
+
 .icon:before {
-  content:'⬇';
-  font-size: initial;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 16px solid black;
+  content:'';
+  height: 0;
+  position: relative;
+  top: 8px;
+  width: 0;
 }
 
 .menu.open {
   background: white;
   box-shadow: 1px 1px 5px rgba(0,0,0,.3);
-  width: 110px;
+  width: 130px;
 }
 
 .menu.open .icon:before {
-  content:'⬆';
+  border-bottom: 16px solid black;
+  border-top: 0px;
+  height: 0;
+  top: -8px;
+  width: 0;
+}
+
+.menu .radioSelector {
+  font-size: 12px;
+  margin: 0 4px 8px;
+}
+
+.viewCardsBtn {
+  margin: 14px 10px 16px;
+  padding: 10px 20px;
 }

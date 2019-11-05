@@ -17,8 +17,8 @@ class PlaymodeSelector extends React.Component{
   }
 
   render () {
-    return <div className="PlaymodeSelector">
-      <h4>Playmode</h4>
+    return <div className="playmodeSelector">
+      <h4 className="sectionTitle">Playmode</h4>
       <RadioSelector
         params={Object.keys(PLAY_MODE)}
         name="playmodeSelection"

@@ -13,11 +13,10 @@ export const ACTIONS = {
   COMPUTER_TURN: 'COMPUTER_TURN'
 }
 
-// enums
+// enums -> future addition VS_REMOTE: 'VS_REMOTE'
 export const PLAY_MODE = {
   VS_COMPUTER: 'VS_COMPUTER',
-  VS_LOCAL: 'VS_LOCAL',
-  VS_REMOTE: 'VS_REMOTE'
+  VS_LOCAL: 'VS_LOCAL'
 }
 
 export const PLAYERS = {
@@ -35,9 +34,12 @@ export const GAME_STATE = {
 export const GAME_LEVEL = {
   EASY: 'EASY',
   MEDIUM: 'MEDIUM',
-  HARD: 'HARD',
+  HARD: 'HARD'
+}
+/*
   RANDOM: 'RANDOM',
   GT_MEDIAN: 'GT_MEDIAN',
   GT_AVERAGE: 'GT_AVERAGE',
   BEST_ON_CARD: 'BEST_ON_CARD'
 }
+*/
