@@ -1,13 +1,14 @@
 export default [
   'transformers', 
-  'dinosaurs'
+  'dinosaurs',
+  'short'
 ]
 
 /*
   Each deck represents a JSON object at /data/ and must include an "info" object and a "cards" array of card objects.
-  all members of the ifo and card objects are required as in the current examples and the info.title should math the 
+  all members of the info and card objects are required as in the current examples and the info.title should match the 
   file name.
-  A card should be series of attributes and their values should corrispond to the competeOn array values in the info object.
+  A card should be series of attributes and their values should correspond to the competeOn array values in the info object.
   Cards should also have a Name attribute and an Image attribute. 
   
 example

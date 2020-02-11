@@ -18,8 +18,8 @@ export const throwError = (payload) => {
   return { type: THROW_ERROR, payload } // -> errorMiddleware
 }
 
-export const getCards = (payload) => {
-  return { type: GET_CARDS, payload} // -> sagasMiddleware
+export const getCards = (payload, callback = ()=>{}) => {
+  return { type: GET_CARDS, payload, callback } // -> sagasMiddleware
 }
 
 export const setCards = (payload) => {

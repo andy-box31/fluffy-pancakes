@@ -12,9 +12,11 @@ const DeckSelector = ({getCards}) => {
     updateChoice(e.target.value)
     getCards(e.target.value)
   }
+  // remove debugging deck
+  const filteredDecks = decks.filter(deck => !(deck==='short'))
   return (
     <RadioSelector
-          params={decks}
+          params={filteredDecks}
           name="deckSelection"
           handleChange={handleSelect}
           activeParam={deckChoice}
