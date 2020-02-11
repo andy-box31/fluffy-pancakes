@@ -4,7 +4,7 @@ import shuffle from '../utilities/shuffle'
 const initialState = {
   cards: [],
   deckInfo: {competeOn: []},
-  playmode: PLAY_MODE.VS_COMPUTER,
+  playmode: PLAY_MODE.VS_LOCAL,
   activePlayer: null,
   winner: null,
   gameState: GAME_STATE.PRE_GAME,

@@ -1,12 +1,11 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import {Redirect} from 'react-router-dom'
+import { Redirect } from 'react-router-dom'
 import classNames from 'classnames'
-import battleEngine from '../../utilities/battleEngine'
 import vpSetter from '../../utilities/viewportHeightSetter'
 import decks from '../../utilities/decks'
 import { goBattle, dealCards, getCards } from '../../actions/index'
-import { PLAY_MODE, PLAYERS, GAME_LEVEL, GAME_STATE } from '../../utilities/constants'
+import { PLAYERS } from '../../utilities/constants'
 import CardStack from '../CardStack/CardStack'
 import TheMiddle from '../TheMiddle/TheMiddle'
 import './GamePlay.css'
@@ -16,81 +15,43 @@ class GamePlayLocal extends React.Component {
     super (props)
     this.state = {
       turnCount: 0,
-      pauseForComputer: false,
       revealCards: false,
       target: undefined,
       pick: undefined
     }
-    this.battleEngine = null
     this.handleSelection = this.handleSelection.bind(this)
-    this.endPauseForComputer = this.endPauseForComputer.bind(this)
     this.endRevealCards = this.endRevealCards.bind(this)
   }
 
   componentDidMount () {
     vpSetter()
-    this.checkPauseForComputer()
-    this.tryInitBattleEngine()
-    if( decks.includes(this.props.match.params.deck) && (!this.props.deckInfo.title || this.props.match.params.deck != this.props.deckInfo.title.toLowerCase()) ) {
-      this.props.getCards(this.props.match.params.deck)
-        //wait for cards and fire deal cards..
-      let interval = setInterval(() => {
-        // TODO instead of setting an interval move this to componentDidUpdate
-        if (!!this.props.deckInfo.title && (this.props.match.params.deck === this.props.deckInfo.title.toLowerCase())) {
+
+    if( decks.includes(this.props.match.params.deck) &&
+      (!this.props.deckInfo.title ||
+        this.props.match.params.deck != this.props.deckInfo.title.toLowerCase())
+      ) {
+      this.props.getCards(this.props.match.params.deck, () => {
+        if (!!this.props.deckInfo.title &&
+          (this.props.match.params.deck === this.props.deckInfo.title.toLowerCase())) {
           this.props.dealCards()
-          this.tryInitBattleEngine()
-          clearInterval(interval)
         }
-      }, 100)
-    }
-  }
-
-  componentDidUpdate () {
-    this.checkPauseForComputer()
-    
-  }
-
-  tryInitBattleEngine () {
-    if (this.battleEngine === null && this.props.cards.length > 0 && this.props.deckInfo.competeOn.length > 0) {
-      this.battleEngine = new battleEngine(this.props.cards, this.props.deckInfo, GAME_LEVEL.GT_MEDIAN)
-    }
-  }
-
-  checkPauseForComputer () {
-    if (!this.state.pauseForComputer && !this.state.revealCards && this.props.playmode === PLAY_MODE.VS_COMPUTER && this.props.activePlayer === PLAYERS.PLAYER_2 && !this.props.winner) {
-      this.setState({pauseForComputer: true})
+      })
     }
   }
 
   handleSelection (e) {
-    if (this.props.playmode === PLAY_MODE.VS_COMPUTER && this.props.activePlayer === PLAYERS.PLAYER_2) {
-      return
-    }
     this.setState({revealCards: true, target: e.target, pick: e.target.value})
   }
 
   endRevealCards () {
-    let newState = {revealCards: false}
-    if (this.props.playmode === PLAY_MODE.VS_COMPUTER && this.props.activePlayer === PLAYERS.PLAYER_2) {
-      this.dispatchBattle(this.state.pick)
-      newState.pauseForComputer = true
-      newState.pick = undefined
-    } else if (this.props.playmode === PLAY_MODE.VS_LOCAL || (this.props.playmode === PLAY_MODE.VS_COMPUTER && this.props.activePlayer === PLAYERS.PLAYER_1)){
-      this.dispatchBattle(this.state.target.value)
-      this.state.target.checked = false
-      newState.target = undefined
-      newState.pick = undefined
-    }
-    this.setState(newState)
-  }
+    this.dispatchBattle(this.state.target.value)
+    this.state.target.checked = false
 
-  endPauseForComputer () {
-    if(this.props.playmode === PLAY_MODE.VS_LOCAL){
-      // this shouldn't be possible but just in case
-      return 
-    }
-    const attr = this.battleEngine.selectAttribute(this.props.hand2Cards[0])
-    this.setState({pauseForComputer: false, revealCards: true, pick: attr})
+    this.setState({
+      revealCards: false,
+      target: undefined,
+      pick: undefined
+    })
   }
 
   dispatchBattle (pick) {
@@ -101,29 +62,25 @@ class GamePlayLocal extends React.Component {
   }
 
   render () {
-    const { hand1Cards, hand2Cards, activePlayer, playmode, deckInfo, match } = this.props
-    const { revealCards, pauseForComputer, pick } = this.state
+    const { hand1Cards, hand2Cards, activePlayer, deckInfo, match } = this.props
+    const { revealCards, pick } = this.state
 
     const isPlayer1 = activePlayer === PLAYERS.PLAYER_1
     const isPlayer2 = activePlayer === PLAYERS.PLAYER_2
-    const isVsComputer = playmode === PLAY_MODE.VS_COMPUTER
-    const isVsLocal = playmode === PLAY_MODE.VS_LOCAL
+    const showCard1 = revealCards || isPlayer1
+    const showCard2 = revealCards || isPlayer2
 
-    const showCard1 = (revealCards || isPlayer1 || (isPlayer2 && isVsComputer))
-    const showCard2 = (revealCards || (isPlayer2 && isVsLocal))
-    const readOnlyCard1 = (revealCards || isPlayer2)
-    const readOnlyCard2 = (isVsComputer || revealCards || isPlayer1)
-
-    let winLoseTie
-    if(pick && (hand1Cards[0][pick] === hand2Cards[0][pick])) {
-      winLoseTie = <p className="smaller">Tie, cards to the middle</p>
-    }else {
-      if(pick && (hand1Cards[0][pick] > hand2Cards[0][pick])) {
-        winLoseTie = <p className="smaller">Player 1 takes it</p>
+    let winLoseTie = (() => {
+      if(pick && (hand1Cards[0][pick] === hand2Cards[0][pick])) {
+        return `Tie, cards to the middle`
       } else {
-        winLoseTie = <p className="smaller">Player 2 takes it</p>
+        if(pick && (hand1Cards[0][pick] > hand2Cards[0][pick])) {
+          return `Player 1 takes it`
+        } else {
+          return `Player 2 takes it`
+        }
       }
-    }
+    })()
     
     const backgroundImage = {
       backgroundImage: `url(${deckInfo.backgroundImage})`
@@ -143,7 +100,7 @@ class GamePlayLocal extends React.Component {
               <CardStack
                 params={hand1Cards[0]}
                 onSubmit={this.handleSelection}
-                readOnly={readOnlyCard1}
+                readOnly={revealCards}
                 showCard={showCard1}
                 stackSize={hand1Cards.length - 1}
               />
@@ -152,14 +109,8 @@ class GamePlayLocal extends React.Component {
               <header>
                 <h1>Trumps</h1>
               </header>
-              {!revealCards && (!isVsComputer || isPlayer1) &&
+              {!revealCards &&
                 <p><span className="standOut">{activePlayer}</span> take your turn!</p>
-              }
-              {isVsComputer && isPlayer2 && pauseForComputer &&
-                <React.Fragment>
-                  <p>She's thinking..... </p>
-                  <button type="button" className="glbFullAbsolute fullPageButton" onClick={this.endPauseForComputer}>Continue</button>
-                </React.Fragment>
               }
               {revealCards &&
                 <button type="button" className="glbFullAbsolute fullPageButton" onClick={this.endRevealCards}>Next</button>
@@ -168,7 +119,7 @@ class GamePlayLocal extends React.Component {
                 <div>
                   <p>{pick}</p>
                   <p className="scores"><span className="score">{hand1Cards[0][pick]}</span> <span className="versus">VS</span> <span className="score">{hand2Cards[0][pick]}</span></p>
-                  {winLoseTie}
+                  <p className="smaller">{winLoseTie}</p>
                 </div>
               }
             </div>
@@ -176,7 +127,7 @@ class GamePlayLocal extends React.Component {
               <CardStack
                 params={hand2Cards[0]}
                 onSubmit={this.handleSelection}
-                readOnly={readOnlyCard2}
+                readOnly={revealCards}
                 showCard={showCard2}
                 stackSize={hand2Cards.length - 1}
               />
@@ -197,7 +148,6 @@ function mapStateToProps (state) {
     deckInfo: state.deckInfo,
     hand1Cards: state.hand1Cards,
     hand2Cards: state.hand2Cards,
-    playmode: state.playmode,
     activePlayer: state.activePlayer,
     winner: state.winner,
     gameState: state.gameState
@@ -208,7 +158,7 @@ function mapDispatchToProps(dispatch) {
   return {
     goBattle: (args) => dispatch(goBattle(args)),
     dealCards: () => dispatch(dealCards()),
-    getCards: (val)=> dispatch(getCards(val))
+    getCards: (val, cb)=> dispatch(getCards(val, cb))
   }
 }
 

@@ -1,6 +1,6 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import {Redirect} from 'react-router-dom'
+import { Redirect } from 'react-router-dom'
 import classNames from 'classnames'
 import battleEngine from '../../utilities/battleEngine'
 import vpSetter from '../../utilities/viewportHeightSetter'
@@ -115,7 +115,7 @@ class GamePlayComputer extends React.Component {
     let winLoseTie = (() => {
       if(pick && (hand1Cards[0][pick] === hand2Cards[0][pick])) {
         return `Tie, cards to the middle`
-      }else {
+      } else {
         if(pick && (hand1Cards[0][pick] > hand2Cards[0][pick])) {
           return `Player 1 takes it`
         } else {

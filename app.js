@@ -9,7 +9,6 @@ const app = express()
 
 app.use(express.static('public'))
 
-// app.get('/', (req, res) => res.send("Nothing to see here :("));
 app.get('/healthcheck', (req, res) => res.send('I am healthy!'))
 
 app.get('/data/transformers', (req, res) => res.send(transformers))
