@@ -1,25 +1,20 @@
 const express = require('express')
+const app = express()
 const path = require('path')
-const transformers = require('./data/transformers.json')
-const dinosaurs = require('./data/dinosaurs.json')
-const short = require('./data/transformersShort.json')
+const socketio = require('./services/socketIo')
+var apiRouter = require('./routes/api');
 const port = process.env.PORT || 3000
 
-const app = express()
-
 app.use(express.static('public'))
-
+app.use('/data', apiRouter);
 app.get('/healthcheck', (req, res) => res.send('I am healthy!'))
-
-app.get('/data/transformers', (req, res) => res.send(transformers))
-app.get('/data/dinosaurs', (req, res) => res.send(dinosaurs))
-app.get('/data/short', (req, res) => res.send(short))
-
 app.get('/*', (req, res) => {
   res.sendFile(path.join(__dirname, 'public/index.html'))
 })
 
-app.listen(port, () => {
-  console.log(`Example app listening on port ${port}!`)
+socketio(app)
+
+app.listen(port, function(){
+  console.log(`Trumps listening on port ${port}!`)
   console.log(`CMD + click to view http://localhost:${port}`)
-})
+});
