@@ -1,5 +1,5 @@
-var express = require('express')
-var router = express.Router()
+const express = require('express')
+const router = express.Router()
 const transformers = require('../data/transformers')
 const dinosaurs = require('../data/dinosaurs.json')
 const short = require('../data/transformersShort.json')
