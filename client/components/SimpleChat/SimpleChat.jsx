@@ -4,9 +4,9 @@ import './SimpleChat.css'
 
 const socket = io(window.location.hostname + ':4000')
 const SimpleChat = () => {
+
   const [chats, updateChats] = React.useState([])
   const [newChat, updateNewChat] = React.useState('')
-
   React.useEffect(() => {
     socket.on('chat message', (msg) => {
       updateChats([...chats, msg])

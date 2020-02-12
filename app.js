@@ -1,9 +1,10 @@
 const express = require('express')
-const app = express()
 const path = require('path')
 const socketio = require('./services/socketIo')
 var apiRouter = require('./routes/api');
 const port = process.env.PORT || 3000
+
+const app = express()
 
 app.use(express.static('public'))
 app.use('/data', apiRouter);
@@ -14,7 +15,7 @@ app.get('/*', (req, res) => {
 
 socketio(app)
 
-app.listen(port, function(){
+app.listen(port, () => {
   console.log(`Trumps listening on port ${port}!`)
   console.log(`CMD + click to view http://localhost:${port}`)
-});
+})

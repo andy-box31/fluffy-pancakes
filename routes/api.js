@@ -1,11 +1,11 @@
-var express = require('express');
-var router = express.Router();
+var express = require('express')
+var router = express.Router()
 const transformers = require('../data/transformers')
 const dinosaurs = require('../data/dinosaurs.json')
 const short = require('../data/transformersShort.json')
 
 router.get('/', function(req, res) {
-  res.send('bad request - use a collection name, eg /transformers');
+  res.send('bad request - use a collection name, eg /transformers')
 });
 
 router.get('/transformers', (req, res) => res.send(transformers))
