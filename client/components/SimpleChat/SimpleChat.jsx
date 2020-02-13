@@ -14,17 +14,17 @@ const SimpleChat = () => {
   })
 
   function handleChange(e) {
-    updateNewChat(e.target.value);
+    updateNewChat(e.target.value)
   }
 
   function handleSubmit (e) {
     e.preventDefault()
     socket.emit('chat message', newChat);
     e.target.querySelector('input').value = ''
-    updateNewChat('');
+    updateNewChat('')
   }
 
-  const chatsUI = chats.map((chat, i) => <li key={i}>{chat}</li>);
+  const chatsUI = chats.map((chat, i) => <li key={i}>{chat}</li>)
   return (
     <div className="outer">
       <ul className="messages">{chatsUI}</ul>

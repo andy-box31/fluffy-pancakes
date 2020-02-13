@@ -7,20 +7,20 @@ module.exports = function socketIo(app) {
     pingTimeout: 60000
   })
 
-  io.on('connection', function(socket){
+  io.on('connection', (socket) => {
     socket.broadcast.emit('chat message', `New user entered: ${socket.id}`)
     console.log('a user connected', socket.id)
 
-    socket.on('disconnect', function(){
+    socket.on('disconnect', () => {
       console.log('user disconnected', socket.id)
     });
       
-    socket.on('chat message', function(msg){
+    socket.on('chat message', (msg) => {
       io.emit('chat message', `${socket.id}: ${msg}`)
     });
   });
 
-  server.listen(4000, function(){
+  server.listen(4000, () => {
     console.log(`socket.io listening on port 4000!`)
   });
 }
