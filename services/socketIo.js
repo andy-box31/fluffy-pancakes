@@ -9,10 +9,10 @@ module.exports = function socketIo(app) {
 
   io.on('connection', (socket) => {
     socket.broadcast.emit('chat message', `New user entered: ${socket.id}`)
-    console.log('a user connected', socket.id)
+    //console.log('a user connected', socket.id)
 
     socket.on('disconnect', () => {
-      console.log('user disconnected', socket.id)
+      //console.log('user disconnected', socket.id)
     });
       
     socket.on('chat message', (msg) => {

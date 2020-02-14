@@ -2,15 +2,22 @@ import React from 'react'
 import io from 'socket.io-client'
 import './SimpleChat.css'
 
-const socket = io(window.location.hostname + ':4000')
 const SimpleChat = () => {
-
   const [chats, updateChats] = React.useState([])
   const [newChat, updateNewChat] = React.useState('')
+  const [socket, setSocket] = React.useState({on: () => {}, off: () => {}});
+  React.useEffect(() => {
+    setSocket(io(window.location.hostname + ':4000'))
+    console.log('create socket')
+  }, [])
+
   React.useEffect(() => {
     socket.on('chat message', (msg) => {
       updateChats([...chats, msg])
     })
+    return () => {
+      socket.off('chat message');
+    }
   })
 
   function handleChange(e) {
