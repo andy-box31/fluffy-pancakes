@@ -5,10 +5,10 @@ import './SimpleChat.css'
 const SimpleChat = () => {
   const [chats, updateChats] = React.useState([])
   const [newChat, updateNewChat] = React.useState('')
-  const [socket, setSocket] = React.useState({on: () => {}, off: () => {}});
+  const [socket, setSocket] = React.useState({on: () => {}, off: () => {}})
+
   React.useEffect(() => {
     setSocket(io(window.location.hostname + ':4000'))
-    console.log('create socket')
   }, [])
 
   React.useEffect(() => {
@@ -16,7 +16,7 @@ const SimpleChat = () => {
       updateChats([...chats, msg])
     })
     return () => {
-      socket.off('chat message');
+      socket.off('chat message')
     }
   })
 
@@ -36,7 +36,7 @@ const SimpleChat = () => {
     <div className="outer">
       <ul className="messages">{chatsUI}</ul>
       <form className="form" onSubmit={handleSubmit}>
-        <input onChange={handleChange} type="text"/>
+        <input onChange={handleChange} type="text" />
         <button type="submit">Send</button>
       </form>
     </div>
