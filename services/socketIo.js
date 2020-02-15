@@ -1,8 +1,6 @@
-const http = require('http')
 const socketio = require('socket.io')
 
-module.exports = function socketIo(app) {
-  const server = http.createServer(app)
+module.exports = function socketIo(server) {
   const io = socketio(server, {
     pingTimeout: 60000
   })
@@ -18,9 +16,5 @@ module.exports = function socketIo(app) {
     socket.on('chat message', (msg) => {
       io.emit('chat message', `${socket.id}: ${msg}`)
     });
-  });
-
-  server.listen(4000, () => {
-    console.log(`socket.io listening on port 4000!`)
   });
 }
