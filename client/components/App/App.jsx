@@ -5,6 +5,7 @@ import { GAME_STATE } from '../../utilities/constants'
 import Splash from '../Splash/Splash'
 import GamePlayRoute from '../GamePlay/GamePlayRoute'
 import  FullDeckRoute  from '../FullDeck/FullDeckRoute'
+import  SimpleChatRoute  from '../SimpleChat/SimpleChatRoute'
 import Four0Four from './Four0Four'
 
 const App = ({gameState, deckInfo}) => {
@@ -17,6 +18,7 @@ const App = ({gameState, deckInfo}) => {
         <Route exact path="/" component={Splash} />
         <Route path="/deck" component={FullDeckRoute} />
         <Route path="/play" component={GamePlayRoute} />
+        <Route path="/chat" component={SimpleChatRoute} />
         <Route component={Four0Four} />
       </Switch>
     </BrowserRouter>
