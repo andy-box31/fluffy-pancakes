@@ -8,7 +8,7 @@ const SimpleChat = () => {
   const [socket, setSocket] = React.useState({on: () => {}, off: () => {}})
 
   React.useEffect(() => {
-    setSocket(io(window.location.hostname + ':4000'))
+    setSocket(io())
   }, [])
 
   React.useEffect(() => {
