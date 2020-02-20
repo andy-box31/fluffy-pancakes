@@ -6,15 +6,18 @@ module.exports = function socketIo(server) {
   })
 
   io.on('connection', (socket) => {
-    socket.broadcast.emit('chat message', `New user entered: ${socket.id}`)
+    socket.broadcast.emit('welcome message', 'Trump', `New user entered: ${socket.id}`)
     //console.log('a user connected', socket.id)
 
     socket.on('disconnect', () => {
       //console.log('user disconnected', socket.id)
     });
       
-    socket.on('chat message', (msg) => {
-      io.emit('chat message', `${socket.id}: ${msg}`)
+    socket.on('chat message', (...rest) => {
+      io.emit('chat message', ...rest)
+    });
+    socket.on('welcome message', (name) => {
+      io.emit('welcome message', 'Trump', `${socket.id} is ${name}. Welcome to chat ${name}`)
     });
   });
 }
