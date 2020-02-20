@@ -4,10 +4,10 @@
 .chatForm { background:#000; box-sizing:border-box; margin-bottom: 30px; padding:8px 10px; position:fixed; bottom:0; width:100% }
 .chatForm input { border:0; box-sizing:border-box; padding:10px; width:90%; margin-right:.5% }
 .chatForm button { width:9%; box-sizing:border-box; background:rgb(130, 224, 255); border:none; padding:10px }
-.messages { list-style-type:none; margin:0 0 85px; padding:0; }
+.messages { list-style-type:none; margin:0 0 85px; padding:0 }
 .messages li { padding:5px 10px }
 .messages li:nth-child(odd) { background:#eee }
 
 .nameForm { max-width:500px; padding:100px; text-align:center }
 .nameForm label { font-size: 40px; margin-bottom: 15px }
-.nameForm input { display:block; margin: 15px auto; }
+.nameForm input { display:block; margin: 15px auto }
