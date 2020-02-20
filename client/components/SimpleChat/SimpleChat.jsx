@@ -59,7 +59,7 @@ const SimpleChat = () => {
   function handleCloseUsernameModal (e) {
     e.preventDefault()
     setUsername(tempUserName)
-    socket.emit('welcome message', tempUserName);
+    socket.emit('welcome message', tempUserName)
   }
 
   const chatsUI = chats.map((chat, i) => <li key={i} ref={listElements}>{chat}</li>)

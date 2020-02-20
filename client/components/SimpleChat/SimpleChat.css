@@ -1,9 +1,9 @@
-.outer { overflow: auto; }
+.outer { overflow: auto }
 .chatName { font-size:20px; font-weight:600 }
 
-.chatForm { background:#000; box-sizing:border-box; margin-bottom: 30px; padding:8px 10px; position:fixed; bottom:0; width:100% }
-.chatForm input { border:0; box-sizing:border-box; padding:10px; width:90%; margin-right:.5% }
-.chatForm button { width:9%; box-sizing:border-box; background:rgb(130, 224, 255); border:none; padding:10px }
+.chatForm { background:#000; bottom:0; box-sizing:border-box; margin-bottom: 30px; padding:8px 10px; position:fixed; width:100% }
+.chatForm input { border:0; box-sizing:border-box; margin-right:.5%; padding:10px; width:90% }
+.chatForm button { background:rgb(130, 224, 255); box-sizing:border-box; border:none; padding:10px; width:9% }
 .messages { list-style-type:none; margin:0 0 85px; padding:0 }
 .messages li { padding:5px 10px }
 .messages li:nth-child(odd) { background:#eee }
