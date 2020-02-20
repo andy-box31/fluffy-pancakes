@@ -1,24 +1,45 @@
 import React from 'react'
 import io from 'socket.io-client'
 import './SimpleChat.css'
+import Modal from '../Modal/Modal'
 
 const SimpleChat = () => {
   const [chats, updateChats] = React.useState([])
+  const [userName, setUsername] = React.useState(false)
+  const [tempUserName, setTempUsername] = React.useState('')
   const [newChat, updateNewChat] = React.useState('')
   const [socket, setSocket] = React.useState({on: () => {}, off: () => {}})
+
+  const listElements = React.createRef();
+  const chatInput = React.createRef();
+  const nameInput = React.createRef();
 
   React.useEffect(() => {
     setSocket(io())
   }, [])
 
   React.useEffect(() => {
-    socket.on('chat message', (msg) => {
-      updateChats([...chats, msg])
+    let unsub = [];
+    ['chat message', 'welcome message'].forEach(event => {
+      socket.on(event, (name, msg) => {
+        updateChats([...chats, <p><span className="chatName">{name}: </span>{msg}</p>])
+      })
+      unsub.push(() => {socket.off(event)})
+    
     })
+
+    if(userName){
+      chatInput.current.focus()
+    } else {
+      nameInput.current.focus()
+    }
+
     return () => {
-      socket.off('chat message')
+      unsub.forEach(func => { func() })
     }
   })
+
+  React.useLayoutEffect(() => { listElements.current?.scrollIntoView() })
 
   function handleChange(e) {
     updateNewChat(e.target.value)
@@ -26,17 +47,34 @@ const SimpleChat = () => {
 
   function handleSubmit (e) {
     e.preventDefault()
-    socket.emit('chat message', newChat);
+    if (newChat === '') { return }
+    socket.emit('chat message', userName, newChat);
     e.target.querySelector('input').value = ''
     updateNewChat('')
   }
 
-  const chatsUI = chats.map((chat, i) => <li key={i}>{chat}</li>)
+  function handleSetUsernameChange (e) {
+    setTempUsername(e.target.value)
+  }
+  function handleCloseUsernameModal (e) {
+    e.preventDefault()
+    setUsername(tempUserName)
+    socket.emit('welcome message', tempUserName)
+  }
+
+  const chatsUI = chats.map((chat, i) => <li key={i} ref={listElements}>{chat}</li>)
   return (
     <div className="outer">
-      <ul className="messages">{chatsUI}</ul>
-      <form className="form" onSubmit={handleSubmit}>
-        <input onChange={handleChange} type="text" />
+      {!userName && <Modal onClose={handleCloseUsernameModal}>
+      <form className="nameForm" onSubmit={handleCloseUsernameModal}>
+        <label htmlFor="unInput">What should we call you?</label>
+        <input id="unInput" onChange={handleSetUsernameChange} type="text" ref={nameInput} />
+        <button type="submit">Send</button>
+      </form>
+      </Modal>}
+      <ul id="messages" className="messages">{chatsUI}</ul>
+      <form className="chatForm" onSubmit={handleSubmit}>
+        <input onChange={handleChange} type="text" ref={chatInput} />
         <button type="submit">Send</button>
       </form>
     </div>
