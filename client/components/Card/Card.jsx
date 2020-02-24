@@ -23,8 +23,8 @@ const Card = ({ params, onSubmit, attrs, readOnly }) => {
       </label>
     )
   })
-  // TODO: review disabled eslint
-  const backgroundImage = !!params.Image ? { // eslint-disable-line no-extra-boolean-cast
+
+  const backgroundImage = params.Image ? {
     backgroundImage: `url(${params.Image})`,
     backgroundSize: 'cover',
     backgroundRepeat: 'no-repeat'
