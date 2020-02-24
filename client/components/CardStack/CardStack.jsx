@@ -4,25 +4,23 @@ import BackgroundCardStack from '../BackgroundCardStack/BackgroundCardStack'
 import Card from '../Card/Card'
 import './CardStack.css'
 
-const CardStack = ({params, onSubmit, readOnly, stackSize, showCard}) => {
+const CardStack = ({ params, onSubmit, readOnly, stackSize, showCard }) => {
   return (
     <div>
       {showCard &&
-        <div className="glbFullAbsolute">
+        <div className='glbFullAbsolute'>
           <Card
             params={params}
             onSubmit={onSubmit}
             readOnly={readOnly}
           />
           <BackgroundCardStack count={stackSize} />
-        </div>
-      }
+        </div>}
       {!showCard &&
-        <div className="glbFullAbsolute">
-          <div className="opponentCard" />
-          <BackgroundCardStack count={stackSize} back={true} />
-        </div>
-      }
+        <div className='glbFullAbsolute'>
+          <div className='opponentCard' />
+          <BackgroundCardStack count={stackSize} back />
+        </div>}
     </div>
   )
 }

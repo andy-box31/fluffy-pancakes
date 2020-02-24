@@ -5,8 +5,8 @@ import FullDeck from './FullDeck'
 const FullDeckRoute = () => {
   return (
     <Switch>
-      <Route exact path='/deck' render={() => <Redirect to="/" />}/>
-      <Route path='/deck/:deck' component={FullDeck}/>
+      <Route exact path='/deck' render={() => <Redirect to='/' />} />
+      <Route path='/deck/:deck' component={FullDeck} />
     </Switch>
   )
 }

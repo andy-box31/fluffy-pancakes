@@ -3,19 +3,21 @@ import PropTypes from 'prop-types'
 import classNames from 'classnames'
 import './BackgroundCardStack.css'
 
-const BackgroundCardStack = ({count, back}) => {
-  let underCards  = []
+const BackgroundCardStack = ({ count, back }) => {
+  let underCards = []
   let rotateStyle = {
-    transform: "rotate(-3deg)"
+    transform: 'rotate(-3deg)'
   }
-  for(let i=0; (i<count && i<7); i++){ // 7 is plenty lets not polute the DOM too much :|
-    let degrees = Math.random()*6-3
+  for (let i = 0; (i < count && i < 7); i++) { // 7 is plenty lets not polute the DOM too much :|
+    let degrees = Math.random() * 6 - 3
     rotateStyle = { transform: `rotate(${degrees}deg)` }
-    underCards.push(<div key={i} style={rotateStyle} className={classNames({glbFullAbsolute: true, underCard: true, backside: back})} />)
+    underCards.push(<div key={i} style={rotateStyle} className={classNames({ glbFullAbsolute: true, underCard: true, backside: back })} />)
   }
-  return <React.Fragment>
-          {underCards}
-        </React.Fragment>
+  return (
+    <>
+      {underCards}
+    </>
+  )
 }
 
 BackgroundCardStack.defaultProps = {
@@ -25,7 +27,7 @@ BackgroundCardStack.defaultProps = {
 
 BackgroundCardStack.propTypes = {
   count: PropTypes.number,
-  back:PropTypes.bool
+  back: PropTypes.bool
 }
 
 export default BackgroundCardStack

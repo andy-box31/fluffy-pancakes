@@ -18,7 +18,7 @@ export const throwError = (payload) => {
   return { type: THROW_ERROR, payload } // -> errorMiddleware
 }
 
-export const getCards = (payload, callback = ()=>{}) => {
+export const getCards = (payload, callback = () => {}) => {
   return { type: GET_CARDS, payload, callback } // -> sagasMiddleware
 }
 
@@ -47,14 +47,13 @@ export const goBattle = (payload) => {
 }
 
 export const setPlaymode = (payload) => {
-  return {type: SET_PLAY_MODE, payload}
+  return { type: SET_PLAY_MODE, payload }
 }
 
-
 export const setGameLevel = (payload) => {
-  return {type: SET_GAME_LEVEL, payload}
+  return { type: SET_GAME_LEVEL, payload }
 }
 
 export const computerTurn = () => {
-  return {type: COMPUTER_TURN}
+  return { type: COMPUTER_TURN }
 }

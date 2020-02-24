@@ -1,14 +1,15 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import './RadioSelector.css'
 
-const RadioSelector = ({params = [], handleChange, activeParam, name}) => { 
+const RadioSelector = ({ params = [], handleChange, activeParam, name }) => {
   return (
-      <div className="radioSelector">
-        {params.map((param, i) => {
+    <div className='radioSelector'>
+      {params.map((param) => {
         return (
-          <label className="radioBtn" key={param}>
+          <label className='radioBtn' key={param}>
             <input
-              type="radio"
+              type='radio'
               name={name}
               value={param}
               onChange={handleChange}
@@ -19,6 +20,13 @@ const RadioSelector = ({params = [], handleChange, activeParam, name}) => {
       })}
     </div>
   )
+}
+
+RadioSelector.propTypes = {
+  params: PropTypes.array,
+  handleChange: PropTypes.func,
+  activeParam: PropTypes.oneOfType([PropTypes.string, PropTypes.bool]),
+  name: PropTypes.string
 }
 
 export default RadioSelector
