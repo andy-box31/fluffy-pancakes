@@ -8,11 +8,11 @@ const SimpleChat = () => {
   const [userName, setUsername] = React.useState(false)
   const [tempUserName, setTempUsername] = React.useState('')
   const [newChat, updateNewChat] = React.useState('')
-  const [socket, setSocket] = React.useState({on: () => {}, off: () => {}})
+  const [socket, setSocket] = React.useState({ on: () => {}, off: () => {} })
 
-  const listElements = React.createRef();
-  const chatInput = React.createRef();
-  const nameInput = React.createRef();
+  const listElements = React.createRef()
+  const chatInput = React.createRef()
+  const nameInput = React.createRef()
 
   React.useEffect(() => {
     setSocket(io())
@@ -20,15 +20,14 @@ const SimpleChat = () => {
 
   React.useEffect(() => {
     let unsub = [];
-    ['chat message', 'welcome message'].forEach(event => {
+    ['chat message', 'welcome message'].forEach((event, index) => {
       socket.on(event, (name, msg) => {
-        updateChats([...chats, <p><span className="chatName">{name}: </span>{msg}</p>])
+        updateChats([...chats, <p key={index}><span className='chatName'>{name}: </span>{msg}</p>])
       })
-      unsub.push(() => {socket.off(event)})
-    
+      unsub.push(() => { socket.off(event) })
     })
 
-    if(userName){
+    if (userName) {
       chatInput.current.focus()
     } else {
       nameInput.current.focus()
@@ -38,17 +37,15 @@ const SimpleChat = () => {
       unsub.forEach(func => { func() })
     }
   })
-
-  React.useLayoutEffect(() => { listElements.current?.scrollIntoView() })
-
-  function handleChange(e) {
+  React.useLayoutEffect(() => { listElements.current?.scrollIntoView() }) // eslint-disable-line
+  function handleChange (e) {
     updateNewChat(e.target.value)
   }
 
   function handleSubmit (e) {
     e.preventDefault()
     if (newChat === '') { return }
-    socket.emit('chat message', userName, newChat);
+    socket.emit('chat message', userName, newChat)
     e.target.querySelector('input').value = ''
     updateNewChat('')
   }
@@ -64,18 +61,19 @@ const SimpleChat = () => {
 
   const chatsUI = chats.map((chat, i) => <li key={i} ref={listElements}>{chat}</li>)
   return (
-    <div className="outer">
-      {!userName && <Modal onClose={handleCloseUsernameModal}>
-      <form className="nameForm" onSubmit={handleCloseUsernameModal}>
-        <label htmlFor="unInput">What should we call you?</label>
-        <input id="unInput" onChange={handleSetUsernameChange} type="text" ref={nameInput} />
-        <button type="submit">Send</button>
-      </form>
-      </Modal>}
-      <ul id="messages" className="messages">{chatsUI}</ul>
-      <form className="chatForm" onSubmit={handleSubmit}>
-        <input onChange={handleChange} type="text" ref={chatInput} />
-        <button type="submit">Send</button>
+    <div className='outer'>
+      {!userName &&
+        <Modal onClose={handleCloseUsernameModal}>
+          <form className='nameForm' onSubmit={handleCloseUsernameModal}>
+            <label htmlFor='unInput'>What should we call you?</label>
+            <input id='unInput' onChange={handleSetUsernameChange} type='text' ref={nameInput} />
+            <button type='submit'>Send</button>
+          </form>
+        </Modal>}
+      <ul id='messages' className='messages'>{chatsUI}</ul>
+      <form className='chatForm' onSubmit={handleSubmit}>
+        <input onChange={handleChange} type='text' ref={chatInput} />
+        <button type='submit'>Send</button>
       </form>
     </div>
   )

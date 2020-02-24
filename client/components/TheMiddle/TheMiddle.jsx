@@ -1,21 +1,25 @@
 import React from 'react'
-import { connect } from'react-redux'
+import PropTypes from 'prop-types'
+import { connect } from 'react-redux'
 import './TheMiddle.css'
 
-const TheMiddle = ({theMiddle}) => {
-  const rand = Math.floor(Math.random()*25) - 15
+const TheMiddle = ({ theMiddle }) => {
+  const rand = Math.floor(Math.random() * 25) - 15
   let middleRandomRotate = {
     transform: `rotate(${rand}deg)`
   }
   return (
-    <React.Fragment>
+    <>
       {theMiddle.length > 0 &&
-        <div className="theMiddle" style={middleRandomRotate}>
+        <div className='theMiddle' style={middleRandomRotate}>
           <p>{theMiddle.length}</p>
-        </div>
-      }
-    </React.Fragment>
+        </div>}
+    </>
   )
+}
+
+TheMiddle.propTypes = {
+  theMiddle: PropTypes.array
 }
 
 function mapStateToProps (state) {

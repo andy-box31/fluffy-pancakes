@@ -10,7 +10,7 @@ const Api = {
       }
       throw new Error(`Unexpected response code ${resp.status} from ${location}`, resp)
     } catch (e) {
-      throw(e)
+      throw (e)
     }
   }
 }

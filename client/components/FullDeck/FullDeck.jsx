@@ -9,8 +9,8 @@ import DeckSelect from '../DeckSelect/DeckSelect'
 import Card from '../Card/Card'
 import './FullDeck.css'
 
-const FullDeck = ({cards, info, match, getCards}) => {
-  if( decks.includes(match.params.deck) && (!info.title || match.params.deck != info.title.toLowerCase()) ) {
+const FullDeck = ({ cards, info, match, getCards }) => {
+  if (decks.includes(match.params.deck) && (!info.title || match.params.deck !== info.title.toLowerCase())) {
     getCards(match.params.deck)
   }
 
@@ -21,7 +21,7 @@ const FullDeck = ({cards, info, match, getCards}) => {
   const [currentSort, updateSort] = React.useState('Name')
 
   React.useEffect(() => {
-    isChanged ? callUpdates() : undefined
+    if (isChanged) { callUpdates() }
   })
 
   const callUpdates = () => {
@@ -29,12 +29,12 @@ const FullDeck = ({cards, info, match, getCards}) => {
     doSort(currentSort)
   }
 
-  if(shownCards.length === 0 && cards.length > 0) {
+  if (shownCards.length === 0 && cards.length > 0) {
     updateCards(cards)
   }
 
   let filters = new Set()
-  for(const card of cards){
+  for (const card of cards) {
     filters.add(card.Type)
   }
 
@@ -52,7 +52,7 @@ const FullDeck = ({cards, info, match, getCards}) => {
   const doSort = (val) => {
     updateSort(val)
     let newShownCards
-    if(orderLowHigh){
+    if (orderLowHigh) {
       newShownCards = val === 'Name' ? shownCards.sort(sortAlphabetical) : shownCards.sort((a, b) => a[val] - b[val])
     } else {
       newShownCards = val === 'Name' ? shownCards.sort(sortAlphabeticalInverse) : shownCards.sort((a, b) => b[val] - a[val])
@@ -61,35 +61,35 @@ const FullDeck = ({cards, info, match, getCards}) => {
   }
 
   return (
-    (cards.length < 1 && !decks.includes(match.params.deck)) ? ( <Redirect push to="/" /> ) : (
-      <div className="fullDeckOuter">
-        <header className="fullDeckHeader">
+    (cards.length < 1 && !decks.includes(match.params.deck)) ? (<Redirect push to='/' />) : (
+      <div className='fullDeckOuter'>
+        <header className='fullDeckHeader'>
           <DeckSelect
-            title="Filter"
-            initial="all"
+            title='Filter'
+            initial='all'
             currentValue={currentFilter}
             handleChange={handleFilter}
             options={[...filters]}
           />
           <DeckSelect
-            title="Sort"
-            initial="Name"
+            title='Sort'
+            initial='Name'
             currentValue={currentSort}
             handleChange={handleSort}
             options={info.competeOn}
-            handleToggle={() => {updateOrder(!orderLowHigh); updateChanged(true)}}
+            handleToggle={() => { updateOrder(!orderLowHigh); updateChanged(true) }}
           />
         </header>
-        <main className="fullDeckMain">
-          {cards.length < 1 ? <p>Waiting for {match.params.deck}</p> :
-            shownCards.map((card) => {
+        <main className='fullDeckMain'>
+          {/* don't use ternaries like this */}
+          {cards.length < 1 ? <p>Waiting for {match.params.deck}</p>
+            : shownCards.map((card) => {
               return (
-                <div key={card.Name} className="cardWrapper">
+                <div key={card.Name} className='cardWrapper'>
                   <Card params={card} />
                 </div>
               )
-            })
-          }
+            })}
         </main>
       </div>
     )
@@ -110,7 +110,7 @@ function mapStateToProps (state) {
   }
 }
 
-function mapDispatchToProps(dispatch) {
+function mapDispatchToProps (dispatch) {
   return {
     getCards: (choice) => dispatch(getCards(choice))
   }

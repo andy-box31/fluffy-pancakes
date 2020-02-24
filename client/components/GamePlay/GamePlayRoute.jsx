@@ -5,8 +5,8 @@ import GamePlay from './GamePlay'
 const GamePlayRoute = () => {
   return (
     <Switch>
-      <Route exact path='/play' render={() => <Redirect to="/" />}/>
-      <Route path='/play/:deck' component={GamePlay}/>
+      <Route exact path='/play' render={() => <Redirect to='/' />} />
+      <Route path='/play/:deck' component={GamePlay} />
     </Switch>
   )
 }

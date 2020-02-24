@@ -3,7 +3,7 @@ import shuffle from '../utilities/shuffle'
 
 const initialState = {
   cards: [],
-  deckInfo: {competeOn: []},
+  deckInfo: { competeOn: [] },
   playmode: PLAY_MODE.VS_COMPUTER,
   activePlayer: null,
   winner: null,
@@ -11,9 +11,9 @@ const initialState = {
   gameLevel: GAME_LEVEL.HARD
 }
 
-const {SET_CARDS, SET_INFO, DEAL_CARDS, SHOW_DECK, GO_BATTLE, SET_PLAY_MODE, SET_GAME_LEVEL} = ACTIONS
+const { SET_CARDS, SET_INFO, DEAL_CARDS, SHOW_DECK, GO_BATTLE, SET_PLAY_MODE, SET_GAME_LEVEL } = ACTIONS
 
-function rootReducer(state = initialState, action) {
+function rootReducer (state = initialState, action) {
   let newState, newWinner, newMiddle, newHand1, newHand2, newActivePlayer, newGameState
   switch (action.type) {
     case (SET_CARDS): // cards, activePlayer
@@ -30,11 +30,11 @@ function rootReducer(state = initialState, action) {
       }
       return newState
     case (SET_PLAY_MODE): // playmode
-        newState = {
-          ...state,
-          playmode: action.payload
-        }
-        return newState
+      newState = {
+        ...state,
+        playmode: action.payload
+      }
+      return newState
     case (SET_GAME_LEVEL): // gameLevel
       newState = {
         ...state,
@@ -52,7 +52,7 @@ function rootReducer(state = initialState, action) {
         return state
       }
       const shuffled = shuffle(state.cards)
-      const mid = Math.floor(shuffled.length/2)
+      const mid = Math.floor(shuffled.length / 2)
       // Play against computer reset active player to player1
       newActivePlayer = state.playmode === PLAY_MODE.VS_COMPUTER ? PLAYERS.PLAYER_1 : state.activePlayer
       newState = {
@@ -73,17 +73,17 @@ function rootReducer(state = initialState, action) {
       newGameState = state.gameState
       const card1 = newHand1.shift()
       const card2 = newHand2.shift()
-      if(!card1[action.payload] || !card2[action.payload]) {
+      if (!card1[action.payload] || !card2[action.payload]) {
         // error
         return state
       }
-      if (card1[action.payload] > card2[action.payload]){
+      if (card1[action.payload] > card2[action.payload]) {
         newHand1.push(...newMiddle)
         newHand1.push(card2)
         newHand1.push(card1)
         newMiddle = []
         newActivePlayer = PLAYERS.PLAYER_1
-      } else if (card1[action.payload] === card2[action.payload]){
+      } else if (card1[action.payload] === card2[action.payload]) {
         newMiddle.push(card1)
         newMiddle.push(card2)
       } else {

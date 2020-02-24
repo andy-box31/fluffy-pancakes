@@ -1,0 +1,17 @@
+root: true
+extends:
+  - standard
+  - standard-react
+env:
+  browser: true
+overrides:
+  - files:
+      - "__mocks__/**/*.{js,jsx}"
+      - "*.test.{js,jsx}"
+    env:
+      jest: true
+    rules:
+      "react/prop-types": false
+parser: "babel-eslint"
+parserOptions:
+  ecmaVersion: 9
